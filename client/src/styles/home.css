@@ -1,0 +1,69 @@
+body { font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #333; margin: 0; }
+*, ::after, ::before { box-sizing: border-box; }
+ul { padding: 0; margin: 0; list-style: none; }
+a { text-decoration: none; color: #666; }
+img { width: 100%; display: block; }
+h3, p { margin: 0; }
+.container { width: 1310px; margin: 0 auto; padding: 0 15px; }
+.main { padding-top: 24px; }
+
+/* Header */
+.header__top { background: linear-gradient(90deg, #e30e16 18.76%, #c90009 96.9%); }
+.header__top-flex { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+.header__logo { color: #fff; font-size: 28px; font-weight: 700; }
+.header__clink { color: #fff; font-weight: 500; padding: 0 12px; border-right: 1px solid #ed1c24; }
+.header__middle { box-shadow: 0 4px 20px rgba(0,0,0,.05); background: #fff; }
+.menu-nav { display: flex; justify-content: space-between; align-items: center; }
+.menu-nav .nav-link { padding: 8px 0; font-weight: 500; font-size: 12px; text-transform: uppercase; color: #222; white-space: nowrap; }
+.menu-nav .nav-link:hover { color: #ed1c24; }
+
+/* Card */
+.img-resize { display: block; position: relative; }
+.img-resize::before { content: ""; display: block; padding-bottom: 62.5%; }
+.img-resize img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+.box-category-link-title { color: #222; font-size: 18px; font-weight: 500; line-height: 24px; }
+.box-category-link-title:hover { color: #ed1c24; }
+.box-category-category { color: #ed1c24; font-size: 12px; margin-right: 8px; }
+.box-category-time { color: #8f8f8f; font-size: 12px; }
+.box-category-sapo { color: #565656; margin-top: 6px; }
+.box-category-item { margin-bottom: 16px; }
+
+/* Home focus */
+.section__home-focus { margin-bottom: 24px; }
+.section__hf-flex { display: flex; }
+.section__hf-list { width: 172px; border-right: 1px solid #f2f2f2; margin-right: 15px; padding-right: 15px; flex-shrink: 0; }
+.section__hf-list .time-d { font-weight: 500; color: #565656; display: block; margin-bottom: 8px; }
+.side-item { border-top: 1px dashed #d9d9d9; padding: 11px 0; margin: 0; }
+.side-item .box-category-link-title { font-size: 14px; line-height: 20px; font-weight: 400; color: #404040; }
+.section__hf-main { flex: 1; }
+.focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 24px; }
+.focus-big { grid-column: 1 / 4; }
+.section__hf-sub { width: 300px; border-left: 1px solid #f2f2f2; padding-left: 15px; margin-left: 15px; flex-shrink: 0; }
+.ad-placeholder { background: #f7f7f7; color: #aaa; display: flex; align-items: center; justify-content: center; height: 250px; }
+.ad-placeholder.tall { height: 600px; }
+
+/* Hot tags */
+.section__ht-flex { border-top: 1px solid #f2f2f2; border-bottom: 1px solid #f2f2f2; padding: 8px 0; margin-bottom: 14px; display: flex; align-items: center; gap: 16px; }
+.btn-nn { font-weight: 500; font-size: 14px; color: #222; border: 1px solid #f2f2f2; border-radius: 3px; padding: 5px 8px; white-space: nowrap; }
+.list-tag { display: flex; gap: 16px; overflow: hidden; }
+.list-tag .item { background: #f2f2f2; border-radius: 4px; padding: 4px 8px; font-size: 16px; color: #565656; white-space: nowrap; }
+
+/* News list */
+.section__mn-flex { display: flex; }
+.section__mn-main { flex: 1; }
+.news-row { border-top: 1px dashed #d9d9d9; padding: 16px 0; }
+.news-row .box-category-item { display: flex; gap: 16px; margin: 0; }
+.news-row .img-resize { width: 240px; flex-shrink: 0; }
+.section__mn-sub { width: 574px; padding-left: 19px; border-left: 1px solid #f2f2f2; margin-left: 20px; }
+
+/* Footer */
+.footer { padding: 40px 0; background: #fafafc; margin-top: 32px; }
+.footer__nav { padding-bottom: 24px; border-bottom: 2px solid #ed1c24; margin-bottom: 24px; }
+.footer__nav .menu-nav { overflow: auto; }
+.footer__nav .nav-link { margin-right: 9px; }
+.footer__middle-flex { display: flex; border-bottom: 1px dashed #e2e2e2; padding-bottom: 24px; margin-bottom: 24px; }
+.footer__logo { width: 292px; flex-shrink: 0; }
+.footer__logo .logo-text { color: #ed1c24; font-size: 32px; font-weight: 700; }
+.footer__m-content { display: flex; }
+.footer__m-content .box { width: 329px; margin-right: 45px; font-size: 13px; color: #565656; line-height: 20px; }
+.footer__coppy { font-size: 13px; color: #8f8f8f; }

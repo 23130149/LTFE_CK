@@ -1,4 +1,5 @@
 import { menu } from '../data/menu';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -13,12 +14,12 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <nav className="header__middle">
+            <nav className="header__middle" aria-label="Chuyên mục chính">
                 <div className="container">
                     <ul className="menu-nav">
-                        <li><a className="nav-link" href="/">🏠</a></li>
+                        <li><NavLink className="nav-link" to="/" end aria-label="Trang chủ">🏠</NavLink></li>
                         {menu.map((m) => (
-                            <li key={m.href}><a className="nav-link" href={m.href}>{m.title}</a></li>
+                            <li key={m.href}><NavLink className="nav-link" to={m.href}>{m.title}</NavLink></li>
                         ))}
                     </ul>
                 </div>

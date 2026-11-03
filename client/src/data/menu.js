@@ -1,3 +1,5 @@
+import { routes } from '../routing/routes';
+
 export const menu = [
     { title: 'Mới nhất', href: '/tin-moi-nhat' },
     { title: 'Xem nhiều', href: '/tin-xem-nhieu' },
@@ -12,7 +14,7 @@ export const menu = [
     { title: 'Văn hóa', href: '/van-hoa' },
     { title: 'Giải trí', href: '/giai-tri' },
     { title: 'Thể thao', href: '/the-thao' },
-    { title: 'Giáo dục', href: '/giao-duc' },
+    { title: 'Giáo dục', href: routes.education },
     { title: 'Nhà đất', href: '/nha-dat' },
     { title: 'Sức khỏe', href: '/suc-khoe' },
 ];

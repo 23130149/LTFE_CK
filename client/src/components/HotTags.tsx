@@ -1,4 +1,4 @@
-import { hotTags } from '../data/menu';
+import { hotTags } from '../data/menu'
 
 export default function HotTags() {
     return (
@@ -10,5 +10,5 @@ export default function HotTags() {
                 </div>
             </div>
         </div>
-    );
+    )
 }

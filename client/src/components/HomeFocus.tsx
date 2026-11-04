@@ -1,6 +1,13 @@
-import ArticleCard from './ArticleCard';
+import { Link } from 'react-router-dom'
+import ArticleCard from './ArticleCard'
+import type { Article } from '../types/Article'
 
-export default function HomeFocus({ articles, sideList }) {
+interface Props {
+    articles: Article[]
+    sideList: Article[]
+}
+
+export default function HomeFocus({ articles, sideList }: Props) {
     return (
         <section className="section__home-focus">
             <div className="container section__hf-flex">
@@ -10,7 +17,7 @@ export default function HomeFocus({ articles, sideList }) {
                     </div>
                     {sideList.map((a) => (
                         <div key={a.id} className="box-category-item side-item">
-                            <a href={`/bai/${a.id}`} className="box-category-link-title">{a.title}</a>
+                            <Link to={`/bai/${a.id}`} className="box-category-link-title">{a.title}</Link>
                         </div>
                     ))}
                 </div>
@@ -28,5 +35,5 @@ export default function HomeFocus({ articles, sideList }) {
                 </aside>
             </div>
         </section>
-    );
+    )
 }

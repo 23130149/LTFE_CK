@@ -1,4 +1,5 @@
-import { menu } from '../data/menu';
+import { Link } from 'react-router-dom'
+import { menu } from '../data/menu'
 
 export default function Footer() {
     return (
@@ -6,16 +7,16 @@ export default function Footer() {
             <div className="container">
                 <div className="footer__nav">
                     <ul className="menu-nav">
-                        <li><a className="nav-link" href="/">Trang chủ</a></li>
+                        <li><Link className="nav-link" to="/">Trang chủ</Link></li>
                         {menu.map((m) => (
-                            <li key={m.href}><a className="nav-link" href={m.href}>{m.title}</a></li>
+                            <li key={m.href}><Link className="nav-link" to={m.href}>{m.title}</Link></li>
                         ))}
                     </ul>
                 </div>
 
                 <div className="footer__middle-flex">
                     <div className="footer__logo">
-                        <a href="/" className="logo-text">TUỔI TRẺ</a>
+                        <Link to="/" className="logo-text">TUỔI TRẺ</Link>
                     </div>
                     <div className="footer__m-content">
                         <div className="box">
@@ -34,5 +35,5 @@ export default function Footer() {
                 <p className="footer__coppy">© Demo học tập, không phải trang chính thức của Báo Tuổi Trẻ.</p>
             </div>
         </footer>
-    );
+    )
 }

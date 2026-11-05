@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom'
-import { useAppSelector } from '../store/hooks'
-import { menu } from '../data/menu'
-import NewsList from '../components/NewsList'
+import { useAppSelector } from '../store/hooks.ts'
+import { menu } from '../data/menu.ts'
+import NewsList from '../components/NewsList.tsx'
+import NotFoundPage from './NotFoundPage.tsx'
 
 // Các mục menu không phải chuyên mục thật thì hiện tất cả bài
 const ALL_SLUGS = ['tin-moi-nhat', 'tin-xem-nhieu']
@@ -11,7 +12,7 @@ export default function Category() {
     const news = useAppSelector((state) => state.news)
 
     const item = menu.find((m) => m.href === `/${zone}`)
-    if (!item) return <h2 className="container">Chuyên mục không tồn tại!</h2>
+    if (!item) return <NotFoundPage embedded />
 
     const articles = ALL_SLUGS.includes(zone) ? news : news.filter((a) => a.zone === item.title)
 

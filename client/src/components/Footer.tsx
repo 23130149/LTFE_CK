@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { menu } from '../data/menu'
+import { Link, NavLink } from 'react-router-dom'
+import { menu } from '../data/menu.ts'
 
 export default function Footer() {
     return (
@@ -9,7 +9,7 @@ export default function Footer() {
                     <ul className="menu-nav">
                         <li><Link className="nav-link" to="/">Trang chủ</Link></li>
                         {menu.map((m) => (
-                            <li key={m.href}><Link className="nav-link" to={m.href}>{m.title}</Link></li>
+                            <li key={m.href}><NavLink className="nav-link" to={m.href}>{m.title}</NavLink></li>
                         ))}
                     </ul>
                 </div>

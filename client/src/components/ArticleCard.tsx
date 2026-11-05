@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { menu } from '../data/menu'
-import type { Article } from '../types/Article'
+import { menu } from '../data/menu.ts'
+import type { Article } from '../types/Article.ts'
 
 interface Props {
     article: Article

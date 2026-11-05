@@ -1,6 +1,6 @@
-import type { MenuItem } from '../types/Article';
+import type { NavigationItem } from '../types/navigation.ts';
 
-export const menu: MenuItem[] = [
+export const menu: NavigationItem[] = [
     { title: 'Mới nhất', href: '/tin-moi-nhat' },
     { title: 'Xem nhiều', href: '/tin-xem-nhieu' },
     { title: 'Video', href: '/video' },
@@ -14,7 +14,7 @@ export const menu: MenuItem[] = [
     { title: 'Văn hóa', href: '/van-hoa' },
     { title: 'Giải trí', href: '/giai-tri' },
     { title: 'Thể thao', href: '/the-thao' },
-    { title: 'Giáo dục', href: '/giao-duc' },
+    { title: 'Giáo dục', href: '/giao-duc.htm' },
     { title: 'Nhà đất', href: '/nha-dat' },
     { title: 'Sức khỏe', href: '/suc-khoe' },
 ];

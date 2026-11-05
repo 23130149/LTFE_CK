@@ -1,5 +1,5 @@
-import ArticleCard from './ArticleCard'
-import type { Article } from '../types/Article'
+import ArticleCard from './ArticleCard.tsx'
+import type { Article } from '../types/Article.ts'
 
 export default function NewsList({ articles }: { articles: Article[] }) {
     return (

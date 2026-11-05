@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { menu } from '../data/menu'
+import { Link, NavLink } from 'react-router-dom'
+import { menu } from '../data/menu.ts'
 
 export default function Header() {
     return (
@@ -14,12 +14,12 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <nav className="header__middle">
+            <nav className="header__middle" aria-label="Chuyên mục chính">
                 <div className="container">
                     <ul className="menu-nav">
-                        <li><Link className="nav-link" to="/">🏠</Link></li>
+                        <li><NavLink className="nav-link" to="/" end aria-label="Trang chủ">🏠</NavLink></li>
                         {menu.map((m) => (
-                            <li key={m.href}><Link className="nav-link" to={m.href}>{m.title}</Link></li>
+                            <li key={m.href}><NavLink className="nav-link" to={m.href}>{m.title}</NavLink></li>
                         ))}
                     </ul>
                 </div>

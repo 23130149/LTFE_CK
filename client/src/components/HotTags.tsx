@@ -1,4 +1,4 @@
-import { hotTags } from '../data/menu'
+import { hotTags } from '../data/menu.ts'
 
 export default function HotTags() {
     return (

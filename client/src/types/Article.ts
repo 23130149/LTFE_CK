@@ -7,7 +7,4 @@ export interface Article {
     image: string;
 }
 
-export interface MenuItem {
-    title: string;
-    href: string;
-}
+export type { NavigationItem as MenuItem } from './navigation.ts';

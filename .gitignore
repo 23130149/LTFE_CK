@@ -1,0 +1,53 @@
+# Keep shared IDE settings and frontend images visible despite local excludes.
+/.idea/
+!/client/public/images/
+!/client/public/images/**
+
+# Installed dependencies at any depth, including the leftover server install.
+node_modules/
+
+# Vite builds/caches and TypeScript incremental metadata.
+dist/
+dist-ssr/
+.vite/
+.vitest/
+*.tsbuildinfo
+
+# Generated test output; source tests, fixtures and curated evidence stay eligible.
+/client/test-results/
+/client/coverage/
+
+# Runtime/package-manager logs.
+logs/
+*.log
+npm-debug.log*
+
+# Personal JetBrains state; shared vcs/codeStyles/inspectionProfiles are not hidden.
+**/.idea/workspace.xml
+**/.idea/modules.xml
+**/.idea/shelf/
+**/.idea/httpRequests/
+**/.idea/queries/
+**/.idea/dataSources/
+**/.idea/dataSources.local.xml
+*.iml
+
+# OS metadata and editor temporary files.
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Environment secrets and private credentials; commit only sanitized examples.
+.env
+.env.*
+!.env.example
+*.key
+*.p12
+*.pfx
+*.private.pem
+*-private.pem
+id_rsa
+id_ed25519

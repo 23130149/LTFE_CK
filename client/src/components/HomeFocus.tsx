@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import ArticleCard from './ArticleCard'
-import type { Article } from '../types/Article'
+import ArticleCard from './ArticleCard.tsx'
+import type { Article } from '../types/Article.ts'
 
 interface Props {
     articles: Article[]

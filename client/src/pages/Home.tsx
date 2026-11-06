@@ -1,7 +1,7 @@
-import { useAppSelector } from '../store/hooks'
-import HomeFocus from '../components/HomeFocus'
-import HotTags from '../components/HotTags'
-import NewsList from '../components/NewsList'
+import { useAppSelector } from '../store/hooks.ts'
+import HomeFocus from '../components/HomeFocus.tsx'
+import HotTags from '../components/HotTags.tsx'
+import NewsList from '../components/NewsList.tsx'
 
 export default function Home() {
     const news = useAppSelector((state) => state.news)

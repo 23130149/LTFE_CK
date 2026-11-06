@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { Article } from '../../types/Article'
+import type { Article } from '../../types/Article.ts'
 
 const initialState: Article[] = []
 

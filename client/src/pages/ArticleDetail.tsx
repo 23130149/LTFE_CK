@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { useAppSelector } from '../store/hooks'
+import { useAppSelector } from '../store/hooks.ts'
 
 export default function ArticleDetail() {
     const { id } = useParams()

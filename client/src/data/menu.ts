@@ -14,7 +14,7 @@ export const menu: NavigationItem[] = [
     { title: 'Văn hóa', href: '/van-hoa' },
     { title: 'Giải trí', href: '/giai-tri' },
     { title: 'Thể thao', href: '/the-thao' },
-    { title: 'Giáo dục', href: '/giao-duc.htm' },
+    { title: 'Giáo dục', href: '/giao-duc' },
     { title: 'Nhà đất', href: '/nha-dat' },
     { title: 'Sức khỏe', href: '/suc-khoe' },
 ];

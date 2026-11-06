@@ -3,6 +3,6 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
     plugins: [react()],
-    server: { proxy: { '/api': 'http://localhost:4000' } },
+    server: { proxy: { '/api': { target: 'http://localhost:3001', rewrite: (path) => path.replace(/^\/api/, '') } } },
     test: { environment: 'jsdom', setupFiles: ['./src/test/setup.ts'], include: ['src/**/*.test.{ts,tsx}'] },
 })

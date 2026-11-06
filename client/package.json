@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fake-api": "json-server --watch fake-api/db.json --port 3001",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
@@ -21,18 +22,19 @@
     "react-router-dom": "^7.18.5"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^30.1.3",
+    "json-server": "^1.0.0-beta.15",
     "oxlint": "^1.89.0",
     "typescript": "^7.0.2",
     "vite": "^8.3.5",
-    "jsdom": "^30.1.3",
-    "vitest": "^5.1.0",
-    "@testing-library/react": "^16.3.3",
-    "@testing-library/user-event": "^14.6.8",
-    "@testing-library/jest-dom": "^7.0.1"
+    "vitest": "^5.1.0"
   },
   "_comment": "Fix: merged JSON fragments prevented npm from parsing; retain TypeScript/Redux and existing test dependencies."
 }

@@ -1,0 +1,388 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Quy hoạch mới mở rộng không gian phát triển vùng thủ đô",
+      "sapo": "Định hướng mới tập trung vào hạ tầng liên vùng và đô thị vệ tinh.",
+      "zone": "Thời sự",
+      "time": "07:00 01/11/2026",
+      "image": "https://picsum.photos/seed/news1/480/300"
+    },
+    {
+      "id": 2,
+      "title": "Chuyển đổi số giúp người dân tiết kiệm thời gian làm thủ tục",
+      "sapo": "Nhiều dịch vụ công đã được đưa lên nền tảng trực tuyến, rút ngắn thời gian chờ.",
+      "zone": "Thời sự",
+      "time": "08:13 02/11/2026",
+      "image": "https://picsum.photos/seed/news2/480/300"
+    },
+    {
+      "id": 3,
+      "title": "Quốc hội thảo luận nhiều chính sách quan trọng trong tuần này",
+      "sapo": "Các dự án luật về đất đai và đầu tư sẽ được xem xét ở phiên họp.",
+      "zone": "Thời sự",
+      "time": "09:26 03/11/2026",
+      "image": "https://picsum.photos/seed/news3/480/300"
+    },
+    {
+      "id": 4,
+      "title": "Các tỉnh chủ động ứng phó đợt mưa lớn diện rộng",
+      "sapo": "Lực lượng chức năng đã triển khai phương án sơ tán người dân ở vùng trũng.",
+      "zone": "Thời sự",
+      "time": "07:39 04/11/2026",
+      "image": "https://picsum.photos/seed/news4/480/300"
+    },
+    {
+      "id": 5,
+      "title": "Nhịp sống sôi động trở lại tại các trung tâm kinh tế lớn",
+      "sapo": "Thị trường lao động và tiêu dùng đều ghi nhận tín hiệu tích cực.",
+      "zone": "Thời sự",
+      "time": "08:52 05/11/2026",
+      "image": "https://picsum.photos/seed/news5/480/300"
+    },
+    {
+      "id": 6,
+      "title": "Những khu phố gìn giữ nét văn hóa trong lòng đô thị",
+      "sapo": "Từ phố cổ đến ngõ nhỏ, nhiều cộng đồng vẫn giữ những nếp sinh hoạt xưa.",
+      "zone": "Thời sự",
+      "time": "09:05 06/11/2026",
+      "image": "https://picsum.photos/seed/news6/480/300"
+    },
+    {
+      "id": 7,
+      "title": "Cải cách thủ tục hướng tới phục vụ người dân tốt hơn",
+      "sapo": "Bộ phận một cửa được nâng cấp để người dân nộp hồ sơ thuận tiện hơn.",
+      "zone": "Thời sự",
+      "time": "07:18 01/11/2026",
+      "image": "https://picsum.photos/seed/news7/480/300"
+    },
+    {
+      "id": 8,
+      "title": "Cuộc sống mới ở vùng đất mở rộng sau sáp nhập",
+      "sapo": "Người dân các xã mới hợp nhất kể về những thay đổi trong ba năm qua.",
+      "zone": "Thời sự",
+      "time": "08:31 02/11/2026",
+      "image": "https://picsum.photos/seed/news8/480/300"
+    },
+    {
+      "id": 9,
+      "title": "Dù thắng lớn lưỡng viện, Đảng Dân chủ sẽ gặp Ngài phủ quyết",
+      "sapo": "Việc kiểm soát cả Hạ viện và Thượng viện không đồng nghĩa mọi dự luật đều được thông qua.",
+      "zone": "Thế giới",
+      "time": "07:00 01/11/2026",
+      "image": "https://picsum.photos/seed/news9/480/300"
+    },
+    {
+      "id": 10,
+      "title": "Ông Trump: Bầu cử gian lận không thể tưởng tượng",
+      "sapo": "Tổng thống nhấn mạnh quan điểm về kết quả bầu cử giữa kỳ tại một cuộc họp báo.",
+      "zone": "Thế giới",
+      "time": "08:13 02/11/2026",
+      "image": "https://picsum.photos/seed/news10/480/300"
+    },
+    {
+      "id": 11,
+      "title": "Chứng khoán lao dốc hậu bầu cử giữa kỳ",
+      "sapo": "Thị trường Mỹ giảm mạnh trong phiên giao dịch đầu tuần sau kết quả bầu cử.",
+      "zone": "Thế giới",
+      "time": "09:26 03/11/2026",
+      "image": "https://picsum.photos/seed/news11/480/300"
+    },
+    {
+      "id": 12,
+      "title": "Tin tức thế giới 6-11: Ông Trump ký sắc lệnh bảo vệ Phòng Bầu dục",
+      "sapo": "Sắc lệnh mới được ký ngay sau khi tổng thống trở về từ chuyến công du.",
+      "zone": "Thế giới",
+      "time": "07:39 04/11/2026",
+      "image": "https://picsum.photos/seed/news12/480/300"
+    },
+    {
+      "id": 13,
+      "title": "Đài Mỹ: Ông Trump tính thay Bộ trưởng Chiến tranh Pete Hegseth",
+      "sapo": "Thông tin này được đưa ra khi giới chính trị đang bàn về nhân sự cấp cao.",
+      "zone": "Thế giới",
+      "time": "08:52 05/11/2026",
+      "image": "https://picsum.photos/seed/news13/480/300"
+    },
+    {
+      "id": 14,
+      "title": "Quan chức Iran thăm Nga, chuyển thông điệp của Lãnh tụ tối cao",
+      "sapo": "Chuyến thăm diễn ra giữa lúc hai bên thảo luận về các vấn đề khu vực.",
+      "zone": "Thế giới",
+      "time": "09:05 06/11/2026",
+      "image": "https://picsum.photos/seed/news14/480/300"
+    },
+    {
+      "id": 15,
+      "title": "Hậu bầu cử giữa kỳ Mỹ, giá dầu thế giới lao dốc",
+      "sapo": "Nguồn cung tăng và nhu cầu chậm lại khiến giá dầu giảm trong tuần.",
+      "zone": "Thế giới",
+      "time": "07:18 01/11/2026",
+      "image": "https://picsum.photos/seed/news15/480/300"
+    },
+    {
+      "id": 16,
+      "title": "Nga tấn công hạ tầng dược phẩm, người Ukraine phải lên hầm trú ẩn",
+      "sapo": "Các cuộc không kích khiến nhiều khu vực mất điện trong đêm.",
+      "zone": "Thế giới",
+      "time": "08:31 02/11/2026",
+      "image": "https://picsum.photos/seed/news16/480/300"
+    },
+    {
+      "id": 17,
+      "title": "Bán xe rồi vẫn nhận phạt nguội, chủ cũ cần làm gì?",
+      "sapo": "Xe đã bán nhưng chưa hoàn tất thủ tục thu hồi đăng ký, người đứng tên vẫn nhận thông báo.",
+      "zone": "Pháp luật",
+      "time": "07:00 01/11/2026",
+      "image": "https://picsum.photos/seed/news17/480/300"
+    },
+    {
+      "id": 18,
+      "title": "Khởi tố nữ tài xế chèn ép, tông đổ xe máy của phụ nữ mang thai",
+      "sapo": "Cơ quan công an đang làm rõ hành vi chèn ép trên phố.",
+      "zone": "Pháp luật",
+      "time": "08:13 02/11/2026",
+      "image": "https://picsum.photos/seed/news18/480/300"
+    },
+    {
+      "id": 19,
+      "title": "Luật sư nêu hoàn cảnh Shark Bình có 3 con nhỏ",
+      "sapo": "Luật sư đề nghị tòa xem xét điều kiện gia đình khi tuyên án.",
+      "zone": "Pháp luật",
+      "time": "09:26 03/11/2026",
+      "image": "https://picsum.photos/seed/news19/480/300"
+    },
+    {
+      "id": 20,
+      "title": "Vụ Mr Pips: Nhiều cặp vợ chồng, anh em ruột cùng tham gia",
+      "sapo": "Cơ quan điều tra đang xác minh các giao dịch liên quan đến nhóm này.",
+      "zone": "Pháp luật",
+      "time": "07:39 04/11/2026",
+      "image": "https://picsum.photos/seed/news20/480/300"
+    },
+    {
+      "id": 21,
+      "title": "Chia sẻ clip bắt ghen nhạy cảm trên ô tô, hai người ở Huế bị mời làm việc",
+      "sapo": "Công an đã làm việc với hai người liên quan đến đoạn clip lan truyền.",
+      "zone": "Pháp luật",
+      "time": "08:52 05/11/2026",
+      "image": "https://picsum.photos/seed/news21/480/300"
+    },
+    {
+      "id": 22,
+      "title": "Xử lý thiếu niên 13 tuổi lái xe lạng lách, đánh võng trên phố ở Nha Trang",
+      "sapo": "Gia đình được yêu cầu có mặt để làm việc với cơ quan chức năng.",
+      "zone": "Pháp luật",
+      "time": "09:05 06/11/2026",
+      "image": "https://picsum.photos/seed/news22/480/300"
+    },
+    {
+      "id": 23,
+      "title": "Mua hổ nấu cao, sắm Lexus trăm ngàn USD bằng tiền rút từ quỹ BMC",
+      "sapo": "Vụ án đang được điều tra mở rộng sang các giao dịch tài chính liên quan.",
+      "zone": "Pháp luật",
+      "time": "07:18 01/11/2026",
+      "image": "https://picsum.photos/seed/news23/480/300"
+    },
+    {
+      "id": 24,
+      "title": "Viện kiểm sát kiến nghị xử lý nhà hàng có dấu hiệu lấn chiếm vỉa hè",
+      "sapo": "Kiến nghị yêu cầu tháo dỡ phần công trình vi phạm trong thời hạn quy định.",
+      "zone": "Pháp luật",
+      "time": "08:31 02/11/2026",
+      "image": "https://picsum.photos/seed/news24/480/300"
+    },
+    {
+      "id": 25,
+      "title": "Giá cả đầu ngày: Bưởi da xanh, cá tra đồng loạt tăng giá",
+      "sapo": "Giá bưởi da xanh xuất khẩu đạt 45.000 đồng/kg, cá tra tăng theo.",
+      "zone": "Kinh doanh",
+      "time": "07:00 01/11/2026",
+      "image": "https://picsum.photos/seed/news25/480/300"
+    },
+    {
+      "id": 26,
+      "title": "Chính thức giảm 30% thuế cho doanh nghiệp, hộ kinh doanh",
+      "sapo": "Chính sách mới áp dụng cho kỳ tính thuế tiếp theo.",
+      "zone": "Kinh doanh",
+      "time": "08:13 02/11/2026",
+      "image": "https://picsum.photos/seed/news26/480/300"
+    },
+    {
+      "id": 27,
+      "title": "Tăng lương tối thiểu vùng từ 1-1-2027, cao nhất tăng tới 390.000 đồng",
+      "sapo": "Mức tăng cao nhất áp dụng cho vùng I, từ ngày 1-1-2027.",
+      "zone": "Kinh doanh",
+      "time": "09:26 03/11/2026",
+      "image": "https://picsum.photos/seed/news27/480/300"
+    },
+    {
+      "id": 28,
+      "title": "Thành phố mở thêm không gian công cộng ven sông",
+      "sapo": "Các tuyến đường đi bộ và công viên mới được quy hoạch dọc bờ sông.",
+      "zone": "Kinh doanh",
+      "time": "07:39 04/11/2026",
+      "image": "https://picsum.photos/seed/news28/480/300"
+    },
+    {
+      "id": 29,
+      "title": "Đề xuất những giải pháp mới để giảm ùn tắc vào giờ cao điểm",
+      "sapo": "Đề xuất tập trung vào phân luồng và mở rộng vận tải công cộng.",
+      "zone": "Kinh doanh",
+      "time": "08:52 05/11/2026",
+      "image": "https://picsum.photos/seed/news29/480/300"
+    },
+    {
+      "id": 30,
+      "title": "Cổ phiếu ngân hàng dẫn dắt thị trường phiên đầu tuần",
+      "sapo": "Thanh khoản tăng và nhiều mã vốn hóa lớn đồng loạt đi lên.",
+      "zone": "Kinh doanh",
+      "time": "09:05 06/11/2026",
+      "image": "https://picsum.photos/seed/news30/480/300"
+    },
+    {
+      "id": 31,
+      "title": "Doanh nghiệp xuất khẩu tìm hướng đi mới sau biến động thương mại",
+      "sapo": "Nhiều công ty đa dạng hóa thị trường để giảm rủi ro.",
+      "zone": "Kinh doanh",
+      "time": "07:18 01/11/2026",
+      "image": "https://picsum.photos/seed/news31/480/300"
+    },
+    {
+      "id": 32,
+      "title": "Đầu tư hạ tầng logistics: cơ hội cho doanh nghiệp địa phương",
+      "sapo": "Các cụm kho bãi mới được kỳ vọng kéo chi phí vận chuyển xuống.",
+      "zone": "Kinh doanh",
+      "time": "08:31 02/11/2026",
+      "image": "https://picsum.photos/seed/news32/480/300"
+    },
+    {
+      "id": 33,
+      "title": "Trí tuệ nhân tạo vào trường học: lợi ích và rủi ro",
+      "sapo": "Nhiều trường thử nghiệm công cụ AI hỗ trợ học tập và chấm bài.",
+      "zone": "Công nghệ",
+      "time": "07:00 01/11/2026",
+      "image": "https://picsum.photos/seed/news33/480/300"
+    },
+    {
+      "id": 34,
+      "title": "Ứng dụng định danh điện tử được nâng cấp",
+      "sapo": "Người dùng có thể xác thực nhanh hơn trên thiết bị di động.",
+      "zone": "Công nghệ",
+      "time": "08:13 02/11/2026",
+      "image": "https://picsum.photos/seed/news34/480/300"
+    },
+    {
+      "id": 35,
+      "title": "Startup Việt gọi vốn thành công vòng hạt giống",
+      "sapo": "Sản phẩm tập trung vào giải pháp thanh toán cho doanh nghiệp nhỏ.",
+      "zone": "Công nghệ",
+      "time": "09:26 03/11/2026",
+      "image": "https://picsum.photos/seed/news35/480/300"
+    },
+    {
+      "id": 36,
+      "title": "Thiết bị đeo thông minh tăng trưởng mạnh trong quý III",
+      "sapo": "Đồng hồ và vòng đeo tay chiếm phần lớn doanh số.",
+      "zone": "Công nghệ",
+      "time": "07:39 04/11/2026",
+      "image": "https://picsum.photos/seed/news36/480/300"
+    },
+    {
+      "id": 37,
+      "title": "Cảnh báo lừa đảo qua tin nhắn giả mạo ngân hàng",
+      "sapo": "Người dân nên kiểm tra kỹ đường dẫn trước khi nhập thông tin.",
+      "zone": "Công nghệ",
+      "time": "08:52 05/11/2026",
+      "image": "https://picsum.photos/seed/news37/480/300"
+    },
+    {
+      "id": 38,
+      "title": "Trung tâm dữ liệu mới được xây dựng tại miền Nam",
+      "sapo": "Dự án kỳ vọng hỗ trợ điện toán đám mây cho khu vực.",
+      "zone": "Công nghệ",
+      "time": "09:05 06/11/2026",
+      "image": "https://picsum.photos/seed/news38/480/300"
+    },
+    {
+      "id": 39,
+      "title": "Xe điện tự lái thử nghiệm trên một số tuyến đường",
+      "sapo": "Thử nghiệm diễn ra trong điều kiện kiểm soát và có người giám sát.",
+      "zone": "Công nghệ",
+      "time": "07:18 01/11/2026",
+      "image": "https://picsum.photos/seed/news39/480/300"
+    },
+    {
+      "id": 40,
+      "title": "Chuyển đổi số ngành y tế: khám chữa bệnh từ xa",
+      "sapo": "Hồ sơ bệnh án điện tử giúp bệnh nhân không phải mang giấy tờ.",
+      "zone": "Công nghệ",
+      "time": "08:31 02/11/2026",
+      "image": "https://picsum.photos/seed/news40/480/300"
+    },
+    {
+      "id": 41,
+      "title": "Đội tuyển Việt Nam chuẩn bị cho vòng loại mới",
+      "sapo": "Ban huấn luyện đã triệu tập danh sách cầu thủ cho đợt tập trung.",
+      "zone": "Thể thao",
+      "time": "07:00 01/11/2026",
+      "image": "https://picsum.photos/seed/news41/480/300"
+    },
+    {
+      "id": 42,
+      "title": "V-League: Vòng đấu cuối nóng bỏng ở nhóm trụ hạng",
+      "sapo": "Nhiều đội vẫn có cơ hội thay đổi số phận ở vòng đấu cuối.",
+      "zone": "Thể thao",
+      "time": "08:13 02/11/2026",
+      "image": "https://picsum.photos/seed/news42/480/300"
+    },
+    {
+      "id": 43,
+      "title": "Tay vợt trẻ lên hạng cao nhất sự nghiệp",
+      "sapo": "Kết quả giúp cô vào top 100 thế giới lần đầu tiên.",
+      "zone": "Thể thao",
+      "time": "09:26 03/11/2026",
+      "image": "https://picsum.photos/seed/news43/480/300"
+    },
+    {
+      "id": 44,
+      "title": "Giải chạy marathon thu hút hơn 10.000 người tham gia",
+      "sapo": "Đường chạy đi qua nhiều tuyến phố trung tâm.",
+      "zone": "Thể thao",
+      "time": "07:39 04/11/2026",
+      "image": "https://picsum.photos/seed/news44/480/300"
+    },
+    {
+      "id": 45,
+      "title": "Ngoại hạng Anh: Cuộc đua top 4 thêm kịch tính",
+      "sapo": "Các đội bóng liên tục đổi vị trí sau mỗi vòng đấu.",
+      "zone": "Thể thao",
+      "time": "08:52 05/11/2026",
+      "image": "https://picsum.photos/seed/news45/480/300"
+    },
+    {
+      "id": 46,
+      "title": "Cầu thủ trẻ tỏa sáng ở giải đấu quốc tế",
+      "sapo": "Thành tích của anh giúp tên tuổi được chú ý hơn.",
+      "zone": "Thể thao",
+      "time": "09:05 06/11/2026",
+      "image": "https://picsum.photos/seed/news46/480/300"
+    },
+    {
+      "id": 47,
+      "title": "Bóng rổ học đường: Phong trào lan rộng ở các trường",
+      "sapo": "Nhiều trường đầu tư sân chơi và huấn luyện viên chuyên nghiệp.",
+      "zone": "Thể thao",
+      "time": "07:18 01/11/2026",
+      "image": "https://picsum.photos/seed/news47/480/300"
+    },
+    {
+      "id": 48,
+      "title": "Lịch thi đấu cuối tuần: những trận đấu đáng chú ý",
+      "sapo": "Người hâm mộ có thể theo dõi nhiều trận hấp dẫn trong ngày.",
+      "zone": "Thể thao",
+      "time": "08:31 02/11/2026",
+      "image": "https://picsum.photos/seed/news48/480/300"
+    }
+  ]
+}

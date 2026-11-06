@@ -7,7 +7,6 @@ import Category from '../pages/Category.tsx'
 import ArticleDetail from '../pages/ArticleDetail.tsx'
 import { store } from '../store/Store.ts'
 import { load } from '../store/slice/NewsSlice.ts'
-// Fix: explicitly load the typed fixture instead of its duplicate JS module.
 import { mockNews } from '../data/mock.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'

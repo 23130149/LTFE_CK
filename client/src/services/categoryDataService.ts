@@ -15,10 +15,6 @@ function safeImageSource(value: unknown): string {
     catch { return ''; }
 }
 
-/** Validate unknown adapter output in O(n); duplicate IDs cannot become unstable React keys.
- * @param {unknown} value
- * @returns {CategoryArticle[]} A new array; original fixtures are never mutated.
- */
 export function normalizeCategoryArticles(value: unknown): CategoryArticle[] {
     if (!Array.isArray(value)) throw new CategoryDataError();
     const ids = new Set<string>();
@@ -45,5 +41,4 @@ export function createCategoryDataService(sources: CategorySources) {
     };
 }
 
-/** Local frontend fixture adapter. No request to /api/news or any backend. */
 export const loadCategoryNews = createCategoryDataService({ [educationConfig.slug]: async () => educationNews });

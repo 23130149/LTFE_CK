@@ -15,7 +15,6 @@ export const categoryMessages = Object.freeze({
     more: 'Xem thêm tin minh họa', end: 'Bạn đã xem hết tin minh họa trong chuyên mục.',
 });
 
-/** Only Education is configured today; subcategory labels are not fake links. */
 export const educationConfig = Object.freeze<CategoryConfig>({
     slug: 'giao-duc', path: routes.education, title: 'Giáo dục',
     pageTitle: 'Giáo dục | Tuổi Trẻ — Demo học tập',

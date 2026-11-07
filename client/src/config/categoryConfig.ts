@@ -15,6 +15,23 @@ export const categoryMessages = Object.freeze({
     more: 'Xem thêm tin minh họa', end: 'Bạn đã xem hết tin minh họa trong chuyên mục.',
 });
 
+export const realEstateConfig = Object.freeze<CategoryConfig>({
+    slug: 'nha-dat', path: routes.realEstate, title: 'Nhà đất',
+    pageTitle: 'Nhà đất | Tuổi Trẻ — Demo học tập',
+    description: 'Thị trường, chính sách và những câu chuyện về chốn an cư.',
+    navigationLabel: 'Các nhóm nội dung Nhà đất',
+    navigationNote: 'Chọn một mục để xem các bài viết cùng chủ đề.',
+    subcategories: ['Hỏi đáp', 'Thị trường', 'Chính sách', 'Dự án'],
+    filterSections: true, featuredLayout: 'editorial',
+    featuredCount: 4, pageSize: 6, listTitle: 'Tin nhà đất',
+    demoDescription: 'Nội dung, ngày đăng và hình minh họa được biên soạn cho đồ án; không phải tin thời sự, tư vấn pháp lý hay thông tin chào bán dự án.',
+    sidebarEyebrow: 'ĐỌC CÙNG CHỦ ĐỀ',
+    sidebarTitle: 'Nhà đất đáng chú ý',
+    sidebarDescription: 'Thêm góc nhìn về nhà ở, quy hoạch và không gian sống.',
+    guides: [],
+    sidebarNote: 'Bài viết và hình minh họa thuộc bản demo học tập.',
+});
+
 export const educationConfig = Object.freeze<CategoryConfig>({
     slug: 'giao-duc', path: routes.education, title: 'Giáo dục',
     pageTitle: 'Giáo dục | Tuổi Trẻ — Demo học tập',

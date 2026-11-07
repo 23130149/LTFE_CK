@@ -10,6 +10,8 @@ export interface CategoryArticle {
     section: string;
     publishedAt: string;
     image: CategoryImageData;
+    path?: string;
+    content?: string[];
 }
 
 export interface CategoryConfig {
@@ -28,6 +30,10 @@ export interface CategoryConfig {
     readonly sidebarDescription: string;
     readonly guides: readonly { title: string; description: string }[];
     readonly sidebarNote: string;
+    readonly filterSections?: boolean;
+    readonly demoDescription?: string;
+    readonly sidebarEyebrow?: string;
+    readonly featuredLayout?: 'editorial';
 }
 
 export interface CategoryLoadOptions {

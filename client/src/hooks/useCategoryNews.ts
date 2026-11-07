@@ -1,36 +1,31 @@
-import { useCallback, useEffect, useState } from 'react'
-import type { CategoryArticle, CategoryLoader, CategoryLoadState } from '../types/category.ts'
-import { categoryMessages } from '../config/categoryConfig.ts'
+import { useEffect, useState } from 'react';
+import { categoryMessages } from '../config/categoryConfig.ts';
+import { CategoryDataError, normalizeCategoryArticles } from '../services/categoryDataService.ts';
+import type { CategoryLoader, CategoryLoadState } from '../types/category.ts';
 
-const LOADING: CategoryLoadState = { status: 'loading', articles: [], error: '' }
+type RequestSnapshot = CategoryLoadState & { slug?: string; loader?: CategoryLoader; attempt?: number };
 
 export function useCategoryNews(slug: string, loader: CategoryLoader) {
-    const [attempt, setAttempt] = useState(0)
-    // Mỗi lần đổi chuyên mục hoặc bấm thử lại sẽ có một key mới, nên không cần setState đồng bộ trong effect
-    const key = `${slug}:${attempt}`
-    const [result, setResult] = useState<{ key: string; state: CategoryLoadState } | null>(null)
-
+    const [attempt, setAttempt] = useState(0);
+    const [state, setState] = useState<RequestSnapshot>({ status: 'loading', articles: [], error: '' });
     useEffect(() => {
-        const controller = new AbortController()
-        loader(slug, { signal: controller.signal })
-            .then((data) => {
-                setResult({ key, state: { status: 'ready', articles: data as CategoryArticle[], error: '' } })
-            })
-            .catch((err: unknown) => {
-                if (controller.signal.aborted) return
-                setResult({
-                    key,
-                    state: {
-                        status: 'error',
-                        articles: [],
-                        error: err instanceof Error ? err.message : categoryMessages.errorDescription,
-                    },
-                })
-            })
-        return () => controller.abort()
-    }, [slug, loader, attempt, key])
-
-    const state = result?.key === key ? result.state : LOADING
-    const retry = useCallback(() => setAttempt((n) => n + 1), [])
-    return { status: state.status, articles: state.articles, error: state.error, retry }
+        const controller = new AbortController();
+        async function load() {
+            try {
+                const articles = normalizeCategoryArticles(await loader(slug, { signal: controller.signal }));
+                if (!controller.signal.aborted) setState({ slug, loader, attempt, status: 'ready', articles, error: '' });
+            } catch (error) {
+                if (controller.signal.aborted) return;
+                const cancelled = typeof error === 'object' && error !== null && 'name' in error && error.name === 'AbortError';
+                const message = cancelled ? categoryMessages.cancelled
+                    : error instanceof CategoryDataError ? error.message : categoryMessages.errorDescription;
+                setState({ slug, loader, attempt, status: 'error', articles: [], error: message });
+            }
+        }
+        load();
+        return () => controller.abort();
+    }, [slug, loader, attempt]);
+    const currentState: CategoryLoadState = state.slug === slug && state.loader === loader && state.attempt === attempt
+        ? state : { status: 'loading', articles: [], error: '' };
+    return { ...currentState, retry: () => setAttempt((value) => value + 1) };
 }

@@ -7,24 +7,17 @@ import Category from '../pages/Category.tsx'
 import ArticleDetail from '../pages/ArticleDetail.tsx'
 import { store } from '../store/Store.ts'
 import { load } from '../store/slice/NewsSlice.ts'
-import { normalizeArticles } from '../services/articleDataService.ts'
-// Fix: explicitly load the typed fixture instead of its duplicate JS module.
 import { mockNews } from '../data/mock.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
 import { educationConfig } from '../config/categoryConfig.ts'
 import { routes } from '../routing/routes.ts'
 
-// Lấy tin từ fake API (json-server, xem fake-api/). Nếu chưa bật fake API thì dùng mock tĩnh.
-const newsLoader = async () => {
-    try {
-        const res = await fetch('/api/news')
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        store.dispatch(load(normalizeArticles(await res.json())))
-    } catch (err) {
-        console.warn('Không gọi được fake API, dùng dữ liệu mock:', err)
-        store.dispatch(load(mockNews))
-    }
+// Giống productsLoader của lab 5: nạp dữ liệu vào Redux trước khi render,
+// để mở thẳng /bai/5 (F5, dán link) vẫn có dữ liệu.
+// Sau này đổi sang fetch('/api/news') thì chỉ sửa đúng hàm này.
+const newsLoader = () => {
+    store.dispatch(load(mockNews))
     return null
 }
 

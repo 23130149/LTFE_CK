@@ -12,7 +12,9 @@ import { loadCategoryNews } from '../services/categoryDataService.ts';
 
 export default function CategoryPage({ config, loader = loadCategoryNews }: { config: CategoryConfig; loader?: CategoryLoader }) {
     const { status, articles, error, retry } = useCategoryNews(config.slug, loader);
-    const [visibleCount, setVisibleCount] = useState(config.pageSize);
+    const featuredCount = config.featuredCount ?? 4;
+    const pageSize = config.pageSize ?? 6;
+    const [visibleCount, setVisibleCount] = useState(pageSize);
     useEffect(() => {
         const previousTitle = document.title;
         document.title = config.pageTitle;
@@ -23,8 +25,8 @@ export default function CategoryPage({ config, loader = loadCategoryNews }: { co
         <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{categoryMessages.demoDescription}</p></div>
         {status !== 'ready' || articles.length === 0 ? <CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={retry} /> : <div className="category-layout">
             <div className="category-layout__main">
-                <FeaturedArticle articles={articles.slice(0, config.featuredCount)} />
-                <CategoryNewsList articles={articles.slice(config.featuredCount)} config={config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => count + config.pageSize)} />
+                <FeaturedArticle articles={articles.slice(0, featuredCount)} />
+                <CategoryNewsList articles={articles.slice(featuredCount)} config={config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => count + pageSize)} />
             </div>
             <CategorySidebar config={config} />
         </div>}

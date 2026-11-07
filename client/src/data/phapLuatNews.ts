@@ -1,0 +1,18 @@
+import type { CategoryArticle } from '../../../src/types/category.ts';
+
+const img = (seed: string) => ({ src: `https://picsum.photos/seed/${seed}/720/450`, alt: 'Ảnh minh họa tin pháp luật' });
+
+export const phapLuatNews: CategoryArticle[] = [
+    { id: 'pl-01', title: 'Từ ngày 01/12, một số quy định mới về hợp đồng lao động có hiệu lực', summary: 'Người lao động và doanh nghiệp cần rà soát điều khoản thời hạn, thử việc và các quyền lợi đi kèm.', section: 'Pháp lý', publishedAt: '2026-11-06T18:10:00+07:00', image: img('pl01') },
+    { id: 'pl-02', title: 'Phiên tòa xét xử vụ tranh chấp đất đai kéo dài nhiều năm', summary: 'Hội đồng xét xử yêu cầu bổ sung chứng cứ về quá trình sử dụng đất và giao dịch liên quan.', section: 'Chuyện pháp đình', publishedAt: '2026-11-06T15:35:00+07:00', image: img('pl02') },
+    { id: 'pl-03', title: 'Tư vấn: thủ tục khai nhận di sản khi người thừa kế ở nước ngoài', summary: 'Cần chuẩn bị giấy tờ hợp lệ, công chứng và hợp pháp hóa lãnh sự theo quy định hiện hành.', section: 'Tư vấn', publishedAt: '2026-11-06T12:00:00+07:00', image: img('pl03') },
+    { id: 'pl-04', title: 'Cơ quan chức năng khuyến cáo người dân cảnh giác với đường dây cho vay trên mạng', summary: 'Các hình thức đòi nợ gây áp lực tinh thần và thu thập trái phép thông tin cá nhân đang gia tăng.', section: 'Pháp lý', publishedAt: '2026-11-06T09:20:00+07:00', image: img('pl04') },
+    { id: 'pl-05', title: 'Chuyện pháp đình: lời khai mâu thuẫn và hành trình tìm lại sự thật', summary: 'Quá trình điều tra phải đối chiếu nhiều nguồn chứng cứ để làm rõ diễn biến của vụ việc.', section: 'Chuyện pháp đình', publishedAt: '2026-11-05T16:50:00+07:00', image: img('pl05') },
+    { id: 'pl-06', title: 'Tư vấn: quyền của người mua nhà khi chủ đầu tư chậm bàn giao', summary: 'Người mua có thể yêu cầu thương lượng, gia hạn hoặc chấm dứt hợp đồng theo các điều kiện đã thỏa thuận.', section: 'Tư vấn', publishedAt: '2026-11-05T13:40:00+07:00', image: img('pl06') },
+    { id: 'pl-07', title: 'Dự thảo sửa đổi luật giao thông đường bộ nhận nhiều góp ý', summary: 'Ý kiến tập trung vào mức xử phạt, trách nhiệm của chủ phương tiện và việc ứng dụng công nghệ giám sát.', section: 'Pháp lý', publishedAt: '2026-11-05T10:00:00+07:00', image: img('pl07') },
+    { id: 'pl-08', title: 'Tư vấn: cách lập di chúc hợp pháp để tránh tranh chấp sau này', summary: 'Di chúc cần có chữ ký, ngày tháng rõ ràng và nên được công chứng để có giá trị pháp lý cao hơn.', section: 'Tư vấn', publishedAt: '2026-11-04T16:15:00+07:00', image: img('pl08') },
+    { id: 'pl-09', title: 'Chuyện pháp đình: tranh chấp hợp đồng hợp tác kinh doanh giữa các cổ đông', summary: 'Tòa án xem xét điều khoản thỏa thuận, nghĩa vụ góp vốn và trách nhiệm của từng bên.', section: 'Chuyện pháp đình', publishedAt: '2026-11-04T11:05:00+07:00', image: img('pl09') },
+    { id: 'pl-10', title: 'Hướng dẫn mới về xử lý hành chính trong lĩnh vực bảo vệ môi trường', summary: 'Văn bản làm rõ mức phạt, thẩm quyền xử lý và biện pháp khắc phục hậu quả đối với từng hành vi.', section: 'Pháp lý', publishedAt: '2026-11-04T08:30:00+07:00', image: img('pl10') },
+    { id: 'pl-11', title: 'Tư vấn: thủ tục đăng ký kết hôn có yếu tố nước ngoài', summary: 'Hồ sơ cần đủ giấy tờ tùy thân, xác nhận tình trạng hôn nhân và được dịch thuật, chứng thực đúng quy định.', section: 'Tư vấn', publishedAt: '2026-11-03T19:45:00+07:00', image: img('pl11') },
+    { id: 'pl-12', title: 'Hội thảo về bảo vệ dữ liệu cá nhân trong thời đại số', summary: 'Các chuyên gia trao đổi về trách nhiệm của doanh nghiệp và quyền kiểm soát thông tin của người dùng.', section: 'Pháp lý', publishedAt: '2026-11-03T14:00:00+07:00', image: img('pl12') },
+];

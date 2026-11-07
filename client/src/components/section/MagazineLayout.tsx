@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import type { Article } from '../../types/Article.ts'
 import Thumb from './Thumb.tsx'
 
-// Bố cục Thế giới / Pháp luật: bài lớn cạnh chữ, hàng 3 thẻ dưới, cột phải có bài đầu và danh sách
 export default function MagazineLayout({ articles }: { articles: Article[] }) {
     const [hero, sideLead, ...rest] = articles
     const cards = rest.slice(0, 3)

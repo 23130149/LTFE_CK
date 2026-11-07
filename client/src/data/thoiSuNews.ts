@@ -1,0 +1,18 @@
+import type { CategoryArticle } from '../../../src/types/category.ts';
+
+const img = (seed: string) => ({ src: `https://picsum.photos/seed/${seed}/720/450`, alt: 'Ảnh minh họa tin thời sự' });
+
+export const thoiSuNews: CategoryArticle[] = [
+    { id: 'ts-01', title: 'Nhiều địa phương rà soát các điểm nóng ùn tắc trước cao điểm cuối năm', summary: 'Các cơ quan chức năng khảo sát thực tế và đề xuất điều chỉnh tổ chức giao thông tại những nút giao đông đúc.', section: 'Xã hội', publishedAt: '2026-11-06T18:30:00+07:00', image: img('ts01') },
+    { id: 'ts-02', title: 'Kỳ họp cuối năm tập trung thảo luận các dự án hạ tầng trọng điểm', summary: 'Đại biểu góp ý về tiến độ, nguồn vốn và cơ chế giám sát đối với những công trình được ưu tiên.', section: 'Nổi bật', publishedAt: '2026-11-06T16:00:00+07:00', image: img('ts02') },
+    { id: 'ts-03', title: 'Người dân được hướng dẫn đăng ký dịch vụ công trực tuyến ngay tại xã phường', summary: 'Điểm hỗ trợ được bố trí tại trụ sở để những người chưa quen thao tác số vẫn hoàn thành thủ tục.', section: 'Xã hội', publishedAt: '2026-11-06T14:20:00+07:00', image: img('ts03') },
+    { id: 'ts-04', title: 'Phóng sự: những người giữ nhịp cho khu chợ đêm ven sông', summary: 'Từ bốn giờ chiều đến nửa đêm, các tiểu thương và công nhân vệ sinh cùng làm nên một ngày buôn bán nhộn nhịp.', section: 'Phóng sự', publishedAt: '2026-11-06T11:45:00+07:00', image: img('ts04') },
+    { id: 'ts-05', title: 'Dự báo thời tiết tuần tới: không khí lạnh tăng cường ở miền Bắc', summary: 'Nhiệt độ có thể giảm mạnh vào buổi sáng, người dân cần chú ý giữ ấm cho trẻ nhỏ và người cao tuổi.', section: 'Nổi bật', publishedAt: '2026-11-06T09:10:00+07:00', image: img('ts05') },
+    { id: 'ts-06', title: 'Tăng cường tuyên truyền phòng chống đuối nước cho học sinh trước mùa hè', summary: 'Các trường phối hợp với lực lượng địa phương tổ chức buổi học bơi an toàn và kỹ năng cứu hộ cơ bản.', section: 'Xã hội', publishedAt: '2026-11-05T17:05:00+07:00', image: img('ts06') },
+    { id: 'ts-07', title: 'Hội nghị trực tuyến đánh giá kết quả cải cách hành chính quý III', summary: 'Các địa phương báo cáo số hồ sơ được xử lý đúng hạn và những khó khăn còn tồn tại trong quá trình triển khai.', section: 'Nổi bật', publishedAt: '2026-11-05T15:30:00+07:00', image: img('ts07') },
+    { id: 'ts-08', title: 'Phóng sự: một ngôi trường vùng cao và giấc mơ có chỗ học cho mọi em', summary: 'Thầy cô và phụ huynh cùng góp công sửa lại lớp học, mong các em có không gian học tập ấm áp hơn.', section: 'Phóng sự', publishedAt: '2026-11-05T10:15:00+07:00', image: img('ts08') },
+    { id: 'ts-09', title: 'Cảnh báo lừa đảo qua tin nhắn mạo danh cơ quan nhà nước', summary: 'Người dân được khuyến cáo không cung cấp mã xác thực hay thông tin tài khoản khi chưa kiểm chứng.', section: 'Xã hội', publishedAt: '2026-11-05T08:40:00+07:00', image: img('ts09') },
+    { id: 'ts-10', title: 'Thành phố thí điểm mô hình thu gom rác tại nguồn ở khu dân cư', summary: 'Mỗi hộ được phát hai thùng phân loại, lịch thu gom được điều chỉnh để phù hợp với thói quen sinh hoạt.', section: 'Xã hội', publishedAt: '2026-11-04T19:00:00+07:00', image: img('ts10') },
+    { id: 'ts-11', title: 'Chuyên gia góp ý về việc số hóa hồ sơ đất đai ở cấp cơ sở', summary: 'Ý kiến nhấn mạnh cần đồng bộ dữ liệu giữa các cấp để người dân không phải nộp lại giấy tờ nhiều lần.', section: 'Nổi bật', publishedAt: '2026-11-04T15:20:00+07:00', image: img('ts11') },
+    { id: 'ts-12', title: 'Lễ ra quân chiến dịch làm sạch bờ biển đầu mùa đông', summary: 'Hàng nghìn tình nguyện viên tham gia nhặt rác, khảo sát môi trường và trao đổi kiến thức bảo vệ biển.', section: 'Phóng sự', publishedAt: '2026-11-04T08:00:00+07:00', image: img('ts12') },
+];

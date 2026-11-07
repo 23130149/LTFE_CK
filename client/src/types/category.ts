@@ -12,22 +12,25 @@ export interface CategoryArticle {
     image: CategoryImageData;
 }
 
+export type CategoryLayout = 'classic' | 'thoi-su' | 'magazine';
+
 export interface CategoryConfig {
     readonly slug: string;
     readonly path: string;
     readonly title: string;
     readonly pageTitle: string;
     readonly description: string;
-    readonly navigationLabel: string;
-    readonly navigationNote: string;
+    readonly layout: CategoryLayout;
     readonly subcategories: readonly string[];
-    readonly featuredCount: number;
-    readonly pageSize: number;
-    readonly listTitle: string;
-    readonly sidebarTitle: string;
-    readonly sidebarDescription: string;
-    readonly guides: readonly { title: string; description: string }[];
-    readonly sidebarNote: string;
+    readonly navigationLabel?: string;
+    readonly navigationNote?: string;
+    readonly featuredCount?: number;
+    readonly pageSize?: number;
+    readonly listTitle?: string;
+    readonly sidebarTitle?: string;
+    readonly sidebarDescription?: string;
+    readonly guides?: readonly { title: string; description: string }[];
+    readonly sidebarNote?: string;
 }
 
 export interface CategoryLoadOptions {

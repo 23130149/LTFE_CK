@@ -4,7 +4,6 @@ import Thumb from './Thumb.tsx'
 
 const pad = (n: number) => String(n).padStart(2, '0')
 
-// Bố cục Thời sự: tiêu điểm lớn, cột phụ, hàng "Đáng chú ý", danh sách "Mới nhất", cột "Tin nổi bật"
 export default function ThoiSuLayout({ articles, hot }: { articles: Article[]; hot: Article[] }) {
     const [hero, ...rest] = articles
     const topRight = rest.slice(0, 2)

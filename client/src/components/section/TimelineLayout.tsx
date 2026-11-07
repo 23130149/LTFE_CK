@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import type { Article } from '../../types/Article.ts'
 import Thumb from './Thumb.tsx'
 
-// Bố cục Tin mới nhất: danh sách dạng dòng, thời gian bên trái, ảnh và chữ bên phải
 export default function TimelineLayout({ articles }: { articles: Article[] }) {
     return (
         <section className="tl-list">

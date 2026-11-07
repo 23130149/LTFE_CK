@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
-import type { Article } from '../../types/Article.ts'
+import type { SectionArticle } from '../../types/Article.ts'
+import ArticleLink from '../../components/section/ArticleLink.tsx'
 import Thumb from './Thumb.tsx'
 
 const pad = (n: number) => String(n).padStart(2, '0')
 
-export default function ThoiSuLayout({ articles, hot }: { articles: Article[]; hot: Article[] }) {
+export default function ThoiSuLayout({ articles, hot }: { articles: SectionArticle[]; hot: SectionArticle[] }) {
     const [hero, ...rest] = articles
     const topRight = rest.slice(0, 2)
     const ranked = rest.slice(2, 4)
@@ -15,18 +16,18 @@ export default function ThoiSuLayout({ articles, hot }: { articles: Article[]; h
         <>
             <section className="sec-top">
                 <article className="sec-hero">
-                    <Link to={`/bai/${hero.id}`}><Thumb article={hero} className="sec-hero__img" /></Link>
+                    <ArticleLink article={hero}><Thumb article={hero} className="sec-hero__img" /></ArticleLink>
                     <span className="sec-kicker">Tiêu điểm</span>
-                    <h2><Link to={`/bai/${hero.id}`}>{hero.title}</Link></h2>
+                    <h2><ArticleLink article={hero}>{hero.title}</ArticleLink></h2>
                     {hero.sapo && <p>{hero.sapo}</p>}
                 </article>
 
                 <aside className="sec-top__side">
                     {topRight.map((a) => (
                         <article key={a.id} className="sec-mini">
-                            <Link to={`/bai/${a.id}`}><Thumb article={a} /></Link>
+                            <ArticleLink article={a}><Thumb article={a} /></ArticleLink>
                             <div>
-                                <h3><Link to={`/bai/${a.id}`}>{a.title}</Link></h3>
+                                <h3><ArticleLink article={a}>{a.title}</ArticleLink></h3>
                                 <span className="sec-time">{a.time}</span>
                             </div>
                         </article>
@@ -35,7 +36,7 @@ export default function ThoiSuLayout({ articles, hot }: { articles: Article[]; h
                         {ranked.map((a, i) => (
                             <li key={a.id}>
                                 <span>{pad(i + 1)}</span>
-                                <Link to={`/bai/${a.id}`}>{a.title}</Link>
+                                <ArticleLink article={a}>{a.title}</ArticleLink>
                             </li>
                         ))}
                     </ol>
@@ -54,9 +55,9 @@ export default function ThoiSuLayout({ articles, hot }: { articles: Article[]; h
                     <div className="sec-cards">
                         {notable.map((a) => (
                             <article key={a.id} className="sec-card">
-                                <Link to={`/bai/${a.id}`}><Thumb article={a} /></Link>
+                                <ArticleLink article={a}><Thumb article={a} /></ArticleLink>
                                 <span className="sec-kicker">{a.zone}</span>
-                                <h3><Link to={`/bai/${a.id}`}>{a.title}</Link></h3>
+                                <h3><ArticleLink article={a}>{a.title}</ArticleLink></h3>
                                 <span className="sec-time">{a.time}</span>
                             </article>
                         ))}
@@ -76,10 +77,10 @@ export default function ThoiSuLayout({ articles, hot }: { articles: Article[]; h
                     {latest.length === 0 && <p>Chưa có thêm bài viết.</p>}
                     {latest.map((a) => (
                         <article key={a.id} className="sec-row">
-                            <Link to={`/bai/${a.id}`}><Thumb article={a} /></Link>
+                            <ArticleLink article={a}><Thumb article={a} /></ArticleLink>
                             <div>
                                 <span className="sec-kicker">{a.zone}</span>
-                                <h3><Link to={`/bai/${a.id}`}>{a.title}</Link></h3>
+                                <h3><ArticleLink article={a}>{a.title}</ArticleLink></h3>
                                 {a.sapo && <p>{a.sapo}</p>}
                                 <span className="sec-time">{a.time}</span>
                             </div>
@@ -101,7 +102,7 @@ export default function ThoiSuLayout({ articles, hot }: { articles: Article[]; h
                         {hot.map((a, i) => (
                             <li key={a.id}>
                                 <span>{pad(i + 1)}</span>
-                                <Link to={`/bai/${a.id}`}>{a.title}</Link>
+                                <ArticleLink article={a}>{a.title}</ArticleLink>
                             </li>
                         ))}
                     </ol>

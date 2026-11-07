@@ -7,6 +7,7 @@ import NewsList from '../components/NewsList.tsx'
 import SectionHeader from '../components/section/SectionHeader.tsx'
 import ThoiSuLayout from '../components/section/ThoiSuLayout.tsx'
 import MagazineLayout from '../components/section/MagazineLayout.tsx'
+import type { Article } from '../types/Article.ts'
 import '../styles/section.css'
 
 // Các mục menu không phải chuyên mục thật thì hiện tất cả bài
@@ -19,6 +20,8 @@ const PAGE_CONFIG: Record<string, { layout: Layout; tabs: string[] }> = {
     'the-gioi': { layout: 'magazine', tabs: ['Bình luận', 'Kiều bào', 'Muôn màu', 'Hồ sơ'] },
     'phap-luat': { layout: 'magazine', tabs: ['Chuyện pháp đình', 'Tư vấn', 'Pháp lý'] },
 }
+
+const withHref = (list: Article[]) => list.map((a) => ({ ...a, href: `/bai/${a.id}` }))
 
 // Tính một lần khi tải module, tránh gọi hàm không thuần trong lúc render
 const TODAY = new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
@@ -75,8 +78,8 @@ export default function Category() {
                 <SectionHeader title={item.title} tabs={config.tabs} active={tab} onTab={setTab} />
             )}
 
-            {isThoiSu && <ThoiSuLayout articles={pool} hot={news.slice(0, 4)} />}
-            {!isThoiSu && <MagazineLayout articles={pool} />}
+            {isThoiSu && <ThoiSuLayout articles={withHref(pool)} hot={withHref(news.slice(0, 4))} />}
+            {!isThoiSu && <MagazineLayout articles={withHref(pool)} />}
         </div>
     )
 }

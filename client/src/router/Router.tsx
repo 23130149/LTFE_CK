@@ -10,7 +10,8 @@ import { load } from '../store/slice/NewsSlice.ts'
 import { mockNews } from '../data/mock.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
-import { educationConfig } from '../config/categoryConfig.ts'
+import { educationConfig, realEstateConfig } from '../config/categoryConfig.ts'
+import CategoryArticleDetail from '../pages/CategoryArticleDetail.tsx'
 import { routes } from '../routing/routes.ts'
 
 // Giống productsLoader của lab 5: nạp dữ liệu vào Redux trước khi render,
@@ -32,6 +33,8 @@ export const appRoutes: RouteObject[] = [
             { path: 'bai/:id', element: <ArticleDetail /> },
             { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} /> },
             { path: routes.educationLegacy.slice(1), element: <Navigate to={routes.education} replace /> },
+            { path: routes.realEstate.slice(1), element: <CategoryPage config={realEstateConfig} /> },
+            { path: `${routes.realEstate.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={realEstateConfig} /> },
             { path: ':zone', element: <Category /> },
             { path: '*', element: <NotFoundPage embedded /> },
         ],

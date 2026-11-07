@@ -5,12 +5,12 @@ import { routes } from '../routing/routes.ts'
 
 export default function Layout() {
     const { pathname } = useLocation()
-    const isEducation = pathname === routes.education
+    const hasCategoryMain = pathname === routes.education || pathname === routes.realEstate || pathname.startsWith(`${routes.realEstate}/bai/`)
     return (
         <div className={`site-shell${pathname === '/' ? '' : ' site-shell--category'}`}>
             <a className="skip-link" href="#main-content">Đến nội dung chính</a>
             <Header />
-            {isEducation ? <Outlet /> : <main className="main" id="main-content">
+            {hasCategoryMain ? <Outlet /> : <main className="main" id="main-content">
                 <Outlet />
             </main>}
             <Footer />

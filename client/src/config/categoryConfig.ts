@@ -19,6 +19,7 @@ export const educationConfig = Object.freeze<CategoryConfig>({
     slug: 'giao-duc', path: routes.education, title: 'Giáo dục',
     pageTitle: 'Giáo dục | Tuổi Trẻ — Demo học tập',
     description: 'Góc nhìn về học tập, nhà trường và hành trình trưởng thành.',
+    layout: 'classic',
     navigationLabel: 'Các nhóm nội dung Giáo dục',
     navigationNote: 'Chuyên mục con đang ở chế độ giới thiệu.',
     subcategories: ['Tuyển sinh', 'Nhịp sống học đường', 'Chân dung nhà giáo', 'Du học', 'Câu chuyện giáo dục'],
@@ -31,4 +32,28 @@ export const educationConfig = Object.freeze<CategoryConfig>({
         { title: 'Kiểm chứng thông tin tuyển sinh', description: 'Luôn đối chiếu với thông báo chính thức của cơ sở đào tạo.' },
     ],
     sidebarNote: 'Gợi ý minh họa, không phải thông báo tuyển sinh chính thức.',
+});
+
+export const thoiSuConfig = Object.freeze<CategoryConfig>({
+    slug: 'thoi-su', path: routes.thoiSu, title: 'Thời sự',
+    pageTitle: 'Thời sự | Tuổi Trẻ — Demo học tập',
+    description: 'Dòng chảy tin tức thời sự, cập nhật liên tục.',
+    layout: 'thoi-su',
+    subcategories: ['Mới nhất', 'Nổi bật', 'Xã hội', 'Phóng sự'],
+});
+
+export const theGioiConfig = Object.freeze<CategoryConfig>({
+    slug: 'the-gioi', path: routes.theGioi, title: 'Thế giới',
+    pageTitle: 'Thế giới | Tuổi Trẻ — Demo học tập',
+    description: 'Tin tức quốc tế, bình luận và góc nhìn từ nhiều khu vực.',
+    layout: 'magazine',
+    subcategories: ['Bình luận', 'Kiều bào', 'Muôn màu', 'Hồ sơ'],
+});
+
+export const phapLuatConfig = Object.freeze<CategoryConfig>({
+    slug: 'phap-luat', path: routes.phapLuat, title: 'Pháp luật',
+    pageTitle: 'Pháp luật | Tuổi Trẻ — Demo học tập',
+    description: 'Tin pháp luật, chuyện pháp đình và giải đáp thắc mắc thường gặp.',
+    layout: 'magazine',
+    subcategories: ['Chuyện pháp đình', 'Tư vấn', 'Pháp lý'],
 });

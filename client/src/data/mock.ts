@@ -23,7 +23,7 @@ const side = [
     'Đại học Quốc gia Hà Nội: 3 trường thu học phí vượt quy định',
     'Cầu đi bộ qua sông Sài Gòn: Những điều cần biết',
     'TP.HCM miễn phí xe buýt: Người dân cần lưu ý gì?',
-].map((title, i): Article => ({ id: 5 + i, title, sapo: '', zone: 'Thời sự', time: '08:00 31/10/2026', image: '' }));
+].map((title, i): Article => ({ id: 5 + i, title, sapo: '', zone: 'Thời sự', time: '08:00 31/10/2026', image: img(`side${i}`, 240, 150) }));
 
 const zones = ['Thời sự', 'Kinh doanh', 'Giáo dục', 'Thể thao', 'Pháp luật', 'Văn hóa', 'Công nghệ', 'Du lịch'];
 const more = Array.from({ length: 8 }, (_, i): Article => ({

@@ -42,3 +42,21 @@ Mở http://localhost:5173
 - `npm run dev`: chạy môi trường phát triển
 - `npm run build`: build bản production vào `dist/`
 - `npm run lint`: kiểm tra lỗi code
+
+## Fake API (json-server)
+
+Tin được lấy từ `fake-api/db.json` qua cổng 3001. Nếu không bật fake API, app tự dùng dữ liệu tĩnh trong `src/data/mock.ts`.
+
+Chạy hai terminal:
+
+```bash
+# Terminal 1: fake API (cổng 3001)
+npm run fake-api
+
+# Terminal 2: giao diện (cổng 5173)
+npm run dev
+```
+
+Kiểm tra API: mở `http://localhost:3001/news`. Lọc theo chuyên mục: `http://localhost:3001/news?zone=Thế giới`.
+
+Thêm bài mới: sửa `fake-api/db.json`, json-server tự nạp lại. Mỗi bài cần các field `id` (số, không trùng), `title`, `sapo`, `zone` (đúng tên trong `src/data/menu.ts`), `time`, `image`.

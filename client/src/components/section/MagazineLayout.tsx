@@ -2,7 +2,6 @@ import type { SectionArticle } from '../../types/Article.ts'
 import ArticleLink from '../../components/section/ArticleLink.tsx'
 import Thumb from './Thumb.tsx'
 
-// Bố cục Thế giới / Pháp luật: bài lớn cạnh chữ, hàng 3 thẻ dưới, cột phải có bài đầu và danh sách
 export default function MagazineLayout({ articles }: { articles: SectionArticle[] }) {
     const [hero, sideLead, ...rest] = articles
     const cards = rest.slice(0, 3)

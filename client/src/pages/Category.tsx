@@ -1,10 +1,9 @@
 import { useParams } from 'react-router-dom'
 import { useAppSelector } from '../store/hooks.ts'
 import { menu } from '../data/menu.ts'
-import NewsList from '../components/NewsList.tsx'
 import NotFoundPage from './NotFoundPage.tsx'
+import NewsList from '../components/NewsList.tsx'
 
-// Các mục menu không phải chuyên mục thật thì hiện tất cả bài
 const ALL_SLUGS = ['tin-moi-nhat', 'tin-xem-nhieu']
 
 export default function Category() {

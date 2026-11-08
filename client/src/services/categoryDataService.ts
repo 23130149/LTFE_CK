@@ -1,6 +1,8 @@
-import { categoryMessages, educationConfig, realEstateConfig } from '../config/categoryConfig.ts';
+import { categoryMessages, educationConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
 import { educationNews } from '../data/educationNews.ts';
-import { realEstateNews } from '../data/realEstateNews.ts';
+import { phapLuatNews } from '../data/phapLuatNews.ts';
+import { theGioiNews } from '../data/theGioiNews.ts';
+import { thoiSuNews } from '../data/thoiSuNews.ts';
 import type { CategoryArticle, CategoryLoadOptions, CategorySources } from '../types/category.ts';
 
 export class CategoryDataError extends Error {
@@ -26,11 +28,8 @@ export function normalizeCategoryArticles(value: unknown): CategoryArticle[] {
         ids.add(id);
         const date = text(item.publishedAt);
         const image = isRecord(item.image) ? item.image : undefined;
-        const path = text(item.path);
         return { id, title, summary: text(item.summary) || categoryMessages.missingSummary,
             section: text(item.section), publishedAt: date && Number.isFinite(Date.parse(date)) ? date : '',
-            path: /^\/[a-z0-9][a-z0-9/-]*$/.test(path) ? path : undefined,
-            content: Array.isArray(item.content) ? item.content.map(text).filter(Boolean) : undefined,
             image: { src: safeImageSource(image?.src), alt: text(image?.alt) || title } };
     });
 }
@@ -47,5 +46,7 @@ export function createCategoryDataService(sources: CategorySources) {
 
 export const loadCategoryNews = createCategoryDataService({
     [educationConfig.slug]: async () => educationNews,
-    [realEstateConfig.slug]: async () => realEstateNews,
+    [thoiSuConfig.slug]: async () => thoiSuNews,
+    [theGioiConfig.slug]: async () => theGioiNews,
+    [phapLuatConfig.slug]: async () => phapLuatNews,
 });

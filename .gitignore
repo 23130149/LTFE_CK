@@ -2,7 +2,7 @@
 /.idea/
 !/client/public/images/
 !/client/public/images/**
-
+client.zip
 # Installed dependencies at any depth, including the leftover server install.
 node_modules/
 

@@ -10,9 +10,9 @@ export interface CategoryArticle {
     section: string;
     publishedAt: string;
     image: CategoryImageData;
-    path?: string;
-    content?: string[];
 }
+
+export type CategoryLayout = 'classic' | 'thoi-su' | 'magazine';
 
 export interface CategoryConfig {
     readonly slug: string;
@@ -20,20 +20,17 @@ export interface CategoryConfig {
     readonly title: string;
     readonly pageTitle: string;
     readonly description: string;
-    readonly navigationLabel: string;
-    readonly navigationNote: string;
+    readonly layout: CategoryLayout;
     readonly subcategories: readonly string[];
-    readonly featuredCount: number;
-    readonly pageSize: number;
-    readonly listTitle: string;
-    readonly sidebarTitle: string;
-    readonly sidebarDescription: string;
-    readonly guides: readonly { title: string; description: string }[];
-    readonly sidebarNote: string;
-    readonly filterSections?: boolean;
-    readonly demoDescription?: string;
-    readonly sidebarEyebrow?: string;
-    readonly featuredLayout?: 'editorial';
+    readonly navigationLabel?: string;
+    readonly navigationNote?: string;
+    readonly featuredCount?: number;
+    readonly pageSize?: number;
+    readonly listTitle?: string;
+    readonly sidebarTitle?: string;
+    readonly sidebarDescription?: string;
+    readonly guides?: readonly { title: string; description: string }[];
+    readonly sidebarNote?: string;
 }
 
 export interface CategoryLoadOptions {

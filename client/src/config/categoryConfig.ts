@@ -19,6 +19,7 @@ export const realEstateConfig = Object.freeze<CategoryConfig>({
     slug: 'nha-dat', path: routes.realEstate, title: 'Nhà đất',
     pageTitle: 'Nhà đất | Tuổi Trẻ — Demo học tập',
     description: 'Thị trường, chính sách và những câu chuyện về chốn an cư.',
+    layout: 'classic',
     navigationLabel: 'Các nhóm nội dung Nhà đất',
     navigationNote: 'Chọn một mục để xem các bài viết cùng chủ đề.',
     subcategories: ['Hỏi đáp', 'Thị trường', 'Chính sách', 'Dự án'],
@@ -30,6 +31,24 @@ export const realEstateConfig = Object.freeze<CategoryConfig>({
     sidebarDescription: 'Thêm góc nhìn về nhà ở, quy hoạch và không gian sống.',
     guides: [],
     sidebarNote: 'Bài viết và hình minh họa thuộc bản demo học tập.',
+});
+
+export const healthConfig = Object.freeze<CategoryConfig>({
+    slug: 'suc-khoe', path: routes.health, title: 'Sức khỏe',
+    pageTitle: 'Sức khỏe | Tuổi Trẻ — Demo học tập',
+    description: 'Những câu chuyện về bữa ăn, gia đình và sự quan tâm mỗi ngày.',
+    layout: 'classic',
+    navigationLabel: 'Các nhóm nội dung Sức khỏe',
+    navigationNote: 'Chọn chủ đề để đọc nội dung minh họa cùng chuyên mục.',
+    subcategories: ['Dinh dưỡng', 'Mẹ & Bé', 'Giới tính', 'Phòng mạch', 'Biết để khỏe'],
+    filterSections: true, featuredLayout: 'editorial',
+    featuredCount: 4, pageSize: 6, listTitle: 'Tin sức khỏe',
+    demoDescription: 'Bài viết, ngày đăng và hình ảnh là dữ liệu minh họa tự biên soạn cho đồ án; không phải tin y tế thực tế, chẩn đoán hoặc hướng dẫn điều trị.',
+    sidebarEyebrow: 'CÙNG BẠN ĐỌC',
+    sidebarTitle: 'Sức khỏe đáng chú ý',
+    sidebarDescription: 'Đọc thêm những câu chuyện cùng chủ đề trong bản demo.',
+    sidebarNote: 'Danh sách biên tập minh họa, không dựa trên số liệu lượt xem. Nội dung không thay thế tư vấn y tế.',
+    imageCaption: 'Tranh minh họa tự tạo cho đồ án, không mô tả người bệnh hoặc cơ sở y tế có thật.',
 });
 
 export const educationConfig = Object.freeze<CategoryConfig>({

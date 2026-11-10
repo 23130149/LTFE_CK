@@ -117,12 +117,12 @@
 }
 @media (prefers-reduced-motion: reduce) { .category-state__loader { animation: none; } }
 
-.category-page--real-estate a { color: inherit; }
-.category-page--real-estate a:hover { color: var(--category-red); }
-.category-page--real-estate .category-navigation a { display: inline-block; padding: 10px 0; min-height: 44px; }
-.category-page--real-estate .category-navigation a[aria-current="page"] { color: var(--category-red); text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
-.category-page--real-estate .category-card > a { display: block; min-width: 0; }
-.category-page--real-estate .category-card h2 a:hover, .category-page--real-estate .category-card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+:is(.category-page--real-estate, .category-page--filterable) a { color: inherit; }
+:is(.category-page--real-estate, .category-page--filterable) a:hover { color: var(--category-red); }
+:is(.category-page--real-estate, .category-page--filterable) .category-navigation a { display: inline-block; padding: 10px 0; min-height: 44px; }
+:is(.category-page--real-estate, .category-page--filterable) .category-navigation a[aria-current="page"] { color: var(--category-red); text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
+:is(.category-page--real-estate, .category-page--filterable) .category-card > a { display: block; min-width: 0; }
+:is(.category-page--real-estate, .category-page--filterable) .category-card h2 a:hover, :is(.category-page--real-estate, .category-page--filterable) .category-card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .category-featured--editorial { grid-template-columns: minmax(0, 1fr); }
 .category-featured--editorial > .category-card--lead { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 20px; }
 .category-featured--editorial .category-card--lead h2 { font-size: clamp(22px, 2vw, 27px); }
@@ -130,10 +130,10 @@
 .category-featured--editorial .category-featured__supporting { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 24px 0 0; border: 0; border-top: 1px solid var(--category-line); }
 .category-featured--editorial .category-card--compact:not(:first-child) { padding: 0; border: 0; }
 .category-featured--editorial .category-card--compact:not(:first-child) .category-image { display: block; }
-.category-page--real-estate .category-sidebar .category-card { display: block; }
-.category-page--real-estate .category-sidebar .category-image { margin-bottom: 12px; }
-.category-page--real-estate .category-sidebar .category-card__meta { font-size: 11px; }
-.category-page--real-estate .category-sidebar h3 { font-size: 16px; }
+:is(.category-page--real-estate, .category-page--filterable) .category-sidebar .category-card { display: block; }
+:is(.category-page--real-estate, .category-page--filterable) .category-sidebar .category-image { margin-bottom: 12px; }
+:is(.category-page--real-estate, .category-page--filterable) .category-sidebar .category-card__meta { font-size: 11px; }
+:is(.category-page--real-estate, .category-page--filterable) .category-sidebar h3 { font-size: 16px; }
 .category-sidebar__sections { padding: 20px; border-top: 1px solid var(--category-line); }
 .category-sidebar__sections a { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; border-bottom: 1px solid var(--category-line); font-size: 14px; }
 .category-filter-result { font-size: 13px; color: var(--category-muted); }
@@ -163,9 +163,9 @@
     .category-featured--editorial .category-featured__supporting { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-top: 20px; }
     .category-featured--editorial .category-card--compact:not(:first-child) { border-top: 1px solid var(--category-line); padding-top: 16px; }
     .category-featured--editorial .category-card--lead h2 { font-size: 26px; }
-    .category-page--real-estate .category-card--row p { display: block; font-size: 13px; }
+    :is(.category-page--real-estate, .category-page--filterable) .category-card--row p { display: block; font-size: 13px; }
     .category-detail__related > div { grid-template-columns: minmax(0, 1fr); }
     .category-detail__related .category-card--compact { padding: 16px 0; border-top: 1px solid var(--category-line); }
-    .category-page--real-estate .category-sidebar .category-card { display: grid; grid-template-columns: 96px minmax(0, 1fr); }
-    .category-page--real-estate .category-sidebar .category-image { margin: 0; }
+    :is(.category-page--real-estate, .category-page--filterable) .category-sidebar .category-card { display: grid; grid-template-columns: 96px minmax(0, 1fr); }
+    :is(.category-page--real-estate, .category-page--filterable) .category-sidebar .category-image { margin: 0; }
 }

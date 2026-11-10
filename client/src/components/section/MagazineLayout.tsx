@@ -5,7 +5,7 @@ import Thumb from './Thumb.tsx'
 export default function MagazineLayout({ articles }: { articles: SectionArticle[] }) {
     const [hero, sideLead, ...rest] = articles
     const cards = rest.slice(0, 3)
-    const sideList = rest.slice(3, 9)
+    const sideList = rest.slice(3)
 
     return (
         <div className="mg-layout">

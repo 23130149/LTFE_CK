@@ -11,7 +11,7 @@ import { mockNews } from '../data/mock.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
 import CategoryArticleDetail from '../pages/CategoryArticleDetail.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
-import { educationConfig, realEstateConfig, healthConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
+import { educationConfig, realEstateConfig, healthConfig, factCheckConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
 import { routes } from '../routing/routes.ts'
 
 // Giống productsLoader của lab 5: nạp dữ liệu vào Redux trước khi render,
@@ -37,6 +37,8 @@ export const appRoutes: RouteObject[] = [
             { path: `${routes.realEstate.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={realEstateConfig} /> },
             { path: routes.health.slice(1), element: <CategoryPage config={healthConfig} /> },
             { path: `${routes.health.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={healthConfig} /> },
+            { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} /> },
+            { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} /> },
             { path: routes.thoiSu.slice(1), element: <CategoryPage config={thoiSuConfig} /> },
             { path: routes.theGioi.slice(1), element: <CategoryPage config={theGioiConfig} /> },
             { path: routes.phapLuat.slice(1), element: <CategoryPage config={phapLuatConfig} /> },

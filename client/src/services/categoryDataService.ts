@@ -1,7 +1,8 @@
-import { categoryMessages, educationConfig, realEstateConfig, healthConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
+import { categoryMessages, educationConfig, realEstateConfig, healthConfig, factCheckConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
 import { educationNews } from '../data/educationNews.ts';
 import { realEstateNews } from '../data/realEstateNews.ts';
 import { healthNews } from '../data/healthNews.ts';
+import { factCheckNews } from '../data/factCheckNews.ts';
 import { phapLuatNews } from '../data/phapLuatNews.ts';
 import { theGioiNews } from '../data/theGioiNews.ts';
 import { thoiSuNews } from '../data/thoiSuNews.ts';
@@ -53,6 +54,7 @@ export const loadCategoryNews = createCategoryDataService({
     [educationConfig.slug]: async () => educationNews,
     [realEstateConfig.slug]: async () => realEstateNews,
     [healthConfig.slug]: async () => healthNews,
+    [factCheckConfig.slug]: async () => factCheckNews,
     [thoiSuConfig.slug]: async () => thoiSuNews,
     [theGioiConfig.slug]: async () => theGioiNews,
     [phapLuatConfig.slug]: async () => phapLuatNews,

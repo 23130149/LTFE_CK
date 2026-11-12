@@ -18,6 +18,7 @@ export const menu: NavigationItem[] = [
     { title: 'Nhà đất', href: '/nha-dat' },
     { title: 'Sức khỏe', href: '/suc-khoe' },
     { title: 'Giả thật', href: '/gia-that' },
+    { title: 'Cộng đồng', href: '/cong-dong' },
 ];
 
 export const hotTags: string[] = [

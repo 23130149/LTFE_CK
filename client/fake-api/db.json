@@ -1,3 +1,95 @@
 {
-  "articles": []
+  "articles": [
+    {
+      "id": "xe-tin-01",
+      "slug": "xe",
+      "title": "VinFast sắp ra mắt 2 xe máy điện mới",
+      "summary": "VinFast giới thiệu hình ảnh hai mẫu xe máy điện dự kiến ra mắt trong tháng 11-2026.",
+      "section": "Xe máy",
+      "publishedAt": "2026-11-13T00:00:00+07:00",
+      "image": {
+        "src": "/images/sections/xe.svg",
+        "alt": "Tranh minh họa chuyên mục Xe"
+      },
+      "content": [
+        "VinFast công bố hình ảnh hé lộ hai mẫu xe máy điện, nhưng tại thời điểm thông tin được đăng, hãng chưa xác nhận tên sản phẩm, giá bán hay thông số của phiên bản thương mại. Đại lý dự đoán hai xe có thể là Rasad và Sadie, với lịch giới thiệu dự kiến ngày 19-11.",
+        "Trong các bản concept giới thiệu trước đó, Rasad mang kiểu dáng maxi-scooter và có công suất dự kiến 7.100 W. Sadie có thân xe gọn hơn và công suất dự kiến 4.500 W. Thông số cuối cùng cần chờ công bố chính thức."
+      ]
+    },
+    {
+      "id": "xe-01",
+      "slug": "xe",
+      "section": "Ô tô",
+      "title": "Trước chuyến đi xa, nên kiểm tra xe từ đâu?",
+      "summary": "Một danh sách ngắn giúp người lái chủ động kiểm tra lốp, đèn và giấy tờ trước khi lên đường.",
+      "content": [
+        "Người lái có thể bắt đầu từ những việc dễ quan sát như áp suất lốp, đèn chiếu sáng và mức nhiên liệu. Với những dấu hiệu bất thường, nên tìm nơi bảo dưỡng phù hợp trước chuyến đi."
+      ],
+      "publishedAt": "2026-11-12T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/xe.svg",
+        "alt": "Tranh minh họa chuyên mục Xe"
+      }
+    },
+    {
+      "id": "xe-02",
+      "slug": "xe",
+      "section": "Xe máy",
+      "title": "Giữ xe máy gọn gàng trong mùa mưa",
+      "summary": "Vệ sinh và quan sát các bộ phận cơ bản giúp việc đi lại hằng ngày thuận tiện hơn.",
+      "content": [
+        "Sau khi đi qua đoạn đường ngập hoặc nhiều bùn, việc làm sạch xe và kiểm tra phanh là thói quen có ích. Mỗi dòng xe có hướng dẫn bảo dưỡng riêng từ nhà sản xuất."
+      ],
+      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/xe.svg",
+        "alt": "Tranh minh họa chuyên mục Xe"
+      }
+    },
+    {
+      "id": "xe-03",
+      "slug": "xe",
+      "section": "Giao thông",
+      "title": "Một khoảng cách nhỏ cho hành trình an toàn hơn",
+      "summary": "Đi đúng tốc độ và chừa không gian phản ứng là chủ đề được nhiều người đi đường quan tâm.",
+      "content": [
+        "Tình huống minh họa đặt câu hỏi về cách xử lý khi mật độ xe tăng. Quan sát biển báo và giữ khoảng cách phù hợp giúp người lái có thêm thời gian phản ứng."
+      ],
+      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/xe.svg",
+        "alt": "Tranh minh họa chuyên mục Xe"
+      }
+    },
+    {
+      "id": "xe-04",
+      "slug": "xe",
+      "section": "Ô tô",
+      "title": "Sắp xếp hành lý để khoang xe dễ sử dụng",
+      "summary": "Cách đặt đồ nặng, đồ thường dùng và vật dụng khẩn cấp có thể giúp chuyến đi thoải mái.",
+      "content": [
+        "Đồ vật nên được đặt ổn định và không che tầm nhìn của người lái. Một kế hoạch hành lý gọn cũng giúp mọi người lấy đồ cần thiết mà không phải dỡ cả khoang xe."
+      ],
+      "publishedAt": "2026-11-09T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/xe.svg",
+        "alt": "Tranh minh họa chuyên mục Xe"
+      }
+    },
+    {
+      "id": "xe-05",
+      "slug": "xe",
+      "section": "Xe máy",
+      "title": "Chọn thời điểm nghỉ trên một hành trình dài",
+      "summary": "Dừng nghỉ đúng lúc giúp chuyến đi bớt căng thẳng và có thời gian quan sát phương tiện.",
+      "content": [
+        "Trong hành trình giả định, nhóm bạn chia chặng đường thành những đoạn vừa sức. Họ điều chỉnh kế hoạch khi thời tiết thay đổi thay vì cố giữ lịch trình ban đầu."
+      ],
+      "publishedAt": "2026-11-08T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/xe.svg",
+        "alt": "Tranh minh họa chuyên mục Xe"
+      }
+    }
+  ]
 }

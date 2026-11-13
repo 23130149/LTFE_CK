@@ -272,6 +272,97 @@
         "src": "/images/sections/van-hoa.svg",
         "alt": "Tranh minh họa chuyên mục Văn hóa"
       }
+    },
+    {
+      "id": "giai-tri-tin-01",
+      "slug": "giai-tri",
+      "title": "Giảng viên y khoa trở lại với âm nhạc sau 5 lần thi hát thất bại",
+      "summary": "Bác sĩ Phan Hoàng Hải trở lại với âm nhạc sau những lần tham gia cuộc thi ca hát.",
+      "section": "Âm nhạc",
+      "publishedAt": "2026-11-13T00:00:00+07:00",
+      "image": {
+        "src": "/images/sections/giai-tri.svg",
+        "alt": "Tranh minh họa chuyên mục Giải trí"
+      },
+      "content": [
+        "Phan Hoàng Hải từng dự thi Vietnam Idol ba lần và Giọng hát Việt hai lần. Khi đứng trước cơ hội du học và lựa chọn tiếp tục thi hát, anh ưu tiên con đường học tập; năm 2019, anh trở thành giảng viên chính thức tại Trường đại học Y Dược TP.HCM.",
+        "Sau thời gian tập trung vào chuyên môn, anh bắt đầu đầu tư trở lại cho âm nhạc. Dự án đầu tiên mang tên Tiểu tinh cầu gồm năm ca khúc do nhạc sĩ Trần Tuấn Khai sáng tác, với một phần ý tưởng do Hoàng Hải đóng góp."
+      ]
+    },
+    {
+      "id": "giai-tri-01",
+      "slug": "giai-tri",
+      "section": "Phim",
+      "title": "Một buổi xem phim và câu chuyện sau màn ảnh",
+      "summary": "Trao đổi về nhân vật, âm thanh và nhịp kể khiến trải nghiệm xem phim kéo dài hơn.",
+      "content": [
+        "Nhóm bạn trong tình huống minh họa mỗi người chọn một cảnh đáng nhớ rồi chia sẻ lý do. Họ tránh tiết lộ tình tiết quan trọng cho người chưa xem."
+      ],
+      "publishedAt": "2026-11-12T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/giai-tri.svg",
+        "alt": "Tranh minh họa chuyên mục Giải trí"
+      }
+    },
+    {
+      "id": "giai-tri-02",
+      "slug": "giai-tri",
+      "section": "Âm nhạc",
+      "title": "Tạo danh sách nhạc cho một buổi chiều chậm",
+      "summary": "Âm nhạc có thể đi cùng lúc nghỉ ngơi, đọc sách hay gặp gỡ bạn bè.",
+      "content": [
+        "Một danh sách nhạc nhỏ được sắp theo nhịp cảm xúc thay vì thể loại. Mỗi người có thể chọn cách nghe phù hợp mà vẫn tôn trọng không gian của người xung quanh."
+      ],
+      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/giai-tri.svg",
+        "alt": "Tranh minh họa chuyên mục Giải trí"
+      }
+    },
+    {
+      "id": "giai-tri-03",
+      "slug": "giai-tri",
+      "section": "Sân khấu",
+      "title": "Lần đầu đến xem một vở diễn trực tiếp",
+      "summary": "Không khí của sân khấu mang lại trải nghiệm khác với màn hình tại nhà.",
+      "content": [
+        "Tìm hiểu thời lượng, địa điểm và quy định của nơi biểu diễn giúp buổi xem thoải mái hơn. Giữ yên lặng và cất điện thoại là cách dành sự tập trung cho nghệ sĩ."
+      ],
+      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/giai-tri.svg",
+        "alt": "Tranh minh họa chuyên mục Giải trí"
+      }
+    },
+    {
+      "id": "giai-tri-04",
+      "slug": "giai-tri",
+      "section": "Phim",
+      "title": "Chọn phim cùng bạn bè khi gu xem khác nhau",
+      "summary": "Một cuộc trò chuyện ngắn về sở thích có thể giúp cả nhóm tìm được lựa chọn vui vẻ.",
+      "content": [
+        "Nhóm bạn thử thống nhất thể loại, thời lượng và mức độ phù hợp với từng người. Sau buổi xem, điều đáng nhớ có thể là cuộc trò chuyện chứ không chỉ bộ phim."
+      ],
+      "publishedAt": "2026-11-09T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/giai-tri.svg",
+        "alt": "Tranh minh họa chuyên mục Giải trí"
+      }
+    },
+    {
+      "id": "giai-tri-05",
+      "slug": "giai-tri",
+      "section": "Âm nhạc",
+      "title": "Tập nghe một thể loại âm nhạc mới",
+      "summary": "Một bài hát lạ có thể mở ra cách cảm nhận khác về nhịp điệu và giọng hát.",
+      "content": [
+        "Người nghe trong bài minh họa bắt đầu bằng vài ca khúc được bạn bè giới thiệu. Họ tìm hiểu bối cảnh sáng tác để hiểu thêm những điều mình vừa nghe."
+      ],
+      "publishedAt": "2026-11-08T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/giai-tri.svg",
+        "alt": "Tranh minh họa chuyên mục Giải trí"
+      }
     }
   ]
 }

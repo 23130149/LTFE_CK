@@ -24,10 +24,10 @@ Yêu cầu Node.js 20.19 trở lên.
 
 ```bash
 npm install
-npm run dev
+npm run api
 ```
 
-Mở http://localhost:5173
+Mở một terminal khác trong thư mục `client`, chạy `npm run dev` rồi mở http://localhost:5173. Giữ cả hai terminal đang chạy để các chuyên mục Xe, Du lịch, Văn hóa, Giải trí và Thể thao tải được dữ liệu.
 
 ## Cấu trúc
 
@@ -40,5 +40,6 @@ Mở http://localhost:5173
 ## Scripts
 
 - `npm run dev`: chạy môi trường phát triển
+- `npm run api`: chạy fake API ở cổng 4000
 - `npm run build`: build bản production vào `dist/`
 - `npm run lint`: kiểm tra lỗi code

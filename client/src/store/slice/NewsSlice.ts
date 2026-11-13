@@ -4,7 +4,6 @@ import type { Article } from '../../types/Article.ts'
 
 const initialState: Article[] = []
 
-// Giống ProductListSlice của lab 5, nhưng có kiểu
 const newsSlice = createSlice({
     name: 'news',
     initialState,

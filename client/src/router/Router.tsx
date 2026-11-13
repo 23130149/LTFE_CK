@@ -13,6 +13,9 @@ import CategoryArticleDetail from '../pages/CategoryArticleDetail.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
 import { educationConfig, realEstateConfig, healthConfig, factCheckConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
 import { routes } from '../routing/routes.ts'
+import CommunityProvider from '../components/community/CommunityProvider.tsx'
+import CommunityPage from '../pages/CommunityPage.tsx'
+import CommunityDetail from '../pages/CommunityDetail.tsx'
 
 // Giống productsLoader của lab 5: nạp dữ liệu vào Redux trước khi render,
 // để mở thẳng /bai/5 (F5, dán link) vẫn có dữ liệu.
@@ -39,6 +42,10 @@ export const appRoutes: RouteObject[] = [
             { path: `${routes.health.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={healthConfig} /> },
             { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} /> },
             { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} /> },
+            { path: routes.community.slice(1), element: <CommunityProvider />, children: [
+                { index: true, element: <CommunityPage /> },
+                { path: 'bai/:id', element: <CommunityDetail /> },
+            ] },
             { path: routes.thoiSu.slice(1), element: <CategoryPage config={thoiSuConfig} /> },
             { path: routes.theGioi.slice(1), element: <CategoryPage config={theGioiConfig} /> },
             { path: routes.phapLuat.slice(1), element: <CategoryPage config={phapLuatConfig} /> },

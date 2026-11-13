@@ -1,4 +1,4 @@
-import type { CategoryArticle } from '../../../src/types/category.ts';
+import type { CategoryArticle } from '../types/category.ts';
 
 const img = (seed: string) => ({ src: `https://picsum.photos/seed/${seed}/720/450`, alt: 'Ảnh minh họa tin thế giới' });
 

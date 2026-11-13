@@ -1,5 +1,7 @@
-import { categoryMessages, educationConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
+import { categoryMessages, congNgheConfig, educationConfig, kinhDoanhConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
+import { congNgheNews } from '../data/congNgheNews.ts';
 import { educationNews } from '../data/educationNews.ts';
+import { kinhDoanhNews } from '../data/kinhDoanhNews.ts';
 import { phapLuatNews } from '../data/phapLuatNews.ts';
 import { theGioiNews } from '../data/theGioiNews.ts';
 import { thoiSuNews } from '../data/thoiSuNews.ts';
@@ -49,4 +51,6 @@ export const loadCategoryNews = createCategoryDataService({
     [thoiSuConfig.slug]: async () => thoiSuNews,
     [theGioiConfig.slug]: async () => theGioiNews,
     [phapLuatConfig.slug]: async () => phapLuatNews,
+    [kinhDoanhConfig.slug]: async () => kinhDoanhNews,
+    [congNgheConfig.slug]: async () => congNgheNews,
 });

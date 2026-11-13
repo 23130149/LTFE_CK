@@ -10,7 +10,7 @@ import { load } from '../store/slice/NewsSlice.ts'
 import { mockNews } from '../data/mock.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
-import { educationConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
+import { congNgheConfig, educationConfig, kinhDoanhConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
 import { routes } from '../routing/routes.ts'
 
 // Giống productsLoader của lab 5: nạp dữ liệu vào Redux trước khi render,
@@ -35,6 +35,8 @@ export const appRoutes: RouteObject[] = [
             { path: routes.thoiSu.slice(1), element: <CategoryPage config={thoiSuConfig} /> },
             { path: routes.theGioi.slice(1), element: <CategoryPage config={theGioiConfig} /> },
             { path: routes.phapLuat.slice(1), element: <CategoryPage config={phapLuatConfig} /> },
+            { path: routes.kinhDoanh.slice(1), element: <CategoryPage config={kinhDoanhConfig} /> },
+            { path: routes.congNghe.slice(1), element: <CategoryPage config={congNgheConfig} /> },
             { path: ':zone', element: <Category /> },
             { path: '*', element: <NotFoundPage embedded /> },
         ],

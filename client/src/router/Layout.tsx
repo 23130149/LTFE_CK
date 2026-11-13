@@ -3,7 +3,7 @@ import Header from '../components/Header.tsx'
 import Footer from '../components/Footer.tsx'
 import { routes } from '../routing/routes.ts'
 
-const OWN_MAIN_PATHS: string[] = [routes.education, routes.thoiSu, routes.theGioi, routes.phapLuat]
+const OWN_MAIN_PATHS: string[] = [routes.education, routes.thoiSu, routes.theGioi, routes.phapLuat, routes.kinhDoanh, routes.congNghe]
 
 export default function Layout() {
     const { pathname } = useLocation()

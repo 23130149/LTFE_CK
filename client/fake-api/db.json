@@ -363,6 +363,97 @@
         "src": "/images/sections/giai-tri.svg",
         "alt": "Tranh minh họa chuyên mục Giải trí"
       }
+    },
+    {
+      "id": "the-thao-tin-01",
+      "slug": "the-thao",
+      "title": "Việt Nam vượt Thái Lan, Indonesia và Malaysia ở Olympic trẻ",
+      "summary": "Thành tích của đoàn Việt Nam và các nước Đông Nam Á tại Olympic trẻ Dakar 2026.",
+      "section": "Thể thao học đường",
+      "publishedAt": "2026-11-13T00:00:00+07:00",
+      "image": {
+        "src": "/images/sections/the-thao.svg",
+        "alt": "Tranh minh họa chuyên mục Thể thao"
+      },
+      "content": [
+        "Tính đến tối 13-11, đoàn Việt Nam có hai huy chương bạc và đứng trên một số đoàn Đông Nam Á nhờ số huy chương bạc. Bảng xếp hạng toàn đại hội lúc đó chưa phải kết quả chung cuộc, dù các vận động viên trong khu vực đã hoàn tất thi đấu.",
+        "Nguyễn Khắc Lê Hoàng giành bạc ở nội dung wushu, còn Dương Văn Hoàng Quy về nhì ở chung kết 200 m bướm nam. Singapore dẫn đầu nhóm Đông Nam Á với một huy chương vàng, một bạc và một đồng."
+      ]
+    },
+    {
+      "id": "the-thao-01",
+      "slug": "the-thao",
+      "section": "Bóng đá",
+      "title": "Một trận bóng vui bắt đầu từ luật chơi rõ ràng",
+      "summary": "Thống nhất thời gian, đội hình và cách xử lý va chạm giúp mọi người cùng tận hưởng trận đấu.",
+      "content": [
+        "Trong trận đấu giả định, các bạn dành vài phút trước giờ bóng lăn để thống nhất luật. Tinh thần tôn trọng đối thủ được giữ ngay cả khi có tình huống tranh cãi."
+      ],
+      "publishedAt": "2026-11-12T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/the-thao.svg",
+        "alt": "Tranh minh họa chuyên mục Thể thao"
+      }
+    },
+    {
+      "id": "the-thao-02",
+      "slug": "the-thao",
+      "section": "Chạy bộ",
+      "title": "Bắt đầu chạy bằng mục tiêu vừa sức",
+      "summary": "Nhịp tập phù hợp và thời gian nghỉ giúp người mới duy trì thói quen vận động.",
+      "content": [
+        "Một người mới chạy có thể chọn quãng đường ngắn, theo dõi cảm giác cơ thể và tăng dần khi thấy phù hợp. Nếu có vấn đề sức khỏe, nên hỏi ý kiến chuyên môn trước khi tập."
+      ],
+      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/the-thao.svg",
+        "alt": "Tranh minh họa chuyên mục Thể thao"
+      }
+    },
+    {
+      "id": "the-thao-03",
+      "slug": "the-thao",
+      "section": "Thể thao học đường",
+      "title": "Sân trường là nơi học cách phối hợp",
+      "summary": "Một trò chơi đồng đội tạo cơ hội cho học sinh giao tiếp và hỗ trợ nhau.",
+      "content": [
+        "Trong buổi tập minh họa, mỗi bạn thử một vai trò khác nhau. Cả đội rút kinh nghiệm sau mỗi lượt chơi thay vì chỉ chú ý đến tỉ số."
+      ],
+      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/the-thao.svg",
+        "alt": "Tranh minh họa chuyên mục Thể thao"
+      }
+    },
+    {
+      "id": "the-thao-04",
+      "slug": "the-thao",
+      "section": "Bóng đá",
+      "title": "Cổ vũ văn minh từ khán đài nhỏ",
+      "summary": "Lời động viên tích cực có thể giúp không khí trận đấu gần gũi hơn.",
+      "content": [
+        "Một nhóm cổ động viên tự đặt quy tắc tôn trọng cả hai đội. Họ tập trung vào những pha xử lý đẹp và giúp giữ khu vực xem sạch sẽ sau trận."
+      ],
+      "publishedAt": "2026-11-09T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/the-thao.svg",
+        "alt": "Tranh minh họa chuyên mục Thể thao"
+      }
+    },
+    {
+      "id": "the-thao-05",
+      "slug": "the-thao",
+      "section": "Chạy bộ",
+      "title": "Một buổi vận động cùng bạn bè",
+      "summary": "Có người đồng hành giúp việc tập luyện trở nên vui và dễ duy trì hơn.",
+      "content": [
+        "Nhóm bạn trong câu chuyện giả định chọn tốc độ để mọi người có thể trò chuyện. Khi một người cần nghỉ, cả nhóm điều chỉnh thay vì cố hoàn thành một con số."
+      ],
+      "publishedAt": "2026-11-08T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/the-thao.svg",
+        "alt": "Tranh minh họa chuyên mục Thể thao"
+      }
     }
   ]
 }

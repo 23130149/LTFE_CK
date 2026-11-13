@@ -181,6 +181,97 @@
         "src": "/images/sections/du-lich.svg",
         "alt": "Tranh minh họa chuyên mục Du lịch"
       }
+    },
+    {
+      "id": "van-hoa-tin-01",
+      "slug": "van-hoa",
+      "title": "Đồng Nai lần đầu tổ chức Tuần Văn hóa - Đại đoàn kết với 24 hoạt động",
+      "summary": "Đồng Nai tổ chức tuần lễ văn hóa và đại đoàn kết với 24 hoạt động.",
+      "section": "Đời sống",
+      "publishedAt": "2026-11-13T00:00:00+07:00",
+      "image": {
+        "src": "/images/sections/van-hoa.svg",
+        "alt": "Tranh minh họa chuyên mục Văn hóa"
+      },
+      "content": [
+        "Tuần Văn hóa - Đại đoàn kết dự kiến diễn ra từ ngày 18 đến 24-11-2026 với 24 hoạt động về văn hóa, thể thao và du lịch. Chương trình kết nối dịp Ngày hội Đại đoàn kết toàn dân tộc với Ngày Văn hóa Việt Nam.",
+        "Ngoài chương trình nghệ thuật, người tham dự có thể tìm hiểu ẩm thực, sản phẩm địa phương và các nghề truyền thống. Các xã, phường cũng tổ chức hoạt động để người dân ở nhiều khu vực có điều kiện tham gia."
+      ]
+    },
+    {
+      "id": "van-hoa-01",
+      "slug": "van-hoa",
+      "section": "Di sản",
+      "title": "Bước chậm hơn trong một không gian di sản",
+      "summary": "Đọc câu chuyện phía sau hiện vật giúp chuyến tham quan có thêm chiều sâu.",
+      "content": [
+        "Một buổi tham quan minh họa dành thời gian cho bảng giới thiệu và lời kể của người hướng dẫn. Việc giữ khoảng cách, không chạm vào hiện vật cũng thể hiện sự tôn trọng không gian chung."
+      ],
+      "publishedAt": "2026-11-12T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/van-hoa.svg",
+        "alt": "Tranh minh họa chuyên mục Văn hóa"
+      }
+    },
+    {
+      "id": "van-hoa-02",
+      "slug": "van-hoa",
+      "section": "Sách",
+      "title": "Một câu lạc bộ đọc bắt đầu từ vài người bạn",
+      "summary": "Không cần danh sách sách dài, cuộc trò chuyện chân thành đã đủ để hình thành thói quen đọc.",
+      "content": [
+        "Mỗi người chọn một đoạn mình thích và giải thích vì sao. Những góc nhìn khác nhau làm buổi đọc trở nên cởi mở, kể cả khi chưa ai đọc hết cuốn sách."
+      ],
+      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/van-hoa.svg",
+        "alt": "Tranh minh họa chuyên mục Văn hóa"
+      }
+    },
+    {
+      "id": "van-hoa-03",
+      "slug": "van-hoa",
+      "section": "Đời sống",
+      "title": "Giữ một góc cho sinh hoạt văn hóa khu phố",
+      "summary": "Không gian chung có thể kết nối nhiều thế hệ qua hoạt động nhỏ.",
+      "content": [
+        "Trong câu chuyện giả định, cư dân cùng bàn cách sử dụng một căn phòng chung cho đọc sách và trao đổi kỹ năng. Lịch sử dụng rõ ràng giúp nhiều người đều có cơ hội tham gia."
+      ],
+      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/van-hoa.svg",
+        "alt": "Tranh minh họa chuyên mục Văn hóa"
+      }
+    },
+    {
+      "id": "van-hoa-04",
+      "slug": "van-hoa",
+      "section": "Di sản",
+      "title": "Lắng nghe câu chuyện từ người làm nghề thủ công",
+      "summary": "Một sản phẩm thủ công chứa trong đó kinh nghiệm, thời gian và những lựa chọn của người làm nghề.",
+      "content": [
+        "Thay vì chỉ nhìn thành phẩm, người tham quan thử tìm hiểu các bước làm và nguồn nguyên liệu. Cách đặt câu hỏi tôn trọng giúp cuộc gặp gỡ có ý nghĩa hơn."
+      ],
+      "publishedAt": "2026-11-09T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/van-hoa.svg",
+        "alt": "Tranh minh họa chuyên mục Văn hóa"
+      }
+    },
+    {
+      "id": "van-hoa-05",
+      "slug": "van-hoa",
+      "section": "Sách",
+      "title": "Đọc lại một cuốn sách ở tuổi khác",
+      "summary": "Cùng một câu chuyện có thể gợi những suy nghĩ mới khi trải nghiệm của người đọc thay đổi.",
+      "content": [
+        "Nhân vật trong bài minh họa ghi lại vài dòng cảm nhận sau lần đọc thứ hai. Những điều từng bỏ qua giờ trở thành chủ đề để chia sẻ với bạn bè."
+      ],
+      "publishedAt": "2026-11-08T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/van-hoa.svg",
+        "alt": "Tranh minh họa chuyên mục Văn hóa"
+      }
     }
   ]
 }

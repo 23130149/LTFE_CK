@@ -90,6 +90,97 @@
         "src": "/images/sections/xe.svg",
         "alt": "Tranh minh họa chuyên mục Xe"
       }
+    },
+    {
+      "id": "du-lich-tin-01",
+      "slug": "du-lich",
+      "title": "Dự kiến thu phí khách du lịch nghỉ qua đêm ở Cao nguyên đá Đồng Văn",
+      "summary": "Đề xuất thu phí đối với khách du lịch lưu trú qua đêm tại Cao nguyên đá Đồng Văn.",
+      "section": "Điểm đến",
+      "publishedAt": "2026-11-13T00:00:00+07:00",
+      "image": {
+        "src": "/images/sections/du-lich.svg",
+        "alt": "Tranh minh họa chuyên mục Du lịch"
+      },
+      "content": [
+        "UBND tỉnh Tuyên Quang đang lấy ý kiến về đề án phát triển công viên địa chất, trong đó có phương án thu 30.000 đồng mỗi người cho một đêm lưu trú. Cách tổ chức thu vẫn đang được nghiên cứu; cơ sở lưu trú là một địa điểm dự kiến thu phí.",
+        "Theo phương án được nêu, 60% số thu dự kiến nộp ngân sách để phục vụ bảo vệ và phát triển di sản, 40% dành cho các xã trong vùng công viên. Khoản thu được kỳ vọng hỗ trợ bảo tồn, hạ tầng và trải nghiệm du lịch."
+      ]
+    },
+    {
+      "id": "du-lich-01",
+      "slug": "du-lich",
+      "section": "Điểm đến",
+      "title": "Một ngày đi bộ khám phá khu phố cũ",
+      "summary": "Những con đường quen có thể mang lại trải nghiệm mới khi dành thời gian quan sát và lắng nghe.",
+      "content": [
+        "Lộ trình minh họa bắt đầu từ không gian công cộng, đi qua vài điểm sinh hoạt địa phương và kết thúc ở một quán nhỏ. Người tham quan nên tôn trọng đời sống của cư dân."
+      ],
+      "publishedAt": "2026-11-12T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/du-lich.svg",
+        "alt": "Tranh minh họa chuyên mục Du lịch"
+      }
+    },
+    {
+      "id": "du-lich-02",
+      "slug": "du-lich",
+      "section": "Kinh nghiệm",
+      "title": "Chuẩn bị hành lý gọn cho chuyến đi cuối tuần",
+      "summary": "Chọn đồ theo thời tiết và hoạt động dự kiến giúp chiếc túi nhẹ hơn.",
+      "content": [
+        "Một danh sách ngắn gồm giấy tờ, vật dụng cá nhân và đồ dùng phù hợp điểm đến thường dễ kiểm tra hơn. Trước khi khởi hành, nên xác nhận lại thông tin di chuyển và lưu trú."
+      ],
+      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/du-lich.svg",
+        "alt": "Tranh minh họa chuyên mục Du lịch"
+      }
+    },
+    {
+      "id": "du-lich-03",
+      "slug": "du-lich",
+      "section": "Ẩm thực",
+      "title": "Khám phá món ăn địa phương bằng sự tò mò",
+      "summary": "Một bữa ăn có thể là dịp tìm hiểu nguyên liệu, cách nấu và câu chuyện của người làm món.",
+      "content": [
+        "Khi thử món mới, người đi du lịch có thể hỏi về thành phần và cách chế biến. Sự tôn trọng với người bán và văn hóa địa phương làm cuộc trò chuyện thú vị hơn."
+      ],
+      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/du-lich.svg",
+        "alt": "Tranh minh họa chuyên mục Du lịch"
+      }
+    },
+    {
+      "id": "du-lich-04",
+      "slug": "du-lich",
+      "section": "Điểm đến",
+      "title": "Chọn một tuyến tham quan vừa sức",
+      "summary": "Ít điểm dừng hơn có thể tạo thêm thời gian để trải nghiệm từng nơi.",
+      "content": [
+        "Trong kế hoạch minh họa, nhóm bạn để trống một khoảng thời gian cho nghỉ ngơi và thay đổi lịch trình. Cách này hữu ích khi thời tiết hoặc giao thông không như dự tính."
+      ],
+      "publishedAt": "2026-11-09T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/du-lich.svg",
+        "alt": "Tranh minh họa chuyên mục Du lịch"
+      }
+    },
+    {
+      "id": "du-lich-05",
+      "slug": "du-lich",
+      "section": "Kinh nghiệm",
+      "title": "Giữ lại những kỷ niệm mà không để lại rác",
+      "summary": "Những lựa chọn nhỏ trong chuyến đi góp phần giữ không gian chung sạch đẹp.",
+      "content": [
+        "Mang bình nước dùng lại, bỏ rác đúng nơi và tuân thủ hướng dẫn tại điểm tham quan là các thói quen dễ bắt đầu. Mỗi nơi có quy định riêng cần được tìm hiểu trước."
+      ],
+      "publishedAt": "2026-11-08T02:30:00.000Z",
+      "image": {
+        "src": "/images/sections/du-lich.svg",
+        "alt": "Tranh minh họa chuyên mục Du lịch"
+      }
     }
   ]
 }

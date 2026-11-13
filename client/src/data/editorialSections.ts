@@ -24,5 +24,6 @@ export interface EditorialSection {
 
 export const editorialSections: readonly EditorialSection[] = [
     { slug: 'xe', path: routes.vehicles, title: 'Xe', description: 'Chuyện đi lại, chăm sóc phương tiện và trải nghiệm trên đường.', topics: ['Ô tô', 'Xe máy', 'Giao thông'], image: '/images/sections/xe.svg' },
+    { slug: 'du-lich', path: routes.travel, title: 'Du lịch', description: 'Hành trình, điểm đến và những cách khám phá có trách nhiệm.', topics: ['Điểm đến', 'Kinh nghiệm', 'Ẩm thực'], image: '/images/sections/du-lich.svg' },
 ];
 

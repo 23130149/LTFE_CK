@@ -24,10 +24,10 @@ Yêu cầu Node.js 20.19 trở lên.
 
 ```bash
 npm install
-npm run dev
+npm run api
 ```
 
-Mở http://localhost:5173
+Mở một terminal khác trong thư mục `client`, chạy `npm run dev` rồi mở http://localhost:5173. Giữ cả hai terminal đang chạy để các chuyên mục Xe, Du lịch, Văn hóa, Giải trí và Thể thao tải được dữ liệu.
 
 ## Cấu trúc
 
@@ -40,23 +40,10 @@ Mở http://localhost:5173
 ## Scripts
 
 - `npm run dev`: chạy môi trường phát triển
+- `npm run api`: chạy fake API ở cổng 4000
 - `npm run build`: build bản production vào `dist/`
 - `npm run lint`: kiểm tra lỗi code
 
-## Fake API (json-server)
+## Fake API
 
-Tin được lấy từ `fake-api/db.json` qua cổng 3001. Nếu không bật fake API, app tự dùng dữ liệu tĩnh trong `src/data/mock.ts`.
-
-Chạy hai terminal:
-
-```bash
-# Terminal 1: fake API (cổng 3001)
-npm run fake-api
-
-# Terminal 2: giao diện (cổng 5173)
-npm run dev
-```
-
-Kiểm tra API: mở `http://localhost:3001/news`. Lọc theo chuyên mục: `http://localhost:3001/news?zone=Thế giới`.
-
-Thêm bài mới: sửa `fake-api/db.json`, json-server tự nạp lại. Mỗi bài cần các field `id` (số, không trùng), `title`, `sapo`, `zone` (đúng tên trong `src/data/menu.ts`), `time`, `image`.
+Dữ liệu nằm trong `fake-api/db.json`. Chạy `npm run api` để mở API ở cổng 4000. Các đường dẫn `/api/articles` và `/api/news` lần lượt trả dữ liệu cho năm chuyên mục và danh sách tin mẫu; `/api/news?zone=Thế giới` lọc tin theo chuyên mục. API đọc lại file khi có yêu cầu.

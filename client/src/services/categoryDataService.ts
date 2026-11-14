@@ -1,10 +1,8 @@
-import { categoryMessages, congNgheConfig, educationConfig, kinhDoanhConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
+import { categoryMessages, congNgheConfig, educationConfig, kinhDoanhConfig, phapLuatConfig } from '../config/categoryConfig.ts';
 import { congNgheNews } from '../data/congNgheNews.ts';
 import { educationNews } from '../data/educationNews.ts';
 import { kinhDoanhNews } from '../data/kinhDoanhNews.ts';
 import { phapLuatNews } from '../data/phapLuatNews.ts';
-import { theGioiNews } from '../data/theGioiNews.ts';
-import { thoiSuNews } from '../data/thoiSuNews.ts';
 import type { CategoryArticle, CategoryLoadOptions, CategorySources } from '../types/category.ts';
 
 export class CategoryDataError extends Error {
@@ -48,8 +46,6 @@ export function createCategoryDataService(sources: CategorySources) {
 
 export const loadCategoryNews = createCategoryDataService({
     [educationConfig.slug]: async () => educationNews,
-    [thoiSuConfig.slug]: async () => thoiSuNews,
-    [theGioiConfig.slug]: async () => theGioiNews,
     [phapLuatConfig.slug]: async () => phapLuatNews,
     [kinhDoanhConfig.slug]: async () => kinhDoanhNews,
     [congNgheConfig.slug]: async () => congNgheNews,

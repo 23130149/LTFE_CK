@@ -1,4 +1,5 @@
-import type { CategoryConfig, CategoryLoader, CategoryLoadState } from '../types/category.ts';
+import type { CategoryArticle, CategoryConfig, CategoryLoader } from '../types/category.ts';
+import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CategoryHeader from '../components/category/CategoryHeader.tsx';
@@ -13,32 +14,50 @@ import MagazineLayout from '../components/section/MagazineLayout.tsx';
 import { toSectionArticle } from '../components/section/toSectionArticle.ts';
 import { categoryMessages } from '../config/categoryConfig.ts';
 import { useCategoryNews } from '../hooks/useCategoryNews.ts';
+import { useAppSelector } from '../store/hooks.ts';
 import { loadCategoryNews } from '../services/categoryDataService.ts';
 import '../styles/section.css';
 
 const TODAY = new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+const NO_ARTICLES: CategoryArticle[] = [];
 
-type ViewProps = { config: CategoryConfig; status: CategoryLoadState['status']; articles: CategoryLoadState['articles']; error: string; onRetry: () => void };
+type CategorySource = 'service' | 'store';
+type ViewProps = { config: CategoryConfig; articles: CategoryArticle[]; empty: ReactNode };
 
-export default function CategoryPage({ config, loader = loadCategoryNews }: { config: CategoryConfig; loader?: CategoryLoader }) {
+export default function CategoryPage({ config, loader = loadCategoryNews, source = 'service' }: { config: CategoryConfig; loader?: CategoryLoader; source?: CategorySource }) {
+    if (source === 'store') return <StoreCategoryPage config={config} />;
+    return <ServiceCategoryPage config={config} loader={loader} />;
+}
+
+function ServiceCategoryPage({ config, loader }: { config: CategoryConfig; loader: CategoryLoader }) {
     const { status, articles, error, retry } = useCategoryNews(config.slug, loader);
+    return <CategoryView config={config} articles={articles} empty={<CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={retry} />} />;
+}
+
+function StoreCategoryPage({ config }: { config: CategoryConfig }) {
+    const articles = useAppSelector((state) => state.categoryNews[config.slug] ?? NO_ARTICLES);
+    return <CategoryView config={config} articles={articles} empty={<CategoryStates status="empty" />} />;
+}
+
+function CategoryView({ config, articles, empty }: ViewProps) {
     useEffect(() => {
         const previousTitle = document.title;
         document.title = config.pageTitle;
         return () => { document.title = previousTitle; };
     }, [config.pageTitle]);
-    const view = { config, status, articles, error, onRetry: retry };
-    return config.layout === 'classic' ? <ClassicCategory {...view} /> : <SectionCategory {...view} />;
+    return config.layout === 'classic'
+        ? <ClassicCategory config={config} articles={articles} empty={empty} />
+        : <SectionCategory config={config} articles={articles} empty={empty} />;
 }
 
-function ClassicCategory({ config, status, articles, error, onRetry }: ViewProps) {
+function ClassicCategory({ config, articles, empty }: ViewProps) {
     const featuredCount = config.featuredCount ?? 4;
     const pageSize = config.pageSize ?? 6;
     const [visibleCount, setVisibleCount] = useState(pageSize);
     return <main id="main-content" className="category-page">
         <CategoryHeader config={config} /><CategoryNavigation config={config} />
         <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{categoryMessages.demoDescription}</p></div>
-        {status !== 'ready' || articles.length === 0 ? <CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={onRetry} /> : <div className="category-layout">
+        {articles.length === 0 ? empty : <div className="category-layout">
             <div className="category-layout__main">
                 <FeaturedArticle articles={articles.slice(0, featuredCount)} />
                 <CategoryNewsList articles={articles.slice(featuredCount)} config={config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => count + pageSize)} />
@@ -48,14 +67,14 @@ function ClassicCategory({ config, status, articles, error, onRetry }: ViewProps
     </main>;
 }
 
-function SectionCategory({ config, status, articles, error, onRetry }: ViewProps) {
+function SectionCategory({ config, articles, empty }: ViewProps) {
     const [tab, setTab] = useState(0);
     const isThoiSu = config.layout === 'thoi-su';
     const tabs = [...config.subcategories];
 
-    if (status !== 'ready' || articles.length === 0) {
+    if (articles.length === 0) {
         return <main id="main-content" className="container sec-page">
-            <CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={onRetry} />
+            {empty}
         </main>;
     }
 

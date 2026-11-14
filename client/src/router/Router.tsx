@@ -7,10 +7,13 @@ import Category from '../pages/Category.tsx'
 import ArticleDetail from '../pages/ArticleDetail.tsx'
 import { store } from '../store/Store.ts'
 import { load } from '../store/slice/NewsSlice.ts'
+import { loadCategory } from '../store/slice/CategoryNewsSlice.ts'
 import { mockNews } from '../data/mock.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
 import { congNgheConfig, educationConfig, kinhDoanhConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
+import { theGioiNews } from '../data/theGioiNews.ts'
+import { thoiSuNews } from '../data/thoiSuNews.ts'
 import { routes } from '../routing/routes.ts'
 
 // Giống productsLoader của lab 5: nạp dữ liệu vào Redux trước khi render,
@@ -18,6 +21,8 @@ import { routes } from '../routing/routes.ts'
 // Sau này đổi sang fetch('/api/news') thì chỉ sửa đúng hàm này.
 const newsLoader = () => {
     store.dispatch(load(mockNews))
+    store.dispatch(loadCategory({ slug: thoiSuConfig.slug, articles: thoiSuNews }))
+    store.dispatch(loadCategory({ slug: theGioiConfig.slug, articles: theGioiNews }))
     return null
 }
 
@@ -32,8 +37,8 @@ export const appRoutes: RouteObject[] = [
             { path: 'bai/:id', element: <ArticleDetail /> },
             { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} /> },
             { path: routes.educationLegacy.slice(1), element: <Navigate to={routes.education} replace /> },
-            { path: routes.thoiSu.slice(1), element: <CategoryPage config={thoiSuConfig} /> },
-            { path: routes.theGioi.slice(1), element: <CategoryPage config={theGioiConfig} /> },
+            { path: routes.thoiSu.slice(1), element: <CategoryPage config={thoiSuConfig} source="store" /> },
+            { path: routes.theGioi.slice(1), element: <CategoryPage config={theGioiConfig} source="store" /> },
             { path: routes.phapLuat.slice(1), element: <CategoryPage config={phapLuatConfig} /> },
             { path: routes.kinhDoanh.slice(1), element: <CategoryPage config={kinhDoanhConfig} /> },
             { path: routes.congNghe.slice(1), element: <CategoryPage config={congNgheConfig} /> },

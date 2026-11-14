@@ -3,6 +3,7 @@ import Header from '../components/Header.tsx'
 import Footer from '../components/Footer.tsx'
 import { routes } from '../routing/routes.ts'
 
+const OWN_MAIN_PATHS: string[] = [routes.education, routes.realEstate, routes.health, routes.factCheck, routes.community, routes.thoiSu,routes.kinhDoanh,routes.congNghe, routes.theGioi, routes.phapLuat]
 const EDITORIAL_PATHS: string[] = [routes.vehicles, routes.travel, routes.culture, routes.entertainment, routes.sports]
 const OWN_MAIN_PATHS: string[] = [routes.education, routes.realEstate, routes.health, routes.factCheck, routes.community, routes.thoiSu, routes.theGioi, routes.phapLuat, ...EDITORIAL_PATHS]
 

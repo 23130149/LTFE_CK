@@ -1,14 +1,9 @@
-import { categoryMessages, educationConfig, realEstateConfig, healthConfig, factCheckConfig,kinhDoanhConfig, phapLuatConfig,congNgheConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
-import { congNgheNews } from '../data/congNgheNews.ts';
+import { categoryMessages, educationConfig, realEstateConfig, healthConfig, factCheckConfig } from '../config/categoryConfig.ts';
 import { educationNews } from '../data/educationNews.ts';
 import { realEstateNews } from '../data/realEstateNews.ts';
 import { healthNews } from '../data/healthNews.ts';
 import { factCheckNews } from '../data/factCheckNews.ts';
-import { kinhDoanhNews } from '../data/kinhDoanhNews.ts';
-import { phapLuatNews } from '../data/phapLuatNews.ts';
 import type { CategoryArticle, CategoryLoadOptions, CategorySources } from '../types/category.ts';
-import {thoiSuNews} from "../data/thoiSuNews.ts";
-import {theGioiNews} from "../data/theGioiNews.ts";
 
 export class CategoryDataError extends Error {
     constructor() { super(categoryMessages.invalidData); this.name = 'CategoryDataError'; }
@@ -57,9 +52,4 @@ export const loadCategoryNews = createCategoryDataService({
     [realEstateConfig.slug]: async () => realEstateNews,
     [healthConfig.slug]: async () => healthNews,
     [factCheckConfig.slug]: async () => factCheckNews,
-    [thoiSuConfig.slug]: async () => thoiSuNews,
-    [theGioiConfig.slug]: async () => theGioiNews,
-    [phapLuatConfig.slug]: async () => phapLuatNews,
-    [kinhDoanhConfig.slug]: async () => kinhDoanhNews,
-    [congNgheConfig.slug]: async () => congNgheNews,
 });

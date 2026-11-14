@@ -13,13 +13,12 @@ import CategoryArticleDetail from '../pages/CategoryArticleDetail.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
 import { educationConfig, realEstateConfig, healthConfig, factCheckConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
 import { routes } from '../routing/routes.ts'
+import { editorialSections } from '../data/editorialSections.ts'
+import EditorialSectionPage, { EditorialArticleDetail } from '../pages/EditorialSectionPage.tsx'
 import CommunityProvider from '../components/community/CommunityProvider.tsx'
 import CommunityPage from '../pages/CommunityPage.tsx'
 import CommunityDetail from '../pages/CommunityDetail.tsx'
 
-// Giống productsLoader của lab 5: nạp dữ liệu vào Redux trước khi render,
-// để mở thẳng /bai/5 (F5, dán link) vẫn có dữ liệu.
-// Sau này đổi sang fetch('/api/news') thì chỉ sửa đúng hàm này.
 const newsLoader = () => {
     store.dispatch(load(mockNews))
     return null
@@ -36,6 +35,10 @@ export const appRoutes: RouteObject[] = [
             { path: 'bai/:id', element: <ArticleDetail /> },
             { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} /> },
             { path: routes.educationLegacy.slice(1), element: <Navigate to={routes.education} replace /> },
+            ...editorialSections.flatMap(section => [
+                { path: section.path.slice(1), element: <EditorialSectionPage section={section} /> },
+                { path: `${section.path.slice(1)}/bai/:id`, element: <EditorialArticleDetail section={section} /> },
+            ]),
             { path: routes.realEstate.slice(1), element: <CategoryPage config={realEstateConfig} /> },
             { path: `${routes.realEstate.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={realEstateConfig} /> },
             { path: routes.health.slice(1), element: <CategoryPage config={healthConfig} /> },

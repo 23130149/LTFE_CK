@@ -1,5 +1,4 @@
 import type { Article } from '../types/Article.ts';
-// Dữ liệu giả cho giao diện. Khi có backend, thay bằng dữ liệu từ API, giữ nguyên tên field.
 const img = (seed: string, w = 456, h = 285) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
 
 const focus: Article[] = [

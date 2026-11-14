@@ -1,0 +1,18 @@
+import type { CategoryArticle } from '../types/category.ts';
+
+const img = (seed: string) => ({ src: `https://picsum.photos/seed/${seed}/720/450`, alt: 'Ảnh minh họa tin thế giới' });
+
+export const theGioiNews: CategoryArticle[] = [
+    { id: 'tg-01', title: 'Hội nghị thượng đỉnh khu vực tập trung bàn về an ninh năng lượng', summary: 'Các nước thành viên thống nhất tăng cường hợp tác dự trữ và chia sẻ thông tin thị trường.', section: 'Bình luận', publishedAt: '2026-11-06T19:00:00+07:00', image: img('tg01') },
+    { id: 'tg-02', title: 'Cộng đồng người Việt ở châu Âu chung tay hỗ trợ đồng bào sau thiên tai', summary: 'Nhiều hội đoàn phát động quyên góp, gửi hàng cứu trợ và kết nối nguồn lực về quê nhà.', section: 'Kiều bào', publishedAt: '2026-11-06T16:40:00+07:00', image: img('tg02') },
+    { id: 'tg-03', title: 'Thành phố cổ đón làn sóng du khách nhờ lễ hội ánh sáng mùa thu', summary: 'Các con phố được trang trí bằng đèn lồng và tranh vẽ tường, thu hút đông đảo người dân địa phương.', section: 'Muôn màu', publishedAt: '2026-11-06T13:15:00+07:00', image: img('tg03') },
+    { id: 'tg-04', title: 'Hồ sơ: vì sao một chính sách đô thị hóa nhận nhiều ý kiến trái chiều', summary: 'Phân tích các lợi ích kinh tế và những lo ngại về môi trường sống của người dân ở vùng ven.', section: 'Hồ sơ', publishedAt: '2026-11-06T10:05:00+07:00', image: img('tg04') },
+    { id: 'tg-05', title: 'Biến đổi khí hậu khiến mùa màng vùng Đông Nam Á đối mặt nhiều thách thức', summary: 'Nông dân được khuyến khích thử nghiệm giống cây chịu hạn và áp dụng tưới tiết kiệm nước.', section: 'Bình luận', publishedAt: '2026-11-05T18:20:00+07:00', image: img('tg05') },
+    { id: 'tg-06', title: 'Sinh viên quốc tế chia sẻ kinh nghiệm học tập và hòa nhập tại thành phố mới', summary: 'Những câu chuyện thường ngày về ngôn ngữ, bạn bè và cách thích nghi với nếp sống khác biệt.', section: 'Muôn màu', publishedAt: '2026-11-05T14:00:00+07:00', image: img('tg06') },
+    { id: 'tg-07', title: 'Hồ sơ nhân vật: nhà khoa học tiên phong trong nghiên cứu vaccine thế hệ mới', summary: 'Hành trình nghiên cứu kéo dài nhiều năm, từ phòng thí nghiệm nhỏ đến những thử nghiệm quy mô lớn.', section: 'Hồ sơ', publishedAt: '2026-11-05T11:30:00+07:00', image: img('tg07') },
+    { id: 'tg-08', title: 'Kiều bào tại Mỹ tổ chức chương trình kết nối doanh nghiệp khởi nghiệp', summary: 'Sự kiện tạo cơ hội gặp gỡ nhà đầu tư, trao đổi về thị trường và mở rộng hợp tác song phương.', section: 'Kiều bào', publishedAt: '2026-11-05T08:50:00+07:00', image: img('tg08') },
+    { id: 'tg-09', title: 'Thị trường lao động toàn cầu chuyển dịch mạnh sang kỹ năng số', summary: 'Báo cáo cho thấy nhu cầu tuyển dụng tăng ở các vị trí liên quan đến dữ liệu và tự động hóa.', section: 'Bình luận', publishedAt: '2026-11-04T17:45:00+07:00', image: img('tg09') },
+    { id: 'tg-10', title: 'Ẩm thực đường phố trở thành điểm nhấn trong chương trình giao lưu văn hóa', summary: 'Các gian hàng giới thiệu món ăn truyền thống, kèm phần trình diễn cách chế biến trực tiếp.', section: 'Muôn màu', publishedAt: '2026-11-04T14:10:00+07:00', image: img('tg10') },
+    { id: 'tg-11', title: 'Hồ sơ: ba năm đàm phán hiệp định thương mại và những điểm còn bất đồng', summary: 'Tổng hợp các vòng đàm phán chính và những nội dung hai bên vẫn đang cân nhắc.', section: 'Hồ sơ', publishedAt: '2026-11-04T09:25:00+07:00', image: img('tg11') },
+    { id: 'tg-12', title: 'Lễ hội âm nhạc quốc tế quy tụ nghệ sĩ từ nhiều châu lục', summary: 'Chương trình kéo dài ba ngày với các phần biểu diễn giao thoa giữa nhạc truyền thống và đương đại.', section: 'Muôn màu', publishedAt: '2026-11-03T20:00:00+07:00', image: img('tg12') },
+];

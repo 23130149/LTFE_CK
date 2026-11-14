@@ -2,13 +2,16 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 
 createServer(async (request, response) => {
-    if (request.method !== 'GET' || new URL(request.url, 'http://localhost').pathname !== '/api/articles') {
+    const url = new URL(request.url, 'http://localhost');
+    if (request.method !== 'GET' || !['/api/articles', '/api/news'].includes(url.pathname)) {
         response.writeHead(404).end();
         return;
     }
     try {
         const data = JSON.parse(await readFile(new URL('./db.json', import.meta.url), 'utf8'));
-        response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' }).end(JSON.stringify(data.articles));
+        const zone = url.searchParams.get('zone');
+        const result = url.pathname === '/api/articles' ? data.articles : zone ? data.news.filter(item => item.zone === zone) : data.news;
+        response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' }).end(JSON.stringify(result));
     } catch {
         response.writeHead(500).end();
     }

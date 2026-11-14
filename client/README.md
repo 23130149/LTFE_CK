@@ -43,3 +43,7 @@ Mở một terminal khác trong thư mục `client`, chạy `npm run dev` rồi 
 - `npm run api`: chạy fake API ở cổng 4000
 - `npm run build`: build bản production vào `dist/`
 - `npm run lint`: kiểm tra lỗi code
+
+## Fake API
+
+Dữ liệu nằm trong `fake-api/db.json`. Chạy `npm run api` để mở API ở cổng 4000. Các đường dẫn `/api/articles` và `/api/news` lần lượt trả dữ liệu cho năm chuyên mục và danh sách tin mẫu; `/api/news?zone=Thế giới` lọc tin theo chuyên mục. API đọc lại file khi có yêu cầu.

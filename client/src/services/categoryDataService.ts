@@ -1,6 +1,10 @@
+import { categoryMessages, educationConfig, realEstateConfig, healthConfig, factCheckConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
 import { categoryMessages, congNgheConfig, educationConfig, kinhDoanhConfig, phapLuatConfig } from '../config/categoryConfig.ts';
 import { congNgheNews } from '../data/congNgheNews.ts';
 import { educationNews } from '../data/educationNews.ts';
+import { realEstateNews } from '../data/realEstateNews.ts';
+import { healthNews } from '../data/healthNews.ts';
+import { factCheckNews } from '../data/factCheckNews.ts';
 import { kinhDoanhNews } from '../data/kinhDoanhNews.ts';
 import { phapLuatNews } from '../data/phapLuatNews.ts';
 import type { CategoryArticle, CategoryLoadOptions, CategorySources } from '../types/category.ts';
@@ -28,8 +32,11 @@ export function normalizeCategoryArticles(value: unknown): CategoryArticle[] {
         ids.add(id);
         const date = text(item.publishedAt);
         const image = isRecord(item.image) ? item.image : undefined;
+        const path = text(item.path);
         return { id, title, summary: text(item.summary) || categoryMessages.missingSummary,
             section: text(item.section), publishedAt: date && Number.isFinite(Date.parse(date)) ? date : '',
+            path: /^\/[a-z0-9][a-z0-9/-]*$/.test(path) ? path : undefined,
+            content: Array.isArray(item.content) ? item.content.map(text).filter(Boolean) : undefined,
             image: { src: safeImageSource(image?.src), alt: text(image?.alt) || title } };
     });
 }
@@ -46,6 +53,11 @@ export function createCategoryDataService(sources: CategorySources) {
 
 export const loadCategoryNews = createCategoryDataService({
     [educationConfig.slug]: async () => educationNews,
+    [realEstateConfig.slug]: async () => realEstateNews,
+    [healthConfig.slug]: async () => healthNews,
+    [factCheckConfig.slug]: async () => factCheckNews,
+    [thoiSuConfig.slug]: async () => thoiSuNews,
+    [theGioiConfig.slug]: async () => theGioiNews,
     [phapLuatConfig.slug]: async () => phapLuatNews,
     [kinhDoanhConfig.slug]: async () => kinhDoanhNews,
     [congNgheConfig.slug]: async () => congNgheNews,

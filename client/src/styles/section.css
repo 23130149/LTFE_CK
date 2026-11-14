@@ -20,7 +20,7 @@
 .sec-desc { margin: 8px 0 0 20px; font-size: 15px; color: var(--muted); }
 .sec-date { font-size: 13px; color: var(--muted); white-space: nowrap; }
 
-.sec-tabs { display: flex; gap: 28px; margin-top: 24px; border-bottom: 1px solid var(--line); }
+.sec-tabs { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 24px; border-bottom: 1px solid var(--line); }
 .sec-tabs button { margin-bottom: -1px; padding: 12px 0; border: 0; border-bottom: 3px solid transparent; background: none; font-size: 15px; color: var(--muted); cursor: pointer; }
 .sec-tabs button[aria-selected="true"] { color: var(--navy); font-weight: 700; border-bottom-color: var(--accent); }
 
@@ -50,6 +50,8 @@
 .sec-sechead h2 { margin: 6px 0 0; font-size: 26px; color: var(--navy); }
 .sec-more { font-size: 13px; color: var(--muted); text-decoration: none; }
 .sec-more:hover { color: var(--accent); }
+button.sec-more { border: 0; padding: 10px 0; background: none; font: inherit; font-size: 13px; cursor: pointer; }
+.sec-save[aria-pressed="true"] { color: var(--accent); }
 
 .sec-notable { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
 .sec-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }

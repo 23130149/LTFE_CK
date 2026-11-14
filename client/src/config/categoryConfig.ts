@@ -15,6 +15,60 @@ export const categoryMessages = Object.freeze({
     more: 'Xem thêm tin minh họa', end: 'Bạn đã xem hết tin minh họa trong chuyên mục.',
 });
 
+export const realEstateConfig = Object.freeze<CategoryConfig>({
+    slug: 'nha-dat', path: routes.realEstate, title: 'Nhà đất',
+    pageTitle: 'Nhà đất | Tuổi Trẻ — Demo học tập',
+    description: 'Thị trường, chính sách và những câu chuyện về chốn an cư.',
+    layout: 'classic',
+    navigationLabel: 'Các nhóm nội dung Nhà đất',
+    navigationNote: 'Chọn một mục để xem các bài viết cùng chủ đề.',
+    subcategories: ['Hỏi đáp', 'Thị trường', 'Chính sách', 'Dự án'],
+    filterSections: true, featuredLayout: 'editorial',
+    featuredCount: 4, pageSize: 6, listTitle: 'Tin nhà đất',
+    demoDescription: 'Nội dung, ngày đăng và hình minh họa được biên soạn cho đồ án; không phải tin thời sự, tư vấn pháp lý hay thông tin chào bán dự án.',
+    sidebarEyebrow: 'ĐỌC CÙNG CHỦ ĐỀ',
+    sidebarTitle: 'Nhà đất đáng chú ý',
+    sidebarDescription: 'Thêm góc nhìn về nhà ở, quy hoạch và không gian sống.',
+    guides: [],
+    sidebarNote: 'Bài viết và hình minh họa thuộc bản demo học tập.',
+});
+
+export const healthConfig = Object.freeze<CategoryConfig>({
+    slug: 'suc-khoe', path: routes.health, title: 'Sức khỏe',
+    pageTitle: 'Sức khỏe | Tuổi Trẻ — Demo học tập',
+    description: 'Những câu chuyện về bữa ăn, gia đình và sự quan tâm mỗi ngày.',
+    layout: 'classic',
+    navigationLabel: 'Các nhóm nội dung Sức khỏe',
+    navigationNote: 'Chọn chủ đề để đọc nội dung minh họa cùng chuyên mục.',
+    subcategories: ['Dinh dưỡng', 'Mẹ & Bé', 'Giới tính', 'Phòng mạch', 'Biết để khỏe'],
+    filterSections: true, featuredLayout: 'editorial',
+    featuredCount: 4, pageSize: 6, listTitle: 'Tin sức khỏe',
+    demoDescription: 'Bài viết, ngày đăng và hình ảnh là dữ liệu minh họa tự biên soạn cho đồ án; không phải tin y tế thực tế, chẩn đoán hoặc hướng dẫn điều trị.',
+    sidebarEyebrow: 'CÙNG BẠN ĐỌC',
+    sidebarTitle: 'Sức khỏe đáng chú ý',
+    sidebarDescription: 'Đọc thêm những câu chuyện cùng chủ đề trong bản demo.',
+    sidebarNote: 'Danh sách biên tập minh họa, không dựa trên số liệu lượt xem. Nội dung không thay thế tư vấn y tế.',
+    imageCaption: 'Tranh minh họa tự tạo cho đồ án, không mô tả người bệnh hoặc cơ sở y tế có thật.',
+});
+
+export const factCheckConfig = Object.freeze<CategoryConfig>({
+    slug: 'gia-that', path: routes.factCheck, title: 'Giả - Thật',
+    pageTitle: 'Giả - Thật | Tuổi Trẻ — Demo học tập',
+    description: 'Chậm một nhịp trước khi tin, thêm một bước trước khi chia sẻ.',
+    layout: 'classic',
+    navigationLabel: 'Lọc chủ đề Giả thật trong bản demo',
+    navigationNote: 'Hai nhãn tham khảo từ Tuổi Trẻ được dùng để tổ chức dữ liệu demo, không phải kết luận kiểm chứng.',
+    subcategories: ['Chống tin giả, tin lừa đảo', 'Tin giả'],
+    filterSections: true, featuredLayout: 'editorial',
+    featuredCount: 4, pageSize: 6, listTitle: 'Đọc và đối chiếu thông tin',
+    demoDescription: 'Tất cả bài viết, ngày đăng và tranh là minh họa tự biên soạn cho đồ án. Tình huống giả định không gắn với cá nhân hoặc tổ chức có thật; đây không phải kết quả kiểm chứng tin tức.',
+    sidebarEyebrow: 'TRƯỚC KHI CHIA SẺ',
+    sidebarTitle: 'Góc đọc thận trọng',
+    sidebarDescription: 'Những tình huống minh họa về đường dẫn, hình ảnh và nguồn thông tin.',
+    sidebarNote: 'Lựa chọn biên tập từ fixture demo, không xếp hạng lượt xem. Nhãn chủ đề không xác nhận một nội dung là thật hay giả.',
+    imageCaption: 'Tranh SVG tự tạo cho đồ án, không phải ảnh chụp sự kiện hoặc bằng chứng xác minh.',
+});
+
 export const educationConfig = Object.freeze<CategoryConfig>({
     slug: 'giao-duc', path: routes.education, title: 'Giáo dục',
     pageTitle: 'Giáo dục | Tuổi Trẻ — Demo học tập',

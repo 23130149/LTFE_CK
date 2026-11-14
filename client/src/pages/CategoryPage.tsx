@@ -1,7 +1,7 @@
 import type { CategoryArticle, CategoryConfig, CategoryLoader } from '../types/category.ts';
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import CategoryHeader from '../components/category/CategoryHeader.tsx';
 import CategoryNavigation from '../components/category/CategoryNavigation.tsx';
 import FeaturedArticle from '../components/category/FeaturedArticle.tsx';
@@ -48,8 +48,23 @@ function CategoryView({ config, articles, empty }: ViewProps) {
     return config.layout === 'classic'
         ? <ClassicCategory config={config} articles={articles} empty={empty} />
         : <SectionCategory config={config} articles={articles} empty={empty} />;
+    const view = { config, status, articles, error, onRetry: retry };
+    return config.layout === 'classic' ? <ClassicCategory key={config.slug} {...view} /> : <SectionCategory key={config.slug} {...view} />;
 }
 
+function ClassicCategory({ config, status, articles, error, onRetry }: ViewProps) {
+    const [searchParams] = useSearchParams();
+    const activeSection = config.filterSections ? searchParams.get('muc') || '' : '';
+    const filteredArticles = activeSection ? articles.filter((article) => article.section === activeSection) : articles;
+    return <main id="main-content" className={`category-page${config.filterSections ? ' category-page--filterable' : ''}`}>
+        <CategoryHeader config={config} /><CategoryNavigation config={config} activeSection={activeSection} />
+        <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{config.demoDescription || categoryMessages.demoDescription}</p></div>
+        {status !== 'ready' || filteredArticles.length === 0 ? <CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={onRetry} /> : <ClassicContent key={activeSection} config={config} articles={filteredArticles} activeSection={activeSection} />}
+    </main>;
+}
+
+function ClassicContent({ config, articles, activeSection }: { config: CategoryConfig; articles: CategoryLoadState['articles']; activeSection: string }) {
+    const featuredCount = activeSection ? 0 : config.featuredCount ?? 4;
 function ClassicCategory({ config, articles, empty }: ViewProps) {
     const featuredCount = config.featuredCount ?? 4;
     const pageSize = config.pageSize ?? 6;
@@ -58,19 +73,21 @@ function ClassicCategory({ config, articles, empty }: ViewProps) {
         <CategoryHeader config={config} /><CategoryNavigation config={config} />
         <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{categoryMessages.demoDescription}</p></div>
         {articles.length === 0 ? empty : <div className="category-layout">
+    const sidebarArticles = articles.slice(featuredCount + pageSize, featuredCount + pageSize + 3);
+    return <div className="category-layout">
             <div className="category-layout__main">
-                <FeaturedArticle articles={articles.slice(0, featuredCount)} />
-                <CategoryNewsList articles={articles.slice(featuredCount)} config={config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => count + pageSize)} />
+                {!activeSection && <FeaturedArticle articles={articles.slice(0, featuredCount)} layout={config.featuredLayout} />}
+                {activeSection && <p className="category-filter-result" role="status">{articles.length} bài viết · {activeSection}</p>}
+                <CategoryNewsList articles={articles.slice(featuredCount)} config={activeSection ? { ...config, listTitle: activeSection } : config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => Math.min(count + pageSize, articles.length - featuredCount))} />
             </div>
-            <CategorySidebar config={config} />
-        </div>}
-    </main>;
+            <CategorySidebar config={config} articles={config.filterSections ? sidebarArticles.length ? sidebarArticles : articles.slice(0, 3) : undefined} />
+        </div>;
 }
 
 function SectionCategory({ config, articles, empty }: ViewProps) {
     const [tab, setTab] = useState(0);
     const isThoiSu = config.layout === 'thoi-su';
-    const tabs = [...config.subcategories];
+    const tabs = isThoiSu ? [...config.subcategories] : ['Tất cả', ...config.subcategories];
 
     if (articles.length === 0) {
         return <main id="main-content" className="container sec-page">
@@ -78,7 +95,10 @@ function SectionCategory({ config, articles, empty }: ViewProps) {
         </main>;
     }
 
-    const items = articles.map(toSectionArticle);
+    const selectedSection = tabs[tab];
+    const selectedArticles = tab === 0 ? articles : isThoiSu && selectedSection === 'Nổi bật'
+        ? articles.slice(0, 4) : articles.filter((article) => article.section === selectedSection);
+    const items = selectedArticles.map(toSectionArticle);
     return <main id="main-content" className="container sec-page">
         {isThoiSu && (
             <nav className="sec-crumb" aria-label="Đường dẫn trang">
@@ -91,8 +111,8 @@ function SectionCategory({ config, articles, empty }: ViewProps) {
             <SectionHeader title={config.title} tabs={tabs} active={tab} onTab={setTab} />
         )}
         <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{categoryMessages.demoDescription}</p></div>
-        {isThoiSu
-            ? <ThoiSuLayout articles={items} hot={items.slice(0, 4)} />
+        {items.length === 0 ? <CategoryStates status="empty" onRetry={onRetry} /> : isThoiSu
+            ? <ThoiSuLayout key={tab} articles={items} hot={items.slice(0, 4)} />
             : <MagazineLayout articles={items} />}
     </main>;
 }

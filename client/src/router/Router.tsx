@@ -7,12 +7,18 @@ import Category from '../pages/Category.tsx'
 import ArticleDetail from '../pages/ArticleDetail.tsx'
 import { store } from '../store/Store.ts'
 import { load } from '../store/slice/NewsSlice.ts'
-import { loadCategory } from '../store/slice/CategoryNewsSlice.ts'
 import { mockNews } from '../data/mock.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
 import CategoryArticleDetail from '../pages/CategoryArticleDetail.tsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
-import { educationConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts'
+import {
+    congNgheConfig,
+    educationConfig, factCheckConfig, healthConfig,
+    kinhDoanhConfig,
+    phapLuatConfig, realEstateConfig,
+    theGioiConfig,
+    thoiSuConfig
+} from '../config/categoryConfig.ts'
 import { routes } from '../routing/routes.ts'
 import CommunityProvider from '../components/community/CommunityProvider.tsx'
 import CommunityPage from '../pages/CommunityPage.tsx'

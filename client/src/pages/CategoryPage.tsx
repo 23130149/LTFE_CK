@@ -1,5 +1,4 @@
-import type { CategoryArticle, CategoryConfig, CategoryLoader } from '../types/category.ts';
-import type { ReactNode } from 'react';
+import type { CategoryArticle, CategoryConfig, CategoryLoader, CategoryLoadState } from '../types/category.ts';
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import CategoryHeader from '../components/category/CategoryHeader.tsx';
@@ -22,7 +21,7 @@ const TODAY = new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'nu
 const NO_ARTICLES: CategoryArticle[] = [];
 
 type CategorySource = 'service' | 'store';
-type ViewProps = { config: CategoryConfig; articles: CategoryArticle[]; empty: ReactNode };
+type ViewProps = { config: CategoryConfig; status: CategoryLoadState['status']; articles: CategoryArticle[]; error: string; onRetry?: () => void };
 
 export default function CategoryPage({ config, loader = loadCategoryNews, source = 'service' }: { config: CategoryConfig; loader?: CategoryLoader; source?: CategorySource }) {
     if (source === 'store') return <StoreCategoryPage config={config} />;
@@ -31,24 +30,21 @@ export default function CategoryPage({ config, loader = loadCategoryNews, source
 
 function ServiceCategoryPage({ config, loader }: { config: CategoryConfig; loader: CategoryLoader }) {
     const { status, articles, error, retry } = useCategoryNews(config.slug, loader);
-    return <CategoryView config={config} articles={articles} empty={<CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={retry} />} />;
+    return <CategoryView config={config} status={status} articles={articles} error={error} onRetry={retry} />;
 }
 
 function StoreCategoryPage({ config }: { config: CategoryConfig }) {
     const articles = useAppSelector((state) => state.categoryNews[config.slug] ?? NO_ARTICLES);
-    return <CategoryView config={config} articles={articles} empty={<CategoryStates status="empty" />} />;
+    return <CategoryView config={config} status="ready" articles={articles} error="" />;
 }
 
-function CategoryView({ config, articles, empty }: ViewProps) {
+function CategoryView({ config, status, articles, error, onRetry }: ViewProps) {
     useEffect(() => {
         const previousTitle = document.title;
         document.title = config.pageTitle;
         return () => { document.title = previousTitle; };
     }, [config.pageTitle]);
-    return config.layout === 'classic'
-        ? <ClassicCategory config={config} articles={articles} empty={empty} />
-        : <SectionCategory config={config} articles={articles} empty={empty} />;
-    const view = { config, status, articles, error, onRetry: retry };
+    const view = { config, status, articles, error, onRetry };
     return config.layout === 'classic' ? <ClassicCategory key={config.slug} {...view} /> : <SectionCategory key={config.slug} {...view} />;
 }
 
@@ -65,33 +61,27 @@ function ClassicCategory({ config, status, articles, error, onRetry }: ViewProps
 
 function ClassicContent({ config, articles, activeSection }: { config: CategoryConfig; articles: CategoryLoadState['articles']; activeSection: string }) {
     const featuredCount = activeSection ? 0 : config.featuredCount ?? 4;
-function ClassicCategory({ config, articles, empty }: ViewProps) {
-    const featuredCount = config.featuredCount ?? 4;
     const pageSize = config.pageSize ?? 6;
     const [visibleCount, setVisibleCount] = useState(pageSize);
-    return <main id="main-content" className="category-page">
-        <CategoryHeader config={config} /><CategoryNavigation config={config} />
-        <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{categoryMessages.demoDescription}</p></div>
-        {articles.length === 0 ? empty : <div className="category-layout">
     const sidebarArticles = articles.slice(featuredCount + pageSize, featuredCount + pageSize + 3);
     return <div className="category-layout">
-            <div className="category-layout__main">
-                {!activeSection && <FeaturedArticle articles={articles.slice(0, featuredCount)} layout={config.featuredLayout} />}
-                {activeSection && <p className="category-filter-result" role="status">{articles.length} bài viết · {activeSection}</p>}
-                <CategoryNewsList articles={articles.slice(featuredCount)} config={activeSection ? { ...config, listTitle: activeSection } : config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => Math.min(count + pageSize, articles.length - featuredCount))} />
-            </div>
-            <CategorySidebar config={config} articles={config.filterSections ? sidebarArticles.length ? sidebarArticles : articles.slice(0, 3) : undefined} />
-        </div>;
+        <div className="category-layout__main">
+            {!activeSection && <FeaturedArticle articles={articles.slice(0, featuredCount)} layout={config.featuredLayout} />}
+            {activeSection && <p className="category-filter-result" role="status">{articles.length} bài viết · {activeSection}</p>}
+            <CategoryNewsList articles={articles.slice(featuredCount)} config={activeSection ? { ...config, listTitle: activeSection } : config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => Math.min(count + pageSize, articles.length - featuredCount))} />
+        </div>
+        <CategorySidebar config={config} articles={config.filterSections ? sidebarArticles.length ? sidebarArticles : articles.slice(0, 3) : undefined} />
+    </div>;
 }
 
-function SectionCategory({ config, articles, empty }: ViewProps) {
+function SectionCategory({ config, status, articles, error, onRetry }: ViewProps) {
     const [tab, setTab] = useState(0);
     const isThoiSu = config.layout === 'thoi-su';
     const tabs = isThoiSu ? [...config.subcategories] : ['Tất cả', ...config.subcategories];
 
-    if (articles.length === 0) {
+    if (status !== 'ready' || articles.length === 0) {
         return <main id="main-content" className="container sec-page">
-            {empty}
+            <CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={onRetry} />
         </main>;
     }
 

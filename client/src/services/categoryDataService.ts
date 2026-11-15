@@ -1,11 +1,8 @@
-import { categoryMessages, educationConfig, realEstateConfig, healthConfig, factCheckConfig, phapLuatConfig, theGioiConfig, thoiSuConfig } from '../config/categoryConfig.ts';
+import { categoryMessages, educationConfig, realEstateConfig, healthConfig, factCheckConfig } from '../config/categoryConfig.ts';
 import { educationNews } from '../data/educationNews.ts';
 import { realEstateNews } from '../data/realEstateNews.ts';
 import { healthNews } from '../data/healthNews.ts';
 import { factCheckNews } from '../data/factCheckNews.ts';
-import { phapLuatNews } from '../data/phapLuatNews.ts';
-import { theGioiNews } from '../data/theGioiNews.ts';
-import { thoiSuNews } from '../data/thoiSuNews.ts';
 import type { CategoryArticle, CategoryLoadOptions, CategorySources } from '../types/category.ts';
 
 export class CategoryDataError extends Error {
@@ -55,7 +52,4 @@ export const loadCategoryNews = createCategoryDataService({
     [realEstateConfig.slug]: async () => realEstateNews,
     [healthConfig.slug]: async () => healthNews,
     [factCheckConfig.slug]: async () => factCheckNews,
-    [thoiSuConfig.slug]: async () => thoiSuNews,
-    [theGioiConfig.slug]: async () => theGioiNews,
-    [phapLuatConfig.slug]: async () => phapLuatNews,
 });

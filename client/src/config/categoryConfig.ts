@@ -111,3 +111,19 @@ export const phapLuatConfig = Object.freeze<CategoryConfig>({
     layout: 'magazine',
     subcategories: ['Chuyện pháp đình', 'Tư vấn', 'Pháp lý'],
 });
+
+export const kinhDoanhConfig = Object.freeze<CategoryConfig>({
+    slug: 'kinh-doanh', path: routes.kinhDoanh, title: 'Kinh doanh',
+    pageTitle: 'Kinh doanh | Tuổi Trẻ — Demo học tập',
+    description: 'Thị trường, doanh nghiệp và các chính sách tác động đến đời sống kinh tế.',
+    layout: 'magazine',
+    subcategories: ['Thị trường', 'Doanh nghiệp', 'Tài chính', 'Chính sách'],
+});
+
+export const congNgheConfig = Object.freeze<CategoryConfig>({
+    slug: 'cong-nghe', path: routes.congNghe, title: 'Công nghệ',
+    pageTitle: 'Công nghệ | Tuổi Trẻ — Demo học tập',
+    description: 'Sản phẩm mới, trí tuệ nhân tạo và chuyển đổi số trong đời sống.',
+    layout: 'magazine',
+    subcategories: ['Sản phẩm mới', 'Trí tuệ nhân tạo', 'An toàn thông tin', 'Chuyển đổi số'],
+});

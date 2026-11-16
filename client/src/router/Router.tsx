@@ -45,7 +45,7 @@ const newsLoader = () => {
 export const appRoutes: RouteObject[] = [
     {
         path: '/',
-        element: <Layout />,
+        element: <CommunityProvider><Layout /></CommunityProvider>,
         errorElement: <ErrorPage />,
         loader: newsLoader,
         children: [
@@ -63,7 +63,7 @@ export const appRoutes: RouteObject[] = [
             { path: `${routes.health.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={healthConfig} /> },
             { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} /> },
             { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} /> },
-            { path: routes.community.slice(1), element: <CommunityProvider />, children: [
+            { path: routes.community.slice(1), children: [
                     { index: true, element: <CommunityPage /> },
                     { path: 'bai/:id', element: <CommunityDetail /> },
                 ] },

@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import type { ReactNode } from 'react';
 import { communityComments, communityPolls, communityPosts } from '../../data/communityData.ts';
 import { CommunityContext } from '../../hooks/useCommunity.ts';
 import { communityLimits, isCommunityTopic, readCommunityState, validateCommunityPost, writeCommunityState } from '../../services/communityStorage.ts';
 import type { CommunityBrowserState, CommunityPostInput } from '../../types/community.ts';
 import '../../styles/community.css';
 
-export default function CommunityProvider() {
+export default function CommunityProvider({ children }: { children: ReactNode }) {
     const [initial] = useState(readCommunityState);
     const [state, setState] = useState(initial.state);
     const [warning, setWarning] = useState(initial.warning);
@@ -57,5 +57,5 @@ export default function CommunityProvider() {
             return '';
         },
         removeComment: id => { const previous = current.current; commit({ ...previous, comments: previous.comments.filter(item => item.id !== id) }); },
-    }}><Outlet /></CommunityContext.Provider>;
+    }}>{children}</CommunityContext.Provider>;
 }

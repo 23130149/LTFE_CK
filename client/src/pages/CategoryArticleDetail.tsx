@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import type { CategoryConfig } from '../types/category.ts';
-import { useCategoryNews } from '../hooks/useCategoryNews.ts';
-import { loadCategoryNews } from '../services/categoryDataService.ts';
-import CategoryStates from '../components/category/CategoryStates.tsx';
+import { useAppSelector } from '../store/hooks.ts';
+import { selectCategoryArticles } from '../store/slice/CategoryNewsSlice.ts';
 import CategoryImage from '../components/category/CategoryImage.tsx';
 import CategoryArticleCard from '../components/category/CategoryArticleCard.tsx';
 import { routes } from '../routing/routes.ts';
@@ -12,7 +11,7 @@ const dateFormatter = new Intl.DateTimeFormat('vi-VN', { timeZone: 'Asia/Ho_Chi_
 
 export default function CategoryArticleDetail({ config }: { config: CategoryConfig }) {
     const { id } = useParams();
-    const { status, articles, error, retry } = useCategoryNews(config.slug, loadCategoryNews);
+    const articles = useAppSelector((state) => selectCategoryArticles(state, config.slug));
     const article = articles.find((item) => item.id === id);
     const title = article ? `${article.title} | ${config.title} — Demo` : config.pageTitle;
     useEffect(() => { window.scrollTo(0, 0); }, [id]);
@@ -26,7 +25,7 @@ export default function CategoryArticleDetail({ config }: { config: CategoryConf
 
     return <main id="main-content" className="category-page category-page--filterable category-detail">
         <nav aria-label="Đường dẫn trang" className="category-breadcrumb"><Link to={routes.home}>Trang chủ</Link><span aria-hidden="true">/</span><Link to={config.path}>{config.title}</Link>{article && <><span aria-hidden="true">/</span><Link to={sectionPath}>{article.section}</Link><span aria-hidden="true">/</span><span aria-current="page">Bài viết</span></>}</nav>
-        {status !== 'ready' ? <CategoryStates status={status} error={error} onRetry={retry} /> : !article ? <section className="category-state"><h1>Bài viết không tồn tại</h1><p>Hãy chọn bài khác trong chuyên mục {config.title}.</p><Link to={config.path}>← Về {config.title}</Link></section> : <>
+        {!article ? <section className="category-state"><h1>Bài viết không tồn tại</h1><p>Hãy chọn bài khác trong chuyên mục {config.title}.</p><Link to={config.path}>← Về {config.title}</Link></section> : <>
             <article>
                 <header><Link className="category-detail__section" to={sectionPath}>{article.section}</Link><h1>{article.title}</h1>{article.publishedAt && <time dateTime={article.publishedAt}>{dateFormatter.format(new Date(article.publishedAt))} · Ngày đăng minh họa</time>}</header>
                 <div className="category-demo"><strong>Bản demo học tập</strong><p>{config.demoDescription}</p></div>

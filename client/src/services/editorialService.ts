@@ -19,7 +19,6 @@ export async function fetchEditorialArticles(): Promise<EditorialArticle[]> {
             || !Array.isArray(value.content) || !value.content.every((part: unknown) => typeof part === 'string')) throw new Error('Dữ liệu bài viết không hợp lệ.');
         ids.add(value.id);
         return { id: value.id, slug: value.slug as EditorialSlug, title: value.title, summary: value.summary, section: value.section,
-            publishedAt: value.publishedAt, image: { src: image.src, alt: image.alt }, content: value.content as string[],
-            sourceUrl: typeof value.sourceUrl === 'string' && value.sourceUrl.startsWith('https://tuoitre.vn/') ? value.sourceUrl : undefined };
+            publishedAt: value.publishedAt, image: { src: image.src, alt: image.alt }, content: value.content as string[] };
     });
 }

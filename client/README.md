@@ -16,7 +16,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
 # Báo Tuổi Trẻ - Giao diện (React + Vite)
 
-Frontend chạy độc lập, dữ liệu lấy từ `src/data/mock.js`. Chưa cần backend.
+Frontend chạy độc lập với dữ liệu mock trong `src/data/` và `fake-api/db.json`.
 
 ## Chạy
 
@@ -24,10 +24,10 @@ Yêu cầu Node.js 20.19 trở lên.
 
 ```bash
 npm install
-npm run api
+npm run dev
 ```
 
-Mở một terminal khác trong thư mục `client`, chạy `npm run dev` rồi mở http://localhost:5173. Giữ cả hai terminal đang chạy để các chuyên mục Xe, Du lịch, Văn hóa, Giải trí và Thể thao tải được dữ liệu.
+Chạy các lệnh trên trong thư mục `client`, rồi mở http://localhost:5173. Các trang chuyên mục lấy dữ liệu mock từ Redux.
 
 ## Cấu trúc
 

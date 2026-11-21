@@ -62,7 +62,7 @@ export default function EditorialSectionPage({ section }: { section: EditorialSe
                 {rest.slice(0, visibleCount).map(article => <ArticleCard key={article.id} article={article} section={section} />)}
                 {visibleCount < rest.length && <button type="button" onClick={() => setVisibleCount(count => count + 3)}>Xem thêm bài viết</button>}
             </section>}
-        </div><aside className="editorial-side"><h2>Khám phá chủ đề</h2><p>Chọn một chủ đề để xem bài viết minh họa cùng chuyên mục.</p>
+        </div><aside className="editorial-side"><h2>Khám phá chủ đề</h2><p>Chọn một chủ đề để xem các bài viết cùng chuyên mục.</p>
             <ul>{section.topics.map(item => <li key={item}><button type="button" onClick={() => selectTopic(item)}>{item}<span>{articles.filter(article => article.section === item).length} bài</span></button></li>)}</ul>
         </aside></div> : <div className="category-state"><h2>Chưa có bài viết</h2><p>Thử chọn một chủ đề khác.</p><button type="button" onClick={() => selectTopic('')}>Xem tất cả</button></div>}
         </>}
@@ -84,8 +84,10 @@ export function EditorialArticleDetail({ section }: { section: EditorialSection 
     return <main className="category-page editorial-detail" id="main-content">
         <nav className="category-breadcrumb" aria-label="Đường dẫn trang"><Link to="/">Trang chủ</Link><span aria-hidden="true">/</span><Link to={section.path}>{section.title}</Link><span aria-hidden="true">/</span><span aria-current="page">Bài viết</span></nav>
         {(status === 'idle' || status === 'loading') ? <div className="category-state" role="status">Đang tải bài viết…</div> : status === 'error' ? <div className="category-state" role="alert"><p>{error}</p><button type="button" onClick={() => void dispatch(loadEditorialArticles())}>Thử lại</button></div> : article ? <article><p className="editorial-detail__topic">{article.section}</p><h1>{article.title}</h1><time dateTime={article.publishedAt}>{dateFormatter.format(new Date(article.publishedAt))}</time>
-            <p className="editorial-detail__summary">{article.summary}</p><figure><CategoryImage image={article.image} priority /><figcaption>Tranh minh họa cho bản demo học tập.</figcaption></figure>
-            {article.content.map((paragraph, index) => <p key={index}>{paragraph}</p>)}<Link className="editorial-detail__back" to={section.path}>← Về chuyên mục {section.title}</Link>
+            <p className="editorial-detail__summary">{article.summary}</p><figure><CategoryImage image={article.image} priority /><figcaption>{article.image.alt}</figcaption></figure>
+            {article.content.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+            {article.sourceUrl && <p><a href={article.sourceUrl}>Đọc bài gốc trên Tuổi Trẻ</a></p>}
+            <Link className="editorial-detail__back" to={section.path}>← Về chuyên mục {section.title}</Link>
         </article> : <div className="category-state"><h1>Không tìm thấy bài viết</h1><Link to={section.path}>Về chuyên mục {section.title}</Link></div>}
     </main>;
 }

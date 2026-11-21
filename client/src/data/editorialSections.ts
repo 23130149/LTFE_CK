@@ -11,6 +11,7 @@ export interface EditorialArticle {
     publishedAt: string;
     image: { src: string; alt: string };
     content: string[];
+    sourceUrl?: string;
 }
 
 export interface EditorialSection {

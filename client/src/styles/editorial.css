@@ -31,7 +31,9 @@
 .editorial-detail__topic { color: #b21822; font-size: 14px; font-weight: 700; margin: 0; }
 .editorial-detail__summary { font-size: 20px; font-weight: 600; line-height: 1.55; margin: 22px 0; }
 .editorial-detail figure { margin: 24px 0; }
-.editorial-detail figure .category-image { aspect-ratio: 16 / 9; }
+.editorial-detail figure .category-image { aspect-ratio: auto; }
+.editorial-detail figure img { height: auto; }
+.editorial-detail article > p + p { margin-top: 1em; }
 .editorial-detail__back { display: inline-block; margin: 24px 0; color: #b21822; text-decoration: underline; }
 @media (max-width: 850px) { .editorial-layout { grid-template-columns: 1fr; } .editorial-side { order: -1; } }
 @media (max-width: 600px) { .editorial-card { grid-template-columns: 110px minmax(0, 1fr); gap: 12px; } .editorial-card--lead { display: block; } .editorial-card h3 { font-size: 16px; } .editorial-card:not(.editorial-card--lead) p { display: none; } .editorial-detail article { font-size: 16px; } }

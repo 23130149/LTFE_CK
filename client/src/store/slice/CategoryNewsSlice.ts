@@ -1,10 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { CategoryArticle } from '../../types/category.ts'
+import { educationNews } from '../../data/educationNews.ts'
+
+type CategoryNewsState = Partial<Record<string, CategoryArticle[]>>
+
+const initialState: CategoryNewsState = { 'giao-duc': educationNews }
 
 const categoryNewsSlice = createSlice({
     name: 'categoryNews',
-    initialState: {} as Record<string, CategoryArticle[]>,
+    initialState,
     reducers: {
         loadCategory: (state, action: PayloadAction<{ slug: string; articles: CategoryArticle[] }>) => {
             state[action.payload.slug] = action.payload.articles

@@ -1,5 +1,5 @@
 import type { CategoryArticle, CategoryConfig, CategoryLoader, CategoryLoadState } from '../types/category.ts';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import CategoryHeader from '../components/category/CategoryHeader.tsx';
 import CategoryNavigation from '../components/category/CategoryNavigation.tsx';
@@ -14,14 +14,14 @@ import { toSectionArticle } from '../components/section/toSectionArticle.ts';
 import { categoryMessages } from '../config/categoryConfig.ts';
 import { useCategoryNews } from '../hooks/useCategoryNews.ts';
 import { useAppSelector } from '../store/hooks.ts';
+import { selectCategoryArticles, selectCategoryPage } from '../store/categorySelectors.ts';
 import { loadCategoryNews } from '../services/categoryDataService.ts';
 import '../styles/section.css';
 
 const TODAY = new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-const NO_ARTICLES: CategoryArticle[] = [];
 
 type CategorySource = 'service' | 'store';
-type ViewProps = { config: CategoryConfig; status: CategoryLoadState['status']; articles: CategoryArticle[]; error: string; onRetry?: () => void };
+type ViewProps = { config: CategoryConfig; status: CategoryLoadState['status']; articles: CategoryArticle[]; error: string; onRetry?: () => void; source?: CategorySource };
 
 export default function CategoryPage({ config, loader = loadCategoryNews, source = 'service' }: { config: CategoryConfig; loader?: CategoryLoader; source?: CategorySource }) {
     if (source === 'store') return <StoreCategoryPage config={config} />;
@@ -34,29 +34,45 @@ function ServiceCategoryPage({ config, loader }: { config: CategoryConfig; loade
 }
 
 function StoreCategoryPage({ config }: { config: CategoryConfig }) {
-    const articles = useAppSelector((state) => state.categoryNews[config.slug] ?? NO_ARTICLES);
-    return <CategoryView config={config} status="ready" articles={articles} error="" />;
+    const articles = useAppSelector((state) => selectCategoryArticles(state, config.slug));
+    return <CategoryView config={config} status="ready" articles={articles} error="" source="store" />;
 }
 
-function CategoryView({ config, status, articles, error, onRetry }: ViewProps) {
+function CategoryView({ config, status, articles, error, onRetry, source }: ViewProps) {
     useEffect(() => {
         const previousTitle = document.title;
         document.title = config.pageTitle;
         return () => { document.title = previousTitle; };
     }, [config.pageTitle]);
-    const view = { config, status, articles, error, onRetry };
+    const view = { config, status, articles, error, onRetry, source };
     return config.layout === 'classic' ? <ClassicCategory key={config.slug} {...view} /> : <SectionCategory key={config.slug} {...view} />;
 }
 
-function ClassicCategory({ config, status, articles, error, onRetry }: ViewProps) {
+function ClassicCategory({ config, status, articles, error, onRetry, source }: ViewProps) {
     const [searchParams] = useSearchParams();
     const activeSection = config.filterSections ? searchParams.get('muc') || '' : '';
-    const filteredArticles = activeSection ? articles.filter((article) => article.section === activeSection) : articles;
+    const filteredArticles = source === 'store' ? articles : activeSection ? articles.filter((article) => article.section === activeSection) : articles;
     return <main id="main-content" className={`category-page${config.filterSections ? ' category-page--filterable' : ''}`}>
         <CategoryHeader config={config} /><CategoryNavigation config={config} activeSection={activeSection} />
         <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{config.demoDescription || categoryMessages.demoDescription}</p></div>
-        {status !== 'ready' || filteredArticles.length === 0 ? <CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={onRetry} /> : <ClassicContent key={activeSection} config={config} articles={filteredArticles} activeSection={activeSection} />}
+        {source === 'store' ? <StoreClassicContent key={activeSection} config={config} activeSection={activeSection} /> : status !== 'ready' || filteredArticles.length === 0 ? <CategoryStates status={status === 'ready' ? 'empty' : status} error={error} onRetry={onRetry} /> : <ClassicContent key={activeSection} config={config} articles={filteredArticles} activeSection={activeSection} />}
     </main>;
+}
+
+function StoreClassicContent({ config, activeSection }: { config: CategoryConfig; activeSection: string }) {
+    const pageSize = config.pageSize ?? 6;
+    const [visibleCount, setVisibleCount] = useState(pageSize);
+    const options = useMemo(() => ({ section: activeSection, featuredCount: config.featuredCount, pageSize, visibleCount }), [activeSection, config.featuredCount, pageSize, visibleCount]);
+    const page = useAppSelector((state) => selectCategoryPage(state, config.slug, options));
+    if (!page.total) return <CategoryStates status="empty" />;
+    return <div className="category-layout">
+        <div className="category-layout__main">
+            {!activeSection && <FeaturedArticle articles={page.featured} layout={config.featuredLayout} />}
+            {activeSection && <p className="category-filter-result" role="status">{page.total} bài viết · {activeSection}</p>}
+            <CategoryNewsList articles={page.visibleArticles} totalCount={page.listTotal} config={activeSection ? { ...config, listTitle: activeSection } : config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => Math.min(count + pageSize, page.listTotal))} />
+        </div>
+        <CategorySidebar config={config} articles={config.filterSections ? page.sidebar : undefined} />
+    </div>;
 }
 
 function ClassicContent({ config, articles, activeSection }: { config: CategoryConfig; articles: CategoryLoadState['articles']; activeSection: string }) {

@@ -51,7 +51,7 @@ export const appRoutes: RouteObject[] = [
         children: [
             { index: true, element: <Home /> },
             { path: 'bai/:id', element: <ArticleDetail /> },
-            { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} /> },
+            { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} source="store" /> },
             { path: routes.educationLegacy.slice(1), element: <Navigate to={routes.education} replace /> },
             ...editorialSections.flatMap(section => [
                 { path: section.path.slice(1), element: <EditorialSectionPage section={section} /> },

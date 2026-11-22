@@ -20,6 +20,13 @@ export const selectCategoryArticles = (state: RootState, slug: string) => state.
 export const selectCategoryArticleById = (state: RootState, slug: string, id: string) =>
     selectCategoryArticles(state, slug).find((article) => article.id === id)
 
+export const selectRelatedCategoryArticles = createSelector(
+    [selectCategoryArticles, selectCategoryArticleById],
+    (articles, article) => article
+        ? articles.filter((item) => item.id !== article.id && item.section === article.section).slice(0, 3)
+        : NO_ARTICLES,
+)
+
 export const selectFilteredCategoryArticles = createSelector(
     [selectCategoryArticles, selectOptions],
     (articles, { section, sort }) => {

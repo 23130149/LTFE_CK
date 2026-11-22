@@ -1,19 +1,48 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import type { CategoryConfig } from '../types/category.ts';
+import type { CategoryArticle, CategoryConfig, CategoryLoadState } from '../types/category.ts';
 import { useCategoryNews } from '../hooks/useCategoryNews.ts';
 import { loadCategoryNews } from '../services/categoryDataService.ts';
 import CategoryStates from '../components/category/CategoryStates.tsx';
 import CategoryImage from '../components/category/CategoryImage.tsx';
 import CategoryArticleCard from '../components/category/CategoryArticleCard.tsx';
 import { routes } from '../routing/routes.ts';
+import { useAppSelector } from '../store/hooks.ts';
+import { selectCategoryArticleById, selectRelatedCategoryArticles } from '../store/categorySelectors.ts';
 
 const dateFormatter = new Intl.DateTimeFormat('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', dateStyle: 'long', timeStyle: 'short' });
 
-export default function CategoryArticleDetail({ config }: { config: CategoryConfig }) {
+type DetailViewProps = {
+    config: CategoryConfig;
+    id?: string;
+    status: CategoryLoadState['status'];
+    article?: CategoryArticle;
+    related: CategoryArticle[];
+    error?: string;
+    onRetry?: () => void;
+};
+
+export default function CategoryArticleDetail({ config, source = 'service' }: { config: CategoryConfig; source?: 'service' | 'store' }) {
+    if (source === 'store') return <StoreCategoryArticleDetail config={config} />;
+    return <ServiceCategoryArticleDetail config={config} />;
+}
+
+function StoreCategoryArticleDetail({ config }: { config: CategoryConfig }) {
+    const { id } = useParams();
+    const article = useAppSelector((state) => selectCategoryArticleById(state, config.slug, id ?? ''));
+    const related = useAppSelector((state) => selectRelatedCategoryArticles(state, config.slug, id ?? ''));
+    return <CategoryArticleDetailView config={config} id={id} status="ready" article={article} related={related} />;
+}
+
+function ServiceCategoryArticleDetail({ config }: { config: CategoryConfig }) {
     const { id } = useParams();
     const { status, articles, error, retry } = useCategoryNews(config.slug, loadCategoryNews);
     const article = articles.find((item) => item.id === id);
+    const related = articles.filter((item) => item.id !== id && item.section === article?.section).slice(0, 3);
+    return <CategoryArticleDetailView config={config} id={id} status={status} article={article} related={related} error={error} onRetry={retry} />;
+}
+
+function CategoryArticleDetailView({ config, id, status, article, related, error, onRetry }: DetailViewProps) {
     const title = article ? `${article.title} | ${config.title} — Demo` : config.pageTitle;
     useEffect(() => { window.scrollTo(0, 0); }, [id]);
     useEffect(() => {
@@ -22,11 +51,10 @@ export default function CategoryArticleDetail({ config }: { config: CategoryConf
         return () => { document.title = previousTitle; };
     }, [title]);
     const sectionPath = `${config.path}?${new URLSearchParams({ muc: article?.section || '' })}`;
-    const related = articles.filter((item) => item.id !== id && item.section === article?.section).slice(0, 3);
 
     return <main id="main-content" className="category-page category-page--filterable category-detail">
         <nav aria-label="Đường dẫn trang" className="category-breadcrumb"><Link to={routes.home}>Trang chủ</Link><span aria-hidden="true">/</span><Link to={config.path}>{config.title}</Link>{article && <><span aria-hidden="true">/</span><Link to={sectionPath}>{article.section}</Link><span aria-hidden="true">/</span><span aria-current="page">Bài viết</span></>}</nav>
-        {status !== 'ready' ? <CategoryStates status={status} error={error} onRetry={retry} /> : !article ? <section className="category-state"><h1>Bài viết không tồn tại</h1><p>Hãy chọn bài khác trong chuyên mục {config.title}.</p><Link to={config.path}>← Về {config.title}</Link></section> : <>
+        {status !== 'ready' ? <CategoryStates status={status} error={error} onRetry={onRetry} /> : !article ? <section className="category-state"><h1>Bài viết không tồn tại</h1><p>Hãy chọn bài khác trong chuyên mục {config.title}.</p><Link to={config.path}>← Về {config.title}</Link></section> : <>
             <article>
                 <header><Link className="category-detail__section" to={sectionPath}>{article.section}</Link><h1>{article.title}</h1>{article.publishedAt && <time dateTime={article.publishedAt}>{dateFormatter.format(new Date(article.publishedAt))} · Ngày đăng minh họa</time>}</header>
                 <div className="category-demo"><strong>Bản demo học tập</strong><p>{config.demoDescription}</p></div>

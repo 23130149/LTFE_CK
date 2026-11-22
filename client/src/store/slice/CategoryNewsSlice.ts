@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { CategoryArticle } from '../../types/category.ts'
 import { educationNews } from '../../data/educationNews.ts'
+import { realEstateNews } from '../../data/realEstateNews.ts'
 
 type CategoryNewsState = Partial<Record<string, CategoryArticle[]>>
 
-const initialState: CategoryNewsState = { 'giao-duc': educationNews }
+const initialState: CategoryNewsState = { 'giao-duc': educationNews, 'nha-dat': realEstateNews }
 
 const categoryNewsSlice = createSlice({
     name: 'categoryNews',

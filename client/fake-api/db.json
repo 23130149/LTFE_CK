@@ -387,6 +387,74 @@
   ],
   "articles": [
     {
+      "id": "xe-tin-02",
+      "slug": "xe",
+      "title": "Xe BYD bị tố 'nhái' Land Rover Defender đã có lệnh cấm bán",
+      "summary": "Tòa án tại Hà Lan ra phán quyết sơ bộ về thiết kế mẫu SUV Ti7 của BYD.",
+      "section": "Ô tô",
+      "publishedAt": "2026-11-21T13:29:00+07:00",
+      "image": {
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/byd-ti7-1-17952391235791340506388.jpg",
+        "alt": "Mẫu SUV BYD Ti7 với cảm biến trên nóc. Ảnh: BYD"
+      },
+      "content": [
+        "Vụ kiện xoay quanh kiểu dáng mà Jaguar Land Rover đã đăng ký cho Defender. Lệnh cấm kinh doanh Ti7 áp dụng trong Liên minh châu Âu, còn thị trường Anh nằm ngoài phạm vi phán quyết.",
+        "Jaguar Land Rover đưa sáu mẫu đăng ký bảo hộ ra làm căn cứ. Sau khi đối chiếu, tòa xác định Ti7 xâm phạm một trong sáu mẫu đó. Các chi tiết được xem xét cùng nhau gồm vòm bánh xe, đường cửa sổ bên hông và cách tạo hình phần vai thân xe.",
+        "BYD lập luận rằng dáng vuông đã xuất hiện trên nhiều xe khác và chỉ ra sự khác nhau ở đèn, lưới tản nhiệt cùng nắp ca-pô. Tòa vẫn nhận định tổng thể hai thiết kế quá gần nhau. Mười công ty thuộc BYD chịu tác động của phán quyết sơ bộ này."
+      ]
+    },
+    {
+      "id": "xe-tin-04",
+      "slug": "xe",
+      "title": "Đường Mai Chí Thọ thông thoáng, xe máy vẫn lấn làn xe đạp",
+      "summary": "Trên đường Mai Chí Thọ, người đi xe đạp vẫn phải chia sẻ làn riêng với xe máy.",
+      "section": "Giao thông",
+      "publishedAt": "2026-11-20T20:24:00+07:00",
+      "image": {
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/20/base64-17951768786401632853007.jpeg",
+        "alt": "Xe máy đi vào phần đường dành cho xe đạp trên đường Mai Chí Thọ. Ảnh: Trí Đức"
+      },
+      "content": [
+        "Ghi nhận chiều 20-11 cho thấy tình trạng lấn làn xuất hiện ngay cả lúc đường vắng. Lực lượng cảnh sát giao thông cho biết sẽ tăng tuần tra để xử lý người đi sai làn.",
+        "Trên trục đường này, một số công trình đang thi công khiến việc đi lại khó khăn vào giờ cao điểm. Tuy vậy, hình ảnh phóng viên ghi nhận lúc đường thoáng cho thấy ngay cả khi làn xe máy còn chỗ, vẫn có người chọn chạy sang phần đường của xe đạp.",
+        "Ngoài việc bố trí lực lượng ngoài đường, cảnh sát dùng hình ảnh từ camera để nhận diện vi phạm. Tại thời điểm báo thông tin, đơn vị đã lập biên bản 142 trường hợp và gửi thông báo phạt nguội cho 385 trường hợp khác. Biển báo, vạch phản quang và cọc phân làn cũng được rà soát."
+      ]
+    },
+    {
+      "id": "xe-tin-05",
+      "slug": "xe",
+      "title": "VinFast ra mắt 2 xe máy điện mới, giá từ 59,9 triệu đồng",
+      "summary": "Sadie và Rasad đã có giá bán chính thức tại Việt Nam.",
+      "section": "Xe máy",
+      "publishedAt": "2026-11-20T08:01:00+07:00",
+      "image": {
+        "src": "https://cdn2.tuoitre.vn/thumb_w/660/471584752817336320/2026/11/20/sadie-6-17950823569371858610439-17951346269632107577914.png",
+        "alt": "Hai mẫu xe máy điện mới của VinFast. Ảnh: VinFast"
+      },
+      "content": [
+        "VinFast giới thiệu hai mẫu xe ngày 19-11. Sadie có giá 59,9 triệu đồng, còn Rasad giá 78,9 triệu đồng. Hai mẫu khác nhau về thiết kế và trang bị.",
+        "Sadie theo phong cách scooter cổ điển, có cốp 30 lít dưới yên. Màn hình 5 inch có thể kết nối với điện thoại qua Bluetooth để hiện bản đồ hoặc báo cuộc gọi. Chủ xe cũng có thể xem mức pin và lịch sử hành trình bằng ứng dụng của hãng.",
+        "Một khác biệt dễ nhận thấy khi đặt hai mẫu cạnh nhau là Rasad có dáng maxi-scooter, còn Sadie dùng các đường cong và nhiều chi tiết mạ crôm. Với người đi phố, những thông tin như chỗ để đồ, chức năng lùi và hỗ trợ khởi hành ngang dốc của Sadie giúp hình dung cách dùng xe hằng ngày."
+      ]
+    },
+    {
+      "id": "xe-tin-03",
+      "slug": "xe",
+      "title": "Học sinh biến xe xăng 'cổ lỗ' thành xe điện, tự làm từ phanh đến lắp pin",
+      "summary": "Một nhóm nữ sinh ở Úc đưa chiếc Suzuki Carry đời 1975 trở lại đường phố bằng động cơ điện.",
+      "section": "Ô tô",
+      "publishedAt": "2026-11-19T19:00:00+07:00",
+      "image": {
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/19/hoc-sinh-bien-xe-xang-thanh-xe-dien-1-1795059145449869310061.jpg",
+        "alt": "Chiếc Suzuki Carry sau khi được học sinh chuyển sang chạy điện. Ảnh: Queenwood"
+      },
+      "content": [
+        "Học sinh trường Queenwood mất bốn năm để hoàn thành chiếc xe tải nhỏ. Các em trực tiếp sửa phần cơ khí, lắp hệ thống điện và giải quyết những yêu cầu an toàn để xe có thể đăng ký lưu hành.",
+        "Dự án bắt đầu năm 2022 với học sinh từ lớp 8 đến lớp 12 tại bang New South Wales. Khi chiếc xe tải nhẹ được đưa về trường, các em phải tìm hiểu cả phần khung, hệ thống phanh và cách bố trí pin. Mỗi công việc đều phục vụ mục tiêu cuối cùng là đưa xe trở lại đường công cộng.",
+        "Một trong những thành viên đầu tiên là Aaliya. Sau khi vào đại học, cô quay lại Queenwood để hướng dẫn học sinh khóa sau. Những dụng cụ và kỹ năng từng dùng để sửa chiếc xe cũ vì thế tiếp tục được sử dụng trong xưởng của trường."
+      ]
+    },
+    {
       "id": "xe-tin-01",
       "slug": "xe",
       "title": "VinFast sắp ra mắt 2 xe máy điện mới",
@@ -394,88 +462,65 @@
       "section": "Xe máy",
       "publishedAt": "2026-11-13T00:00:00+07:00",
       "image": {
-        "src": "/images/sections/xe.svg",
-        "alt": "Tranh minh họa chuyên mục Xe"
+        "src": "https://cdn2.tuoitre.vn/thumb_w/660/471584752817336320/2026/11/13/xe-may-dien-vinfast-moi-1-1794543745320-17945437459331576645318-17945500409812094769299.jpeg",
+        "alt": "Hình ảnh VinFast công bố trước buổi ra mắt. Ảnh: VinFast"
       },
       "content": [
         "VinFast công bố hình ảnh hé lộ hai mẫu xe máy điện, nhưng tại thời điểm thông tin được đăng, hãng chưa xác nhận tên sản phẩm, giá bán hay thông số của phiên bản thương mại. Đại lý dự đoán hai xe có thể là Rasad và Sadie, với lịch giới thiệu dự kiến ngày 19-11.",
-        "Trong các bản concept giới thiệu trước đó, Rasad mang kiểu dáng maxi-scooter và có công suất dự kiến 7.100 W. Sadie có thân xe gọn hơn và công suất dự kiến 4.500 W. Thông số cuối cùng cần chờ công bố chính thức."
+        "Trong các bản concept giới thiệu trước đó, Rasad mang kiểu dáng maxi-scooter và có công suất dự kiến 7.100 W. Sadie có thân xe gọn hơn và công suất dự kiến 4.500 W. Thông số cuối cùng cần chờ công bố chính thức.",
+        "Ở bản thiết kế ban đầu, Rasad có đầu xe cao và kính chắn gió lớn, trong khi các nét tròn và phần thân nhỏ gọn giúp nhận ra Sadie. Ảnh hé lộ cho thấy một vài chi tiết đã thay đổi so với xe ý tưởng, nên người mua còn phải chờ hãng giới thiệu bản bán ra để đối chiếu."
       ]
     },
     {
-      "id": "xe-01",
-      "slug": "xe",
-      "section": "Ô tô",
-      "title": "Trước chuyến đi xa, nên kiểm tra xe từ đâu?",
-      "summary": "Một danh sách ngắn giúp người lái chủ động kiểm tra lốp, đèn và giấy tờ trước khi lên đường.",
-      "content": [
-        "Người lái có thể bắt đầu từ những việc dễ quan sát như áp suất lốp, đèn chiếu sáng và mức nhiên liệu. Với những dấu hiệu bất thường, nên tìm nơi bảo dưỡng phù hợp trước chuyến đi."
-      ],
-      "publishedAt": "2026-11-12T02:30:00.000Z",
+      "id": "du-lich-tin-02",
+      "slug": "du-lich",
+      "title": "Chủ tịch xã miền núi làm web du lịch, khách nước ngoài khen ‘chuẩn tuyệt đối’",
+      "summary": "Du khách đến Kim Phú có thể tra đường đi và giá dịch vụ trên một trang web song ngữ.",
+      "section": "Kinh nghiệm",
+      "publishedAt": "2026-11-21T15:10:00+07:00",
       "image": {
-        "src": "/images/sections/xe.svg",
-        "alt": "Tranh minh họa chuyên mục Xe"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/chu-tich-xa-kim-phu-thuyen-qua-hung-trau-trong-suong-som-ubnd-xa-kim-phu-1795245387640613139621.jpg",
+        "alt": "Thuyền đi qua Hung Trâu, xã Kim Phú, trong sương sớm. Ảnh: UBND xã Kim Phú"
+      },
+      "content": [
+        "Ông Hoàng Tự Quốc Hùng, chủ tịch xã Kim Phú, xây dựng trang Visit Kim Phú khi thấy khách khó tìm thông tin trước chuyến đi. Tại điểm tham quan, khách có thể quét mã để nghe thuyết minh.",
+        "Trang có hai phiên bản tiếng Việt và tiếng Anh. Thay vì phải hỏi riêng từng nơi, khách có thể tra đường tới điểm tham quan, nghe thuyết minh và tìm hiểu giá ăn ở. Thông tin do cán bộ xã kiểm tra trước khi đưa lên; một số cơ sở còn có mã QR gắn với giá đã công bố.",
+        "Một chi tiết quan trọng với người chuẩn bị chuyến đi là xã không đứng ra bán tour hay nhận tiền đặt cọc. Khách liên hệ trực tiếp với hộ kinh doanh trong danh sách. Nếu giá thực tế khác giá niêm yết, người dùng có thể phản ánh lại với xã."
+      ]
     },
     {
-      "id": "xe-02",
-      "slug": "xe",
-      "section": "Xe máy",
-      "title": "Giữ xe máy gọn gàng trong mùa mưa",
-      "summary": "Vệ sinh và quan sát các bộ phận cơ bản giúp việc đi lại hằng ngày thuận tiện hơn.",
-      "content": [
-        "Sau khi đi qua đoạn đường ngập hoặc nhiều bùn, việc làm sạch xe và kiểm tra phanh là thói quen có ích. Mỗi dòng xe có hướng dẫn bảo dưỡng riêng từ nhà sản xuất."
-      ],
-      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "id": "du-lich-tin-03",
+      "slug": "du-lich",
+      "title": "Trật tự viên du lịch TP.HCM 'thử nghiệm' hiệu quả ở Vũng Tàu",
+      "summary": "Vũng Tàu thử nghiệm lực lượng trật tự viên để hỗ trợ du khách.",
+      "section": "Kinh nghiệm",
+      "publishedAt": "2026-11-21T13:08:00+07:00",
       "image": {
-        "src": "/images/sections/xe.svg",
-        "alt": "Tranh minh họa chuyên mục Xe"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/179516005110831529075458982338143152907545898233814b753fd82a979e571ca70d9b1510de970-1795234524766968783810.jpg",
+        "alt": "Trật tự viên du lịch làm nhiệm vụ tại Vũng Tàu. Ảnh: L.P."
+      },
+      "content": [
+        "Sau hai tháng triển khai tại phường Vũng Tàu, các trật tự viên vừa hỗ trợ khách vừa góp phần giữ trật tự và mỹ quan tại điểm du lịch.",
+        "Công việc ở 15 chốt trực trải từ hướng dẫn sang đường đến tìm trẻ lạc và trả lại tài sản đánh rơi. Khi xảy ra tai nạn, trật tự viên phối hợp với cảnh sát phân luồng và bảo vệ hiện trường. Các tổ tuần tra cũng nhắc nhở những trường hợp chèo kéo khách ở điểm đông người.",
+        "Vào mùa lễ, lượng khách có thể gấp nhiều lần ngày thường. Đơn vị phụ trách dự kiến điều chỉnh nhân sự theo từng khung giờ và từng địa điểm, chú ý các bãi tắm, tuyến đường ven biển và khoảng thời gian giao ca buổi tối."
+      ]
     },
     {
-      "id": "xe-03",
-      "slug": "xe",
-      "section": "Giao thông",
-      "title": "Một khoảng cách nhỏ cho hành trình an toàn hơn",
-      "summary": "Đi đúng tốc độ và chừa không gian phản ứng là chủ đề được nhiều người đi đường quan tâm.",
-      "content": [
-        "Tình huống minh họa đặt câu hỏi về cách xử lý khi mật độ xe tăng. Quan sát biển báo và giữ khoảng cách phù hợp giúp người lái có thêm thời gian phản ứng."
-      ],
-      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "id": "du-lich-tin-04",
+      "slug": "du-lich",
+      "title": "Ngày Văn hóa Việt Nam: Đi du lịch Hà Giang xem 3 đêm nghi lễ nhảy lửa huyền bí của người Pà Thẻn",
+      "summary": "Du khách có dịp xem nghệ nhân Pà Thẻn thực hành nghi lễ nhảy lửa trong ba đêm hội.",
+      "section": "Điểm đến",
+      "publishedAt": "2026-11-21T06:22:00+07:00",
       "image": {
-        "src": "/images/sections/xe.svg",
-        "alt": "Tranh minh họa chuyên mục Xe"
-      }
-    },
-    {
-      "id": "xe-04",
-      "slug": "xe",
-      "section": "Ô tô",
-      "title": "Sắp xếp hành lý để khoang xe dễ sử dụng",
-      "summary": "Cách đặt đồ nặng, đồ thường dùng và vật dụng khẩn cấp có thể giúp chuyến đi thoải mái.",
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/20/2aobordyiewlm1pc13q6frnjp0a8rotia7whdagm-1795193347532412005568.jpg",
+        "alt": "Ông Đỗ Hùng Đức tại ngày hội văn hóa của tỉnh Tuyên Quang. Ảnh: Văn Long"
+      },
       "content": [
-        "Đồ vật nên được đặt ổn định và không che tầm nhìn của người lái. Một kế hoạch hành lý gọn cũng giúp mọi người lấy đồ cần thiết mà không phải dỡ cả khoang xe."
-      ],
-      "publishedAt": "2026-11-09T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/xe.svg",
-        "alt": "Tranh minh họa chuyên mục Xe"
-      }
-    },
-    {
-      "id": "xe-05",
-      "slug": "xe",
-      "section": "Xe máy",
-      "title": "Chọn thời điểm nghỉ trên một hành trình dài",
-      "summary": "Dừng nghỉ đúng lúc giúp chuyến đi bớt căng thẳng và có thời gian quan sát phương tiện.",
-      "content": [
-        "Trong hành trình giả định, nhóm bạn chia chặng đường thành những đoạn vừa sức. Họ điều chỉnh kế hoạch khi thời tiết thay đổi thay vì cố giữ lịch trình ban đầu."
-      ],
-      "publishedAt": "2026-11-08T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/xe.svg",
-        "alt": "Tranh minh họa chuyên mục Xe"
-      }
+        "Chương trình diễn ra nhân ngày hội văn hóa các dân tộc ở Tuyên Quang. Nhảy lửa là nghi lễ của người Pà Thẻn đã được ghi danh là di sản văn hóa phi vật thể cấp quốc gia.",
+        "Lễ hội năm 2026 diễn ra từ ngày 22 đến 24-11 tại xã Tân Trịnh. Nghệ nhân và người dân ở nhiều xã cùng tham gia. Sau phần lễ, những người thực hành bước chân trần vào than hồng. Trong đời sống cộng đồng, nghi lễ gắn với việc tạ ơn và cầu bình an, mùa màng tốt lành.",
+        "Từng có thời gian nghi lễ gần như biến mất trong khoảng nửa thế kỷ. Việc khôi phục có sự tham gia của chính người Pà Thẻn và chính quyền địa phương. Với khách đến dự, ba đêm hội còn là dịp tìm hiểu vì sao cộng đồng tiếp tục truyền lại nghi lễ này."
+      ]
     },
     {
       "id": "du-lich-tin-01",
@@ -485,88 +530,99 @@
       "section": "Điểm đến",
       "publishedAt": "2026-11-13T00:00:00+07:00",
       "image": {
-        "src": "/images/sections/du-lich.svg",
-        "alt": "Tranh minh họa chuyên mục Du lịch"
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/13/base64-17945595556991640367686.jpeg",
+        "alt": "Cảnh quan vùng cao nguyên đá Đồng Văn. Ảnh: Vũ Tuấn"
       },
       "content": [
         "UBND tỉnh Tuyên Quang đang lấy ý kiến về đề án phát triển công viên địa chất, trong đó có phương án thu 30.000 đồng mỗi người cho một đêm lưu trú. Cách tổ chức thu vẫn đang được nghiên cứu; cơ sở lưu trú là một địa điểm dự kiến thu phí.",
-        "Theo phương án được nêu, 60% số thu dự kiến nộp ngân sách để phục vụ bảo vệ và phát triển di sản, 40% dành cho các xã trong vùng công viên. Khoản thu được kỳ vọng hỗ trợ bảo tồn, hạ tầng và trải nghiệm du lịch."
+        "Theo phương án được nêu, 60% số thu dự kiến nộp ngân sách để phục vụ bảo vệ và phát triển di sản, 40% dành cho các xã trong vùng công viên. Khoản thu được kỳ vọng hỗ trợ bảo tồn, hạ tầng và trải nghiệm du lịch.",
+        "Đối tượng mà đề án hướng tới gồm khách trong nước và quốc tế ở qua đêm trong vùng công viên. Theo thống kê được công bố cùng đề án, từ 2021 đến 2025, lượng khách và doanh thu du lịch tại đây tăng trung bình 15–20% mỗi năm, cao hơn mức tăng chung khoảng 10% của tỉnh."
       ]
     },
     {
-      "id": "du-lich-01",
+      "id": "du-lich-tin-05",
       "slug": "du-lich",
-      "section": "Điểm đến",
-      "title": "Một ngày đi bộ khám phá khu phố cũ",
-      "summary": "Những con đường quen có thể mang lại trải nghiệm mới khi dành thời gian quan sát và lắng nghe.",
-      "content": [
-        "Lộ trình minh họa bắt đầu từ không gian công cộng, đi qua vài điểm sinh hoạt địa phương và kết thúc ở một quán nhỏ. Người tham quan nên tôn trọng đời sống của cư dân."
-      ],
-      "publishedAt": "2026-11-12T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/du-lich.svg",
-        "alt": "Tranh minh họa chuyên mục Du lịch"
-      }
-    },
-    {
-      "id": "du-lich-02",
-      "slug": "du-lich",
-      "section": "Kinh nghiệm",
-      "title": "Chuẩn bị hành lý gọn cho chuyến đi cuối tuần",
-      "summary": "Chọn đồ theo thời tiết và hoạt động dự kiến giúp chiếc túi nhẹ hơn.",
-      "content": [
-        "Một danh sách ngắn gồm giấy tờ, vật dụng cá nhân và đồ dùng phù hợp điểm đến thường dễ kiểm tra hơn. Trước khi khởi hành, nên xác nhận lại thông tin di chuyển và lưu trú."
-      ],
-      "publishedAt": "2026-11-11T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/du-lich.svg",
-        "alt": "Tranh minh họa chuyên mục Du lịch"
-      }
-    },
-    {
-      "id": "du-lich-03",
-      "slug": "du-lich",
+      "title": "Việt Nam hưởng lợi từ làn sóng tìm kiếm du lịch ẩm thực",
+      "summary": "Món ăn trở thành một lý do để du khách tìm kiếm chuyến đi đến Việt Nam.",
       "section": "Ẩm thực",
-      "title": "Khám phá món ăn địa phương bằng sự tò mò",
-      "summary": "Một bữa ăn có thể là dịp tìm hiểu nguyên liệu, cách nấu và câu chuyện của người làm món.",
-      "content": [
-        "Khi thử món mới, người đi du lịch có thể hỏi về thành phần và cách chế biến. Sự tôn trọng với người bán và văn hóa địa phương làm cuộc trò chuyện thú vị hơn."
-      ],
-      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "publishedAt": "2026-09-09T16:38:00+07:00",
       "image": {
-        "src": "/images/sections/du-lich.svg",
-        "alt": "Tranh minh họa chuyên mục Du lịch"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/9/9/ed9837363d7ebd20e46f-1788939661714291026877.jpg",
+        "alt": "Món ăn trong bài viết về du lịch ẩm thực Việt Nam. Ảnh: Hải Kim"
+      },
+      "content": [
+        "Theo số liệu tìm kiếm trên Trip.com mà Tuổi Trẻ dẫn lại, Việt Nam xếp thứ tư trong số các điểm đến ẩm thực thuộc khu vực châu Á – Thái Bình Dương.",
+        "Trong tám tháng đầu năm 2026, số lượt tìm thông tin ẩm thực trên nền tảng tăng 45% so với cùng kỳ. Hà Nội, TP.HCM và Đà Nẵng đều xuất hiện trong các cụm từ được quan tâm. Số liệu phản ánh hành vi tìm kiếm trên nền tảng, nên cần phân biệt với số khách thực tế đến từng thành phố.",
+        "Khoảng 41% lượt tìm kiếm về đồ ăn dẫn tới việc người dùng xem tiếp các dịch vụ du lịch khác. Ở nhóm nhà hàng cao cấp, danh sách được công bố ghi nhận Gia và KOKI ở Hà Nội, cùng Ănăn Saigon tại TP.HCM, ở hạng Bạch Kim."
+      ]
     },
     {
-      "id": "du-lich-04",
-      "slug": "du-lich",
-      "section": "Điểm đến",
-      "title": "Chọn một tuyến tham quan vừa sức",
-      "summary": "Ít điểm dừng hơn có thể tạo thêm thời gian để trải nghiệm từng nơi.",
-      "content": [
-        "Trong kế hoạch minh họa, nhóm bạn để trống một khoảng thời gian cho nghỉ ngơi và thay đổi lịch trình. Cách này hữu ích khi thời tiết hoặc giao thông không như dự tính."
-      ],
-      "publishedAt": "2026-11-09T02:30:00.000Z",
+      "id": "van-hoa-tin-03",
+      "slug": "van-hoa",
+      "title": "Cuộc thi Đi tìm người nấu phở ngon 2026 trở lại, sẽ có Đệ nhất phở sáng tạo",
+      "summary": "Cuộc thi nấu phở năm 2026 mở rộng cơ hội cho những người muốn thử cách chế biến mới.",
+      "section": "Đời sống",
+      "publishedAt": "2026-11-21T14:36:00+07:00",
       "image": {
-        "src": "/images/sections/du-lich.svg",
-        "alt": "Tranh minh họa chuyên mục Du lịch"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/screenshot-2026-11-21-at-143009-1795246227544907932435.png",
+        "alt": "Thí sinh Nguyễn Trần Quốc Đạt ở cuộc thi nấu phở năm 2025. Ảnh: Hữu Hạnh"
+      },
+      "content": [
+        "Cuộc thi do Tuổi Trẻ và các đơn vị phối hợp phát động ngày 21-11. Người Việt Nam và người nước ngoài trên 18 tuổi đều có thể dự thi nếu trực tiếp nấu phở.",
+        "Cuộc thi có từ năm 2019, gắn với Ngày của Phở 12-12. Qua các mùa, bên cạnh phở bò và phở gà quen thuộc, người dự mang tới những cách nấu gắn với nguyên liệu địa phương, từ phở ngô ở Hà Giang đến phở khô Gia Lai và phở sâm Ngọc Linh.",
+        "Những người từng đoạt giải Hoa hồi vàng còn tham gia giới thiệu món ăn tại các kỳ Vietnam Phở Festival ở nước ngoài. Hạng mục dành cho món phở sáng tạo năm nay tiếp nối câu chuyện đó bằng một câu hỏi cụ thể cho người thi: đặc sản quê mình có thể góp gì vào một tô phở?"
+      ]
     },
     {
-      "id": "du-lich-05",
-      "slug": "du-lich",
-      "section": "Kinh nghiệm",
-      "title": "Giữ lại những kỷ niệm mà không để lại rác",
-      "summary": "Những lựa chọn nhỏ trong chuyến đi góp phần giữ không gian chung sạch đẹp.",
-      "content": [
-        "Mang bình nước dùng lại, bỏ rác đúng nơi và tuân thủ hướng dẫn tại điểm tham quan là các thói quen dễ bắt đầu. Mỗi nơi có quy định riêng cần được tìm hiểu trước."
-      ],
-      "publishedAt": "2026-11-08T02:30:00.000Z",
+      "id": "van-hoa-tin-02",
+      "slug": "van-hoa",
+      "title": "Khai mạc Hội sách Côn Đảo: Báo Tuổi Trẻ trao 40 suất học bổng cho học sinh khó khăn",
+      "summary": "Hội sách Côn Đảo kết hợp trưng bày tư liệu lịch sử với trao học bổng cho học sinh.",
+      "section": "Sách",
+      "publishedAt": "2026-11-21T14:29:00+07:00",
       "image": {
-        "src": "/images/sections/du-lich.svg",
-        "alt": "Tranh minh họa chuyên mục Du lịch"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/2aobore8uor7rbhdkobymhivup902jkickyvio5q-17952439513941131754968.jpg",
+        "alt": "Đại biểu tham quan các gian sách ở Côn Đảo. Ảnh: Vũ Phượng"
+      },
+      "content": [
+        "Hội sách mở cửa sáng 21-11 với chủ đề “Huyền thoại Côn Đảo”. Ngoài các không gian đọc, chương trình còn dành 40 suất học bổng cho học sinh có hoàn cảnh khó khăn tại địa phương.",
+        "Người đọc có thể tìm hiểu quá khứ của đảo qua nhật ký, bút tích và hồi ức của các cựu tù chính trị. Một khu trưng bày riêng kể chuyện thời chiến bằng thư từ. Cách sắp đặt những lá thư bên cạnh hình ảnh về biển và di tích đưa người xem về hoàn cảnh mà mỗi trang viết ra đời.",
+        "Hội sách cũng dành chỗ cho sách thiếu nhi. Với học sinh trên đảo, lễ khai mạc vừa là dịp tiếp cận sách ngay tại nơi mình sống, vừa có hoạt động trao học bổng. Chương trình diễn ra trước hai ngày kỷ niệm về di sản và văn hóa vào 23 và 24-11."
+      ]
+    },
+    {
+      "id": "van-hoa-tin-04",
+      "slug": "van-hoa",
+      "title": "Trao hơn 4.000 tư liệu liên quan đến cụ Phan Châu Trinh nhân Ngày Văn hóa Việt Nam",
+      "summary": "Gia tộc Phan Châu Trinh trao một bộ tư liệu số cho đơn vị lưu giữ di sản ở Đà Nẵng.",
+      "section": "Di sản",
+      "publishedAt": "2026-11-21T14:18:00+07:00",
+      "image": {
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/gia-toc-phan-chau-trinh-edit-rotate-17952459687181070645287.jpg",
+        "alt": "Đại diện gia tộc Phan Châu Trinh bàn giao tư liệu tại Đà Nẵng. Ảnh: Trường Trung"
+      },
+      "content": [
+        "Bộ sưu tập gồm 4.013 tệp ảnh và tư liệu về cuộc đời, hoạt động của nhà yêu nước. Việc bàn giao diễn ra trong chuỗi hoạt động hưởng ứng Ngày Văn hóa Việt Nam.",
+        "Bảo tàng Đà Nẵng tiếp nhận bộ tư liệu vào năm đánh dấu một thế kỷ kể từ khi Phan Châu Trinh qua đời. Đối với gia đình, việc trao tặng mở ra khả năng lưu giữ lâu dài và giúp người nghiên cứu cùng các thế hệ sau tiếp cận những tài liệu về hoạt động của ông.",
+        "Trong đợt tiếp nhận này còn có vật dụng sinh hoạt của cư dân xứ Quảng, hiện vật dân tộc học và tài liệu thời chiến do nhiều gia đình gìn giữ. Con số 4.115 hiện vật, tài liệu của cả đợt vì vậy bao gồm cả phần đóng góp ngoài bộ sưu tập của gia tộc."
+      ]
+    },
+    {
+      "id": "van-hoa-tin-05",
+      "slug": "van-hoa",
+      "title": "Ngày Văn hóa Việt Nam lần đầu tiên: Sân khấu giảm giá vé ‘mua 2 tặng 1’, rạp phim ‘bung deal hết ý’",
+      "summary": "Các sân khấu và rạp phim giới thiệu ưu đãi vé nhân Ngày Văn hóa Việt Nam.",
+      "section": "Đời sống",
+      "publishedAt": "2026-11-21T06:30:00+07:00",
+      "image": {
+        "src": "https://cdn2.tuoitre.vn/thumb_w/1460/471584752817336320/2026/11/14/base64-1794646844831779191704.jpeg",
+        "alt": "Cảnh trong vở diễn về Lê Văn Duyệt của sân khấu Idecaf. Ảnh: Linh Đoan"
+      },
+      "content": [
+        "Khán giả có thêm lựa chọn xem kịch và điện ảnh trong dịp 24-11. Một số sân khấu áp dụng chương trình mua hai vé tặng một vé.",
+        "Cách dùng vé khác nhau theo từng nhà hát. Sân khấu Trương Hùng Minh áp dụng ưu đãi cho các vở trong tháng 11, còn ở sân khấu 5B, người mua hai vé nhận phiếu để đổi vé cho lần sau. Người muốn rủ bạn xem cùng cần chú ý điểm khác biệt này khi chọn suất.",
+        "Tại Hà Nội, Nhà hát Tuổi Trẻ lên lịch diễn từ ngày 22 đến 29-11 và giảm 20% giá vé. Khán giả có thể chọn Hồn Trương Ba, da hàng thịt hoặc Quân khu Nam Đồng. Nhà hát Kịch Việt Nam dành vé tặng cho một số suất diễn cụ thể."
+      ]
     },
     {
       "id": "van-hoa-tin-01",
@@ -576,88 +632,65 @@
       "section": "Đời sống",
       "publishedAt": "2026-11-13T00:00:00+07:00",
       "image": {
-        "src": "/images/sections/van-hoa.svg",
-        "alt": "Tranh minh họa chuyên mục Văn hóa"
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/13/19-17945495365221625943092.jpg",
+        "alt": "Buổi giới thiệu Tuần Văn hóa – Đại đoàn kết tại Đồng Nai. Ảnh: H.M."
       },
       "content": [
         "Tuần Văn hóa - Đại đoàn kết dự kiến diễn ra từ ngày 18 đến 24-11-2026 với 24 hoạt động về văn hóa, thể thao và du lịch. Chương trình kết nối dịp Ngày hội Đại đoàn kết toàn dân tộc với Ngày Văn hóa Việt Nam.",
-        "Ngoài chương trình nghệ thuật, người tham dự có thể tìm hiểu ẩm thực, sản phẩm địa phương và các nghề truyền thống. Các xã, phường cũng tổ chức hoạt động để người dân ở nhiều khu vực có điều kiện tham gia."
+        "Ngoài chương trình nghệ thuật, người tham dự có thể tìm hiểu ẩm thực, sản phẩm địa phương và các nghề truyền thống. Các xã, phường cũng tổ chức hoạt động để người dân ở nhiều khu vực có điều kiện tham gia.",
+        "Đêm khai mạc được bố trí tại công viên Quảng trường ở phường Tân Triều, kết nối với Lộc Thành và Tà Lài. Ở các hoạt động trải nghiệm, khách có thể tìm hiểu nghề gốm Biên Hòa và nghe đờn ca tài tử. Hai không gian riêng giới thiệu văn hóa và món ăn của Đồng Nai."
       ]
     },
     {
-      "id": "van-hoa-01",
-      "slug": "van-hoa",
-      "section": "Di sản",
-      "title": "Bước chậm hơn trong một không gian di sản",
-      "summary": "Đọc câu chuyện phía sau hiện vật giúp chuyến tham quan có thêm chiều sâu.",
-      "content": [
-        "Một buổi tham quan minh họa dành thời gian cho bảng giới thiệu và lời kể của người hướng dẫn. Việc giữ khoảng cách, không chạm vào hiện vật cũng thể hiện sự tôn trọng không gian chung."
-      ],
-      "publishedAt": "2026-11-12T02:30:00.000Z",
+      "id": "giai-tri-tin-02",
+      "slug": "giai-tri",
+      "title": "Quy tắc Oscar có thể bị phá vỡ trong cuộc đua Phim hay nhất",
+      "summary": "Những phim thuộc nhiều thể loại đang khiến hạng mục cao nhất của Oscar 2027 khó dự đoán.",
+      "section": "Phim",
+      "publishedAt": "2026-11-21T14:25:00+07:00",
       "image": {
-        "src": "/images/sections/van-hoa.svg",
-        "alt": "Tranh minh họa chuyên mục Văn hóa"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2025/7/2/dominic-mclaughlin-harry-potter-3-1751433378414577497174.png",
+        "alt": "Christopher Nolan và tạo hình của Matt Damon trong The Odyssey. Ảnh: AFP/Universal"
+      },
+      "content": [
+        "Bài viết điểm qua các ứng viên như The Odyssey, Project Hail Mary và Wildwood, đồng thời xem xét những tiền lệ của hạng mục Phim hay nhất trước mùa trao giải.",
+        "Nếu phim ra rạp từ mùa hè, liệu đến khi bỏ phiếu các thành viên Viện Hàn lâm còn nhớ đến nó? Trường hợp Oppenheimer là một đối chứng đáng chú ý: phim phát hành tháng 7-2023 nhưng đến tháng 3 năm sau vẫn giành bảy tượng vàng. The Odyssey của Christopher Nolan đang đứng trước phép thử tương tự.",
+        "Các phim làm tiếp một loạt phim lại gặp tiền lệ khác. Trong lịch sử giải, số phần tiếp theo giành giải cao nhất rất ít, dù từng có ngoại lệ như phần hai của Bố già. Với mười chỗ trong danh sách đề cử và nhiều ứng viên còn cạnh tranh, những nhận định hiện tại vẫn chỉ là dự đoán."
+      ]
     },
     {
-      "id": "van-hoa-02",
-      "slug": "van-hoa",
-      "section": "Sách",
-      "title": "Một câu lạc bộ đọc bắt đầu từ vài người bạn",
-      "summary": "Không cần danh sách sách dài, cuộc trò chuyện chân thành đã đủ để hình thành thói quen đọc.",
-      "content": [
-        "Mỗi người chọn một đoạn mình thích và giải thích vì sao. Những góc nhìn khác nhau làm buổi đọc trở nên cởi mở, kể cả khi chưa ai đọc hết cuốn sách."
-      ],
-      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "id": "giai-tri-tin-03",
+      "slug": "giai-tri",
+      "title": "'Hoàng hậu tái hôn' dẫn đầu Disney+ toàn cầu",
+      "summary": "Phim giả tưởng Hàn Quốc có Shin Min Ah vươn lên đầu bảng chương trình truyền hình trên Disney+.",
+      "section": "Phim",
+      "publishedAt": "2026-11-21T12:08:00+07:00",
       "image": {
-        "src": "/images/sections/van-hoa.svg",
-        "alt": "Tranh minh họa chuyên mục Văn hóa"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/anh-man-hinh-2026-11-21-luc-115041-17952366856131467262074.png",
+        "alt": "Shin Min Ah trong vai hoàng hậu Navier. Ảnh: Disney+"
+      },
+      "content": [
+        "Theo bảng xếp hạng FlixPatrol được Tuổi Trẻ dẫn lại, Hoàng hậu tái hôn đạt vị trí này sau 17 ngày phát hành.",
+        "Tác phẩm được chuyển thể từ truyện tranh mạng, lấy bối cảnh một triều đình giả tưởng. Navier, nhân vật của Shin Min Ah, phải đối diện với yêu cầu ly hôn khi hoàng đế Sovieshu muốn đến với Rashta. Quyết định của Navier tại thời điểm đó mở ra xung đột chính của bộ phim.",
+        "Cô đề nghị được tái hôn với hoàng tử Heinrey của một đế quốc khác. Bên cạnh câu chuyện tình cảm, khán giả vì thế còn theo dõi lựa chọn của một người đang giữ vị trí hoàng hậu. Phim lên đầu bảng ở nhiều thị trường khác nhau, từ Nhật Bản tới Pháp, Ba Lan và Tây Ban Nha."
+      ]
     },
     {
-      "id": "van-hoa-03",
-      "slug": "van-hoa",
-      "section": "Đời sống",
-      "title": "Giữ một góc cho sinh hoạt văn hóa khu phố",
-      "summary": "Không gian chung có thể kết nối nhiều thế hệ qua hoạt động nhỏ.",
-      "content": [
-        "Trong câu chuyện giả định, cư dân cùng bàn cách sử dụng một căn phòng chung cho đọc sách và trao đổi kỹ năng. Lịch sử dụng rõ ràng giúp nhiều người đều có cơ hội tham gia."
-      ],
-      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "id": "giai-tri-tin-04",
+      "slug": "giai-tri",
+      "title": "James Bond trở lại thế nào sau cái chết trong No Time to Die?",
+      "summary": "Cái kết của No Time to Die đặt ra câu hỏi về cách mở đầu phần phim James Bond tiếp theo.",
+      "section": "Phim",
+      "publishedAt": "2026-11-21T11:45:00+07:00",
       "image": {
-        "src": "/images/sections/van-hoa.svg",
-        "alt": "Tranh minh họa chuyên mục Văn hóa"
-      }
-    },
-    {
-      "id": "van-hoa-04",
-      "slug": "van-hoa",
-      "section": "Di sản",
-      "title": "Lắng nghe câu chuyện từ người làm nghề thủ công",
-      "summary": "Một sản phẩm thủ công chứa trong đó kinh nghiệm, thời gian và những lựa chọn của người làm nghề.",
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/20/robert-pattinsongetty-2-1794876397900-179518571972651242424.jpeg",
+        "alt": "Diễn viên Robert Pattinson. Ảnh: AFP"
+      },
       "content": [
-        "Thay vì chỉ nhìn thành phẩm, người tham quan thử tìm hiểu các bước làm và nguồn nguyên liệu. Cách đặt câu hỏi tôn trọng giúp cuộc gặp gỡ có ý nghĩa hơn."
-      ],
-      "publishedAt": "2026-11-09T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/van-hoa.svg",
-        "alt": "Tranh minh họa chuyên mục Văn hóa"
-      }
-    },
-    {
-      "id": "van-hoa-05",
-      "slug": "van-hoa",
-      "section": "Sách",
-      "title": "Đọc lại một cuốn sách ở tuổi khác",
-      "summary": "Cùng một câu chuyện có thể gợi những suy nghĩ mới khi trải nghiệm của người đọc thay đổi.",
-      "content": [
-        "Nhân vật trong bài minh họa ghi lại vài dòng cảm nhận sau lần đọc thứ hai. Những điều từng bỏ qua giờ trở thành chủ đề để chia sẻ với bạn bè."
-      ],
-      "publishedAt": "2026-11-08T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/van-hoa.svg",
-        "alt": "Tranh minh họa chuyên mục Văn hóa"
-      }
+        "Daniel Craig khép lại vai diễn khi nhân vật 007 của anh hy sinh. Dòng chữ hẹn James Bond trở lại ở cuối phim khiến cách tiếp nối loạt phim trở thành chủ đề bàn luận.",
+        "Ở hồi kết của phim trước, Bond bị nhiễm các hạt nano có thể gây nguy hiểm cho người thân nếu anh đến gần họ. Anh ở lại căn cứ của Safin khi tên lửa đánh trúng mục tiêu. Chính tình huống này khiến việc viết tiếp câu chuyện phức tạp hơn một lần thay diễn viên thông thường.",
+        "Biên kịch Steven Knight và đạo diễn Denis Villeneuve đứng trước hai hướng kể chuyện: tiếp nối dòng sự kiện cũ hoặc dựng lại nhân vật từ một điểm khởi đầu khác. Bài viết đặt các khả năng ấy cạnh nhau như những giả thuyết; lựa chọn cuối cùng nằm ở kịch bản của phần phim mới."
+      ]
     },
     {
       "id": "giai-tri-tin-01",
@@ -667,88 +700,82 @@
       "section": "Âm nhạc",
       "publishedAt": "2026-11-13T00:00:00+07:00",
       "image": {
-        "src": "/images/sections/giai-tri.svg",
-        "alt": "Tranh minh họa chuyên mục Giải trí"
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/13/base64-1794569072687891923842.jpeg",
+        "alt": "Giảng viên, bác sĩ Phan Hoàng Hải. Ảnh do nhân vật cung cấp"
       },
       "content": [
         "Phan Hoàng Hải từng dự thi Vietnam Idol ba lần và Giọng hát Việt hai lần. Khi đứng trước cơ hội du học và lựa chọn tiếp tục thi hát, anh ưu tiên con đường học tập; năm 2019, anh trở thành giảng viên chính thức tại Trường đại học Y Dược TP.HCM.",
-        "Sau thời gian tập trung vào chuyên môn, anh bắt đầu đầu tư trở lại cho âm nhạc. Dự án đầu tiên mang tên Tiểu tinh cầu gồm năm ca khúc do nhạc sĩ Trần Tuấn Khai sáng tác, với một phần ý tưởng do Hoàng Hải đóng góp."
+        "Sau thời gian tập trung vào chuyên môn, anh bắt đầu đầu tư trở lại cho âm nhạc. Dự án đầu tiên mang tên Tiểu tinh cầu gồm năm ca khúc do nhạc sĩ Trần Tuấn Khai sáng tác, với một phần ý tưởng do Hoàng Hải đóng góp.",
+        "Hải từng muốn học thanh nhạc ngay sau phổ thông. Những năm đi học rồi làm việc trong ngành y, anh vẫn thu âm và tham gia Blouse Trắng, nơi các bác sĩ biểu diễn để gây quỹ hỗ trợ người bệnh. Những buổi hát ấy nối quãng thời gian học nghề với lần anh trở lại phòng thu."
       ]
     },
     {
-      "id": "giai-tri-01",
+      "id": "giai-tri-tin-05",
       "slug": "giai-tri",
-      "section": "Phim",
-      "title": "Một buổi xem phim và câu chuyện sau màn ảnh",
-      "summary": "Trao đổi về nhân vật, âm thanh và nhịp kể khiến trải nghiệm xem phim kéo dài hơn.",
-      "content": [
-        "Nhóm bạn trong tình huống minh họa mỗi người chọn một cảnh đáng nhớ rồi chia sẻ lý do. Họ tránh tiết lộ tình tiết quan trọng cho người chưa xem."
-      ],
-      "publishedAt": "2026-11-12T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/giai-tri.svg",
-        "alt": "Tranh minh họa chuyên mục Giải trí"
-      }
-    },
-    {
-      "id": "giai-tri-02",
-      "slug": "giai-tri",
-      "section": "Âm nhạc",
-      "title": "Tạo danh sách nhạc cho một buổi chiều chậm",
-      "summary": "Âm nhạc có thể đi cùng lúc nghỉ ngơi, đọc sách hay gặp gỡ bạn bè.",
-      "content": [
-        "Một danh sách nhạc nhỏ được sắp theo nhịp cảm xúc thay vì thể loại. Mỗi người có thể chọn cách nghe phù hợp mà vẫn tôn trọng không gian của người xung quanh."
-      ],
-      "publishedAt": "2026-11-11T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/giai-tri.svg",
-        "alt": "Tranh minh họa chuyên mục Giải trí"
-      }
-    },
-    {
-      "id": "giai-tri-03",
-      "slug": "giai-tri",
+      "title": "Nghệ sĩ Thành Lộc có hai vai diễn trong Giáng Hương: Sân khấu về khuya",
+      "summary": "Thành Lộc đảm nhận hai nhân vật trong vở khai trương kịch đoàn mang tên ông.",
       "section": "Sân khấu",
-      "title": "Lần đầu đến xem một vở diễn trực tiếp",
-      "summary": "Không khí của sân khấu mang lại trải nghiệm khác với màn hình tại nhà.",
-      "content": [
-        "Tìm hiểu thời lượng, địa điểm và quy định của nơi biểu diễn giúp buổi xem thoải mái hơn. Giữ yên lặng và cất điện thoại là cách dành sự tập trung cho nghệ sĩ."
-      ],
-      "publishedAt": "2026-11-10T02:30:00.000Z",
+      "publishedAt": "2026-09-18T19:23:00+07:00",
       "image": {
-        "src": "/images/sections/giai-tri.svg",
-        "alt": "Tranh minh họa chuyên mục Giải trí"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/9/18/thanhloc-kimxuan-1789724069132697961978.jpg",
+        "alt": "Các nghệ sĩ trong vở Giáng Hương: Sân khấu về khuya. Ảnh: Kịch đoàn Thành Lộc"
+      },
+      "content": [
+        "Trong Giáng Hương: Sân khấu về khuya, ông vào vai Quốc Sơn và luân phiên với Hữu Châu ở vai Ba Hoài. Địa điểm biểu diễn là Nhà hát Bến Thành.",
+        "Bản dựng năm 2023 từng có Thành Lộc trong vai chính Lĩnh Nam. Khi dựng lại tác phẩm của Nguyễn Thành Châu, ông giao vai này cho Lương Thế Thành và tự chọn hai nhân vật nhìn gánh hát từ hai vị trí khác nhau. Ông đồng thời đảm nhiệm vai trò đạo diễn.",
+        "Quốc Sơn là một ông chủ khá giả có thể tranh luận với Lĩnh Nam về nghệ thuật. Ba Hoài lại là người làm công trong đoàn, từng trải qua danh vọng và có nỗi niềm riêng. Trước buổi ra mắt dự kiến ngày 30-9, vé của năm suất đầu đã được bán hết."
+      ]
     },
     {
-      "id": "giai-tri-04",
-      "slug": "giai-tri",
-      "section": "Phim",
-      "title": "Chọn phim cùng bạn bè khi gu xem khác nhau",
-      "summary": "Một cuộc trò chuyện ngắn về sở thích có thể giúp cả nhóm tìm được lựa chọn vui vẻ.",
-      "content": [
-        "Nhóm bạn thử thống nhất thể loại, thời lượng và mức độ phù hợp với từng người. Sau buổi xem, điều đáng nhớ có thể là cuộc trò chuyện chứ không chỉ bộ phim."
-      ],
-      "publishedAt": "2026-11-09T02:30:00.000Z",
+      "id": "the-thao-tin-04",
+      "slug": "the-thao",
+      "title": "Dư luận Thái Lan sốc nặng khi đội nhà mất vé dự giải U17 châu Á",
+      "summary": "Trận thua Iraq trên sân nhà khiến U17 Thái Lan lỡ vòng chung kết châu Á 2027.",
+      "section": "Bóng đá",
+      "publishedAt": "2026-11-21T11:32:00+07:00",
       "image": {
-        "src": "/images/sections/giai-tri.svg",
-        "alt": "Tranh minh họa chuyên mục Giải trí"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/20/u17-thai-lan-edit-17951862011721583065673.jpg",
+        "alt": "U17 Thái Lan và U17 Iraq trong trận quyết định ngôi đầu bảng B. Ảnh: Changsuek"
+      },
+      "content": [
+        "Thái Lan thắng cả ba lượt đầu nhưng để Iraq vượt lên ở trận quyết định của bảng B. Tỉ số 1-2 khiến đội chủ nhà mất ngôi đầu cùng suất đi tiếp.",
+        "Đội chủ nhà bước vào lượt cuối với chín điểm, hơn Iraq hai điểm và chỉ cần hòa để bảo vệ ngôi đầu. Bàn thua ở phút thứ sáu khiến Thái Lan phải đuổi theo. Họ gỡ hòa bằng phạt đền và có lúc chỉ còn cách tấm vé đi tiếp vài phút thi đấu.",
+        "Bước ngoặt đến ở phút 84 khi Yousif Jale ghi bàn quyết định. Iraq kết thúc vòng loại với mười điểm, còn Thái Lan dừng ở chín. Thể thức chỉ chọn đội đầu bảng khiến ba chiến thắng đầu giải của chủ nhà không đủ bù cho thất bại cuối cùng."
+      ]
     },
     {
-      "id": "giai-tri-05",
-      "slug": "giai-tri",
-      "section": "Âm nhạc",
-      "title": "Tập nghe một thể loại âm nhạc mới",
-      "summary": "Một bài hát lạ có thể mở ra cách cảm nhận khác về nhịp điệu và giọng hát.",
-      "content": [
-        "Người nghe trong bài minh họa bắt đầu bằng vài ca khúc được bạn bè giới thiệu. Họ tìm hiểu bối cảnh sáng tác để hiểu thêm những điều mình vừa nghe."
-      ],
-      "publishedAt": "2026-11-08T02:30:00.000Z",
+      "id": "the-thao-tin-03",
+      "slug": "the-thao",
+      "title": "U17 Việt Nam tự tin ở sân chơi World Cup",
+      "summary": "U17 Việt Nam ghi hai bàn vào lưới Bỉ trong lần đầu dự World Cup ở lứa tuổi này.",
+      "section": "Bóng đá",
+      "publishedAt": "2026-11-21T11:15:00+07:00",
       "image": {
-        "src": "/images/sections/giai-tri.svg",
-        "alt": "Tranh minh họa chuyên mục Giải trí"
-      }
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/chu-ngoc-nguyen-luc-17952275277681482060977.jpg",
+        "alt": "Chu Ngọc Nguyễn Lực mang áo số 10 trong trận gặp U17 Bỉ. Ảnh: VFF"
+      },
+      "content": [
+        "Ở trận mở màn bảng G tại Qatar, đội Việt Nam thua 2-3 trước đương kim á quân U17 châu Âu. Khoảng cách một bàn cho thấy hai đội đã bám đuổi nhau về tỉ số.",
+        "Hai pha lập công đến theo những cách ít thấy ở một trận ra quân. Lê Sỹ Bách dùng gót chân dứt điểm, còn Chu Ngọc Nguyễn Lực đưa bóng thẳng vào lưới từ chấm phạt góc. Đại diện Việt Nam ghi bàn từ phút thứ tư và vẫn tìm cách tấn công sau khi đối thủ lật lại thế trận.",
+        "Trước giải, đội đã có hai tháng chuẩn bị cùng huấn luyện viên Cristiano Roland, qua các đợt tập huấn ở Hàn Quốc và UAE rồi sang Qatar sớm. Năm trận giao hữu trong giai đoạn cuối giúp cầu thủ có cơ hội thử sức với đối thủ mạnh trước lần đầu ra sân ở World Cup."
+      ]
+    },
+    {
+      "id": "the-thao-tin-02",
+      "slug": "the-thao",
+      "title": "Tâm điểm bóng đá cuối tuần: Man United chạm trán Liverpool",
+      "summary": "Trận Liverpool gặp Manchester United trên sân Anfield là tâm điểm lịch bóng đá cuối tuần.",
+      "section": "Bóng đá",
+      "publishedAt": "2026-11-21T10:00:00+07:00",
+      "image": {
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/21/isak-liverpool-edit-17952309252991622261331.jpg",
+        "alt": "Liverpool trước cuộc đối đầu với Manchester United. Ảnh: Reuters"
+      },
+      "content": [
+        "Bài viết tổng hợp các cặp đấu đáng chú ý ở châu Âu. Ngoài cuộc đối đầu tại Anh, lịch thi đấu còn có trận Nice tiếp PSG trên sân Allianz Riviera.",
+        "Trước chuyến làm khách ở Nice, PSG đã thắng bảy trận liên tiếp tại Ligue 1. Đội chủ nhà cũng có lý do để tự tin với năm chiến thắng sau sáu trận gần nhất. Trận này diễn ra lúc 23h15 ngày 21-11 theo giờ Việt Nam, trước trận Newcastle tiếp Arsenal lúc 0h30.",
+        "Tại Tây Ban Nha, Barcelona gặp Villarreal vào 20h ngày 22-11. Sau 12 vòng, đội bóng xứ Catalan có 33 điểm và vừa thắng Atletico Madrid. Người theo dõi nhiều giải vì thế có thể bắt đầu với trận ở Pháp tối thứ bảy rồi chuyển sang các trận Anh và Tây Ban Nha trong ngày chủ nhật."
+      ]
     },
     {
       "id": "the-thao-tin-01",
@@ -758,88 +785,31 @@
       "section": "Thể thao học đường",
       "publishedAt": "2026-11-13T00:00:00+07:00",
       "image": {
-        "src": "/images/sections/the-thao.svg",
-        "alt": "Tranh minh họa chuyên mục Thể thao"
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/11/13/nguyen-khac-le-hoang-1-1794576369450422948645.jpg",
+        "alt": "Võ sĩ Nguyễn Khắc Lê Hoàng tại Olympic trẻ. Ảnh: Cục Thể dục thể thao"
       },
       "content": [
         "Tính đến tối 13-11, đoàn Việt Nam có hai huy chương bạc và đứng trên một số đoàn Đông Nam Á nhờ số huy chương bạc. Bảng xếp hạng toàn đại hội lúc đó chưa phải kết quả chung cuộc, dù các vận động viên trong khu vực đã hoàn tất thi đấu.",
-        "Nguyễn Khắc Lê Hoàng giành bạc ở nội dung wushu, còn Dương Văn Hoàng Quy về nhì ở chung kết 200 m bướm nam. Singapore dẫn đầu nhóm Đông Nam Á với một huy chương vàng, một bạc và một đồng."
+        "Nguyễn Khắc Lê Hoàng giành bạc ở nội dung wushu, còn Dương Văn Hoàng Quy về nhì ở chung kết 200 m bướm nam. Singapore dẫn đầu nhóm Đông Nam Á với một huy chương vàng, một bạc và một đồng.",
+        "Indonesia giành ba huy chương, nhiều hơn Việt Nam một chiếc, nhưng chỉ có một huy chương bạc. Đó là lý do đoàn xếp sau Việt Nam dù tổng số huy chương cao hơn. Đoàn Việt Nam dự đại hội với mười vận động viên ở bảy môn, trong đó có bơi, wushu, xe đạp và vật bãi biển."
       ]
     },
     {
-      "id": "the-thao-01",
+      "id": "the-thao-tin-05",
       "slug": "the-thao",
-      "section": "Bóng đá",
-      "title": "Một trận bóng vui bắt đầu từ luật chơi rõ ràng",
-      "summary": "Thống nhất thời gian, đội hình và cách xử lý va chạm giúp mọi người cùng tận hưởng trận đấu.",
-      "content": [
-        "Trong trận đấu giả định, các bạn dành vài phút trước giờ bóng lăn để thống nhất luật. Tinh thần tôn trọng đối thủ được giữ ngay cả khi có tình huống tranh cãi."
-      ],
-      "publishedAt": "2026-11-12T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/the-thao.svg",
-        "alt": "Tranh minh họa chuyên mục Thể thao"
-      }
-    },
-    {
-      "id": "the-thao-02",
-      "slug": "the-thao",
+      "title": "Runner Ngọc Hoa bò về đích ở Giải marathon quốc gia 2026",
+      "summary": "Hoàng Thị Ngọc Hoa nỗ lực hoàn tất cự ly marathon tại giải vô địch quốc gia 2026.",
       "section": "Chạy bộ",
-      "title": "Bắt đầu chạy bằng mục tiêu vừa sức",
-      "summary": "Nhịp tập phù hợp và thời gian nghỉ giúp người mới duy trì thói quen vận động.",
-      "content": [
-        "Một người mới chạy có thể chọn quãng đường ngắn, theo dõi cảm giác cơ thể và tăng dần khi thấy phù hợp. Nếu có vấn đề sức khỏe, nên hỏi ý kiến chuyên môn trước khi tập."
-      ],
-      "publishedAt": "2026-11-11T02:30:00.000Z",
+      "publishedAt": "2026-03-29T10:37:00+07:00",
       "image": {
-        "src": "/images/sections/the-thao.svg",
-        "alt": "Tranh minh họa chuyên mục Thể thao"
-      }
-    },
-    {
-      "id": "the-thao-03",
-      "slug": "the-thao",
-      "section": "Thể thao học đường",
-      "title": "Sân trường là nơi học cách phối hợp",
-      "summary": "Một trò chơi đồng đội tạo cơ hội cho học sinh giao tiếp và hỗ trợ nhau.",
+        "src": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/3/29/ngoc-hoa-1-17747550862821612042573.jpg",
+        "alt": "Hoàng Thị Ngọc Hoa ở đoạn cuối đường chạy marathon. Ảnh: TPM"
+      },
       "content": [
-        "Trong buổi tập minh họa, mỗi bạn thử một vai trò khác nhau. Cả đội rút kinh nghiệm sau mỗi lượt chơi thay vì chỉ chú ý đến tỉ số."
-      ],
-      "publishedAt": "2026-11-10T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/the-thao.svg",
-        "alt": "Tranh minh họa chuyên mục Thể thao"
-      }
-    },
-    {
-      "id": "the-thao-04",
-      "slug": "the-thao",
-      "section": "Bóng đá",
-      "title": "Cổ vũ văn minh từ khán đài nhỏ",
-      "summary": "Lời động viên tích cực có thể giúp không khí trận đấu gần gũi hơn.",
-      "content": [
-        "Một nhóm cổ động viên tự đặt quy tắc tôn trọng cả hai đội. Họ tập trung vào những pha xử lý đẹp và giúp giữ khu vực xem sạch sẽ sau trận."
-      ],
-      "publishedAt": "2026-11-09T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/the-thao.svg",
-        "alt": "Tranh minh họa chuyên mục Thể thao"
-      }
-    },
-    {
-      "id": "the-thao-05",
-      "slug": "the-thao",
-      "section": "Chạy bộ",
-      "title": "Một buổi vận động cùng bạn bè",
-      "summary": "Có người đồng hành giúp việc tập luyện trở nên vui và dễ duy trì hơn.",
-      "content": [
-        "Nhóm bạn trong câu chuyện giả định chọn tốc độ để mọi người có thể trò chuyện. Khi một người cần nghỉ, cả nhóm điều chỉnh thay vì cố hoàn thành một con số."
-      ],
-      "publishedAt": "2026-11-08T02:30:00.000Z",
-      "image": {
-        "src": "/images/sections/the-thao.svg",
-        "alt": "Tranh minh họa chuyên mục Thể thao"
-      }
+        "Vận động viên của Bình Phước kiệt sức ở những mét cuối và phải bò qua vạch đích. Cô đã hoàn thành đường chạy 42,195 km.",
+        "Sáng 29-3 tại Nha Trang, chân chạy sinh năm 2000 đã ở phía trước trong phần lớn cuộc đua. Tới những trăm mét cuối, Phạm Thị Hồng Lệ vượt lên. Khi còn khoảng 200 mét, Ngọc Hoa bắt đầu loạng choạng; đến sát đích, cô ngã xuống mặt đường.",
+        "Kết quả ghi nhận Ngọc Hoa về nhì sau 2 giờ 44 phút 7 giây, còn Hồng Lệ giành chức vô địch với 2 giờ 42 phút 1 giây. Trước giải năm nay, Ngọc Hoa đã bốn lần vô địch marathon quốc gia và từng giành huy chương đồng ở SEA Games 31."
+      ]
     }
   ]
 }

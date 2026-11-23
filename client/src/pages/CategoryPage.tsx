@@ -64,7 +64,7 @@ function StoreClassicContent({ config, activeSection }: { config: CategoryConfig
     const [visibleCount, setVisibleCount] = useState(pageSize);
     const options = useMemo(() => ({ section: activeSection, featuredCount: config.featuredCount, pageSize, visibleCount }), [activeSection, config.featuredCount, pageSize, visibleCount]);
     const page = useAppSelector((state) => selectCategoryPage(state, config.slug, options));
-    if (!page.total) return <CategoryStates status="empty" />;
+    if (!page.total && config.slug !== 'gia-that') return <CategoryStates status="empty" />;
     return <div className="category-layout">
         <div className="category-layout__main">
             {!activeSection && <FeaturedArticle articles={page.featured} layout={config.featuredLayout} />}

@@ -4,10 +4,11 @@ import type { CategoryArticle } from '../../types/category.ts'
 import { educationNews } from '../../data/educationNews.ts'
 import { realEstateNews } from '../../data/realEstateNews.ts'
 import { healthNews } from '../../data/healthNews.ts'
+import { factCheckNews } from '../../data/factCheckNews.ts'
 
 type CategoryNewsState = Partial<Record<string, CategoryArticle[]>>
 
-const initialState: CategoryNewsState = { 'giao-duc': educationNews, 'nha-dat': realEstateNews, 'suc-khoe': healthNews }
+const initialState: CategoryNewsState = { 'giao-duc': educationNews, 'nha-dat': realEstateNews, 'suc-khoe': healthNews, 'gia-that': factCheckNews }
 
 const categoryNewsSlice = createSlice({
     name: 'categoryNews',

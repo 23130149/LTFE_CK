@@ -61,8 +61,8 @@ export const appRoutes: RouteObject[] = [
             { path: `${routes.realEstate.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={realEstateConfig} source="store" /> },
             { path: routes.health.slice(1), element: <CategoryPage config={healthConfig} source="store" /> },
             { path: `${routes.health.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={healthConfig} source="store" /> },
-            { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} /> },
-            { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} /> },
+            { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} source="store" /> },
+            { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} source="store" /> },
             { path: routes.community.slice(1), children: [
                     { index: true, element: <CommunityPage /> },
                     { path: 'bai/:id', element: <CommunityDetail /> },

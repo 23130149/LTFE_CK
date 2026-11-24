@@ -10,12 +10,8 @@ import { load } from '../store/slice/NewsSlice.ts'
 import { loadCategory } from '../store/slice/CategoryNewsSlice.ts'
 import { mockNews } from '../data/mock.ts'
 import { congNgheNews } from '../data/congNgheNews.ts'
-import { educationNews } from '../data/educationNews.ts'
-import { factCheckNews } from '../data/factCheckNews.ts'
-import { healthNews } from '../data/healthNews.ts'
 import { kinhDoanhNews } from '../data/kinhDoanhNews.ts'
 import { phapLuatNews } from '../data/phapLuatNews.ts'
-import { realEstateNews } from '../data/realEstateNews.ts'
 import { theGioiNews } from '../data/theGioiNews.ts'
 import { thoiSuNews } from '../data/thoiSuNews.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
@@ -43,10 +39,6 @@ const newsLoader = () => {
     store.dispatch(loadCategory({ slug: phapLuatConfig.slug, articles: phapLuatNews }))
     store.dispatch(loadCategory({ slug: kinhDoanhConfig.slug, articles: kinhDoanhNews }))
     store.dispatch(loadCategory({ slug: congNgheConfig.slug, articles: congNgheNews }))
-    store.dispatch(loadCategory({ slug: educationConfig.slug, articles: educationNews }))
-    store.dispatch(loadCategory({ slug: realEstateConfig.slug, articles: realEstateNews }))
-    store.dispatch(loadCategory({ slug: healthConfig.slug, articles: healthNews }))
-    store.dispatch(loadCategory({ slug: factCheckConfig.slug, articles: factCheckNews }))
     return null
 }
 
@@ -59,18 +51,18 @@ export const appRoutes: RouteObject[] = [
         children: [
             { index: true, element: <Home /> },
             { path: 'bai/:id', element: <ArticleDetail /> },
-            { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} source="store" /> },
+            { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} /> },
             { path: routes.educationLegacy.slice(1), element: <Navigate to={routes.education} replace /> },
             ...editorialSections.flatMap(section => [
                 { path: section.path.slice(1), element: <EditorialSectionPage section={section} /> },
                 { path: `${section.path.slice(1)}/bai/:id`, element: <EditorialArticleDetail section={section} /> },
             ]),
-            { path: routes.realEstate.slice(1), element: <CategoryPage config={realEstateConfig} source="store" /> },
-            { path: `${routes.realEstate.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={realEstateConfig} source="store" /> },
-            { path: routes.health.slice(1), element: <CategoryPage config={healthConfig} source="store" /> },
-            { path: `${routes.health.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={healthConfig} source="store" /> },
-            { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} source="store" /> },
-            { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} source="store" /> },
+            { path: routes.realEstate.slice(1), element: <CategoryPage config={realEstateConfig} /> },
+            { path: `${routes.realEstate.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={realEstateConfig} /> },
+            { path: routes.health.slice(1), element: <CategoryPage config={healthConfig} /> },
+            { path: `${routes.health.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={healthConfig} /> },
+            { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} /> },
+            { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} /> },
             { path: routes.community.slice(1), children: [
                     { index: true, element: <CommunityPage /> },
                     { path: 'bai/:id', element: <CommunityDetail /> },

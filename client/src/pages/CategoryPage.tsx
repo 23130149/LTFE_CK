@@ -1,5 +1,5 @@
 import type { CategoryArticle, CategoryConfig } from '../types/category.ts';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import CategoryHeader from '../components/category/CategoryHeader.tsx';
 import CategoryNavigation from '../components/category/CategoryNavigation.tsx';
@@ -13,7 +13,7 @@ import MagazineLayout from '../components/section/MagazineLayout.tsx';
 import { toSectionArticle } from '../components/section/toSectionArticle.ts';
 import { categoryMessages } from '../config/categoryConfig.ts';
 import { useAppSelector } from '../store/hooks.ts';
-import { selectCategoryArticles } from '../store/slice/CategoryNewsSlice.ts';
+import { selectCategoryArticles, selectCategoryPage } from '../store/categorySelectors.ts';
 import '../styles/section.css';
 
 const TODAY = new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
@@ -28,33 +28,33 @@ export default function CategoryPage({ config }: { config: CategoryConfig }) {
         return () => { document.title = previousTitle; };
     }, [config.pageTitle]);
     return config.layout === 'classic'
-        ? <ClassicCategory key={config.slug} config={config} articles={articles} />
+        ? <ClassicCategory key={config.slug} config={config} />
         : <SectionCategory key={config.slug} config={config} articles={articles} />;
 }
 
-function ClassicCategory({ config, articles }: ViewProps) {
+function ClassicCategory({ config }: { config: CategoryConfig }) {
     const [searchParams] = useSearchParams();
     const activeSection = config.filterSections ? searchParams.get('muc') || '' : '';
-    const filteredArticles = activeSection ? articles.filter((article) => article.section === activeSection) : articles;
     return <main id="main-content" className={`category-page${config.filterSections ? ' category-page--filterable' : ''}`}>
         <CategoryHeader config={config} /><CategoryNavigation config={config} activeSection={activeSection} />
         <div className="category-demo"><strong>{categoryMessages.demo}</strong><p>{config.demoDescription || categoryMessages.demoDescription}</p></div>
-        {filteredArticles.length === 0 ? <CategoryEmpty /> : <ClassicContent key={activeSection} config={config} articles={filteredArticles} activeSection={activeSection} />}
+        <ClassicContent key={activeSection} config={config} activeSection={activeSection} />
     </main>;
 }
 
-function ClassicContent({ config, articles, activeSection }: ViewProps & { activeSection: string }) {
-    const featuredCount = activeSection ? 0 : config.featuredCount ?? 4;
+function ClassicContent({ config, activeSection }: { config: CategoryConfig; activeSection: string }) {
     const pageSize = config.pageSize ?? 6;
     const [visibleCount, setVisibleCount] = useState(pageSize);
-    const sidebarArticles = articles.slice(featuredCount + pageSize, featuredCount + pageSize + 3);
+    const options = useMemo(() => ({ section: activeSection, featuredCount: config.featuredCount, pageSize, visibleCount }), [activeSection, config.featuredCount, pageSize, visibleCount]);
+    const page = useAppSelector((state) => selectCategoryPage(state, config.slug, options));
     return <div className="category-layout">
         <div className="category-layout__main">
-            {!activeSection && <FeaturedArticle articles={articles.slice(0, featuredCount)} layout={config.featuredLayout} />}
-            {activeSection && <p className="category-filter-result" role="status">{articles.length} bài viết · {activeSection}</p>}
-            <CategoryNewsList articles={articles.slice(featuredCount)} config={activeSection ? { ...config, listTitle: activeSection } : config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => Math.min(count + pageSize, articles.length - featuredCount))} />
+            {!activeSection && <FeaturedArticle articles={page.featured} layout={config.featuredLayout} />}
+            {activeSection && <p className="category-filter-result" role="status">{page.total} bài viết · {activeSection}</p>}
+            {!page.total && <CategoryEmpty />}
+            <CategoryNewsList articles={page.visibleArticles} totalCount={page.listTotal} config={activeSection ? { ...config, listTitle: activeSection } : config} visibleCount={visibleCount} onLoadMore={() => setVisibleCount((count) => Math.min(count + pageSize, page.listTotal))} />
         </div>
-        <CategorySidebar config={config} articles={config.filterSections ? sidebarArticles.length ? sidebarArticles : articles.slice(0, 3) : undefined} />
+        <CategorySidebar config={config} articles={config.filterSections ? page.sidebar : undefined} />
     </div>;
 }
 

@@ -9,6 +9,7 @@ export function readInitialCommunityState(): CommunityState {
     return {
         ...communityReducer(undefined, { type: '@@community/initial' }),
         local: initial.state,
+        warning: initial.warning ? 'Không đọc được dữ liệu demo đã lưu. Dữ liệu cũ được giữ nguyên; thao tác mới chỉ tồn tại trong phiên này.' : '',
         persistence: initial.warning ? 'protected' : 'ready',
     };
 }

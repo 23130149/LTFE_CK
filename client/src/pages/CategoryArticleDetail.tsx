@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import type { CategoryConfig } from '../types/category.ts';
 import { useAppSelector } from '../store/hooks.ts';
-import { selectCategoryArticles } from '../store/slice/CategoryNewsSlice.ts';
+import { selectCategoryArticleById, selectRelatedCategoryArticles } from '../store/categorySelectors.ts';
 import CategoryImage from '../components/category/CategoryImage.tsx';
 import CategoryArticleCard from '../components/category/CategoryArticleCard.tsx';
 import { routes } from '../routing/routes.ts';
@@ -11,8 +11,8 @@ const dateFormatter = new Intl.DateTimeFormat('vi-VN', { timeZone: 'Asia/Ho_Chi_
 
 export default function CategoryArticleDetail({ config }: { config: CategoryConfig }) {
     const { id } = useParams();
-    const articles = useAppSelector((state) => selectCategoryArticles(state, config.slug));
-    const article = articles.find((item) => item.id === id);
+    const article = useAppSelector((state) => selectCategoryArticleById(state, config.slug, id ?? ''));
+    const related = useAppSelector((state) => selectRelatedCategoryArticles(state, config.slug, id ?? ''));
     const title = article ? `${article.title} | ${config.title} — Demo` : config.pageTitle;
     useEffect(() => { window.scrollTo(0, 0); }, [id]);
     useEffect(() => {
@@ -21,7 +21,6 @@ export default function CategoryArticleDetail({ config }: { config: CategoryConf
         return () => { document.title = previousTitle; };
     }, [title]);
     const sectionPath = `${config.path}?${new URLSearchParams({ muc: article?.section || '' })}`;
-    const related = articles.filter((item) => item.id !== id && item.section === article?.section).slice(0, 3);
 
     return <main id="main-content" className="category-page category-page--filterable category-detail">
         <nav aria-label="Đường dẫn trang" className="category-breadcrumb"><Link to={routes.home}>Trang chủ</Link><span aria-hidden="true">/</span><Link to={config.path}>{config.title}</Link>{article && <><span aria-hidden="true">/</span><Link to={sectionPath}>{article.section}</Link><span aria-hidden="true">/</span><span aria-current="page">Bài viết</span></>}</nav>

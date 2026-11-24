@@ -9,7 +9,7 @@ const EDITORIAL_PATHS: string[] = [routes.vehicles, routes.travel, routes.cultur
 export default function Layout() {
     const { pathname } = useLocation()
     const normalizedPath = pathname.replace(/\/+$/, '') || '/'
-    const ownsMain = OWN_MAIN_PATHS.includes(normalizedPath) || [routes.realEstate, routes.health, routes.factCheck, routes.community, ...EDITORIAL_PATHS].some((path) => matchPath(`${path}/bai/:id`, normalizedPath))
+    const ownsMain = [...OWN_MAIN_PATHS, ...EDITORIAL_PATHS].includes(normalizedPath) || [routes.realEstate, routes.health, routes.factCheck, routes.community, ...EDITORIAL_PATHS].some((path) => matchPath(`${path}/bai/:id`, normalizedPath))
     return (
         <div className={`site-shell${pathname === '/' ? '' : ' site-shell--category'}`}>
             <a className="skip-link" href="#main-content">Đến nội dung chính</a>

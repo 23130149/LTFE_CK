@@ -4,20 +4,21 @@ import CommunityComposer from '../components/community/CommunityComposer.tsx';
 import CommunityGroups from '../components/community/CommunityGroups.tsx';
 import CommunityPostCard from '../components/community/CommunityPostCard.tsx';
 import CommunitySidebar from '../components/community/CommunitySidebar.tsx';
-import { communityTopics } from '../data/communityData.ts';
-import { useCommunity } from '../hooks/useCommunity.ts';
-import { communityScore } from '../services/communityRanking.ts';
+import { useAppSelector } from '../store/hooks.ts';
+import { selectCommunityFeed, selectCommunityPosts, selectCommunityTopicById, selectCommunityWarning } from '../store/communitySelectors.ts';
 import { routes } from '../routing/routes.ts';
 import type { CommunityPost } from '../types/community.ts';
 
 const tabs = [{ id: 'moi-nhat', label: 'Mới nhất' }, { id: 'thinh-hanh', label: 'Thịnh hành' }, { id: 'da-tham-gia', label: 'Đã tham gia' }] as const;
 
 export default function CommunityPage() {
-    const { posts, state, comments, warning } = useCommunity();
+    const posts = useAppSelector(selectCommunityPosts);
+    const warning = useAppSelector(selectCommunityWarning);
     const [params, setParams] = useSearchParams();
     const topicId = params.get('muc') || '';
     const tab = tabs.find(item => item.id === params.get('tab'))?.id || 'moi-nhat';
-    const topic = communityTopics.find(item => item.id === topicId);
+    const topic = useAppSelector(state => selectCommunityTopicById(state, topicId));
+    const sorted = useAppSelector(state => selectCommunityFeed(state, topicId, tab));
     useEffect(() => {
         const previous = document.title;
         document.title = 'Cộng đồng | Tuổi Trẻ — Demo học tập';
@@ -33,10 +34,6 @@ export default function CommunityPage() {
         next.delete('muc'); next.delete('tab');
         setParams(next, { preventScrollReset: true });
     }
-    const participated = new Set([...state.likes, ...state.posts.map(post => post.id), ...state.comments.map(comment => comment.postId)]);
-    const filtered = posts.filter(post => (!topicId || post.topicId === topicId) && (tab !== 'da-tham-gia' || participated.has(post.id)));
-    const sorted = [...filtered].sort((a, b) => (tab === 'thinh-hanh' ? communityScore(b, state.likes, comments) - communityScore(a, state.likes, comments) : 0)
-        || Date.parse(b.publishedAt) - Date.parse(a.publishedAt) || a.id.localeCompare(b.id));
     return <main className="community-page" id="main-content">
         <nav className="category-breadcrumb" aria-label="Đường dẫn trang"><Link to={routes.home}>Trang chủ</Link><span aria-hidden="true">/</span><span aria-current="page">Cộng đồng</span></nav>
         <div className="community-heading"><div><span className="community-eyebrow">KẾT NỐI · LẮNG NGHE · CHIA SẺ</span><h1>CỘNG ĐỒNG</h1></div><p>Câu chuyện của bạn,<br />góc nhìn của chúng ta.</p></div>

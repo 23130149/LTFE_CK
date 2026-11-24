@@ -10,8 +10,12 @@ import { load } from '../store/slice/NewsSlice.ts'
 import { loadCategory } from '../store/slice/CategoryNewsSlice.ts'
 import { mockNews } from '../data/mock.ts'
 import { congNgheNews } from '../data/congNgheNews.ts'
+import { educationNews } from '../data/educationNews.ts'
+import { factCheckNews } from '../data/factCheckNews.ts'
+import { healthNews } from '../data/healthNews.ts'
 import { kinhDoanhNews } from '../data/kinhDoanhNews.ts'
 import { phapLuatNews } from '../data/phapLuatNews.ts'
+import { realEstateNews } from '../data/realEstateNews.ts'
 import { theGioiNews } from '../data/theGioiNews.ts'
 import { thoiSuNews } from '../data/thoiSuNews.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
@@ -39,6 +43,10 @@ const newsLoader = () => {
     store.dispatch(loadCategory({ slug: phapLuatConfig.slug, articles: phapLuatNews }))
     store.dispatch(loadCategory({ slug: kinhDoanhConfig.slug, articles: kinhDoanhNews }))
     store.dispatch(loadCategory({ slug: congNgheConfig.slug, articles: congNgheNews }))
+    store.dispatch(loadCategory({ slug: educationConfig.slug, articles: educationNews }))
+    store.dispatch(loadCategory({ slug: realEstateConfig.slug, articles: realEstateNews }))
+    store.dispatch(loadCategory({ slug: healthConfig.slug, articles: healthNews }))
+    store.dispatch(loadCategory({ slug: factCheckConfig.slug, articles: factCheckNews }))
     return null
 }
 
@@ -67,11 +75,11 @@ export const appRoutes: RouteObject[] = [
                     { index: true, element: <CommunityPage /> },
                     { path: 'bai/:id', element: <CommunityDetail /> },
                 ] },
-            { path: routes.thoiSu.slice(1), element: <CategoryPage config={thoiSuConfig} source="store" /> },
-            { path: routes.theGioi.slice(1), element: <CategoryPage config={theGioiConfig} source="store" /> },
-            { path: routes.phapLuat.slice(1), element: <CategoryPage config={phapLuatConfig} source="store" /> },
-            { path: routes.kinhDoanh.slice(1), element: <CategoryPage config={kinhDoanhConfig} source="store" /> },
-            { path: routes.congNghe.slice(1), element: <CategoryPage config={congNgheConfig} source="store" /> },
+            { path: routes.thoiSu.slice(1), element: <CategoryPage config={thoiSuConfig} /> },
+            { path: routes.theGioi.slice(1), element: <CategoryPage config={theGioiConfig} /> },
+            { path: routes.phapLuat.slice(1), element: <CategoryPage config={phapLuatConfig} /> },
+            { path: routes.kinhDoanh.slice(1), element: <CategoryPage config={kinhDoanhConfig} /> },
+            { path: routes.congNghe.slice(1), element: <CategoryPage config={congNgheConfig} /> },
             { path: ':zone', element: <Category /> },
             { path: '*', element: <NotFoundPage embedded /> },
         ],

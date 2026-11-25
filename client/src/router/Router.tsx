@@ -10,12 +10,8 @@ import { load } from '../store/slice/NewsSlice.ts'
 import { loadCategory } from '../store/slice/CategoryNewsSlice.ts'
 import { mockNews } from '../data/mock.ts'
 import { congNgheNews } from '../data/congNgheNews.ts'
-import { educationNews } from '../data/educationNews.ts'
-import { factCheckNews } from '../data/factCheckNews.ts'
-import { healthNews } from '../data/healthNews.ts'
 import { kinhDoanhNews } from '../data/kinhDoanhNews.ts'
 import { phapLuatNews } from '../data/phapLuatNews.ts'
-import { realEstateNews } from '../data/realEstateNews.ts'
 import { theGioiNews } from '../data/theGioiNews.ts'
 import { thoiSuNews } from '../data/thoiSuNews.ts'
 import CategoryPage from '../pages/CategoryPage.tsx'
@@ -43,17 +39,13 @@ const newsLoader = () => {
     store.dispatch(loadCategory({ slug: phapLuatConfig.slug, articles: phapLuatNews }))
     store.dispatch(loadCategory({ slug: kinhDoanhConfig.slug, articles: kinhDoanhNews }))
     store.dispatch(loadCategory({ slug: congNgheConfig.slug, articles: congNgheNews }))
-    store.dispatch(loadCategory({ slug: educationConfig.slug, articles: educationNews }))
-    store.dispatch(loadCategory({ slug: realEstateConfig.slug, articles: realEstateNews }))
-    store.dispatch(loadCategory({ slug: healthConfig.slug, articles: healthNews }))
-    store.dispatch(loadCategory({ slug: factCheckConfig.slug, articles: factCheckNews }))
     return null
 }
 
 export const appRoutes: RouteObject[] = [
     {
         path: '/',
-        element: <Layout />,
+        element: <CommunityProvider><Layout /></CommunityProvider>,
         errorElement: <ErrorPage />,
         loader: newsLoader,
         children: [
@@ -71,7 +63,7 @@ export const appRoutes: RouteObject[] = [
             { path: `${routes.health.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={healthConfig} /> },
             { path: routes.factCheck.slice(1), element: <CategoryPage config={factCheckConfig} /> },
             { path: `${routes.factCheck.slice(1)}/bai/:id`, element: <CategoryArticleDetail config={factCheckConfig} /> },
-            { path: routes.community.slice(1), element: <CommunityProvider />, children: [
+            { path: routes.community.slice(1), children: [
                     { index: true, element: <CommunityPage /> },
                     { path: 'bai/:id', element: <CommunityDetail /> },
                 ] },

@@ -1,12 +1,14 @@
 import { useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { communityTopics } from '../../data/communityData.ts';
-import { useCommunity } from '../../hooks/useCommunity.ts';
+import { useAppDispatch, useAppSelector } from '../../store/hooks.ts';
+import { selectCommunityTopics } from '../../store/communitySelectors.ts';
+import { publishCommunityPost } from '../../store/communityActions.ts';
 import { communityArticlePath } from '../../routing/routes.ts';
 
 export default function CommunityComposer({ onPublished }: { onPublished: () => void }) {
-    const { publish } = useCommunity();
+    const dispatch = useAppDispatch();
+    const communityTopics = useAppSelector(selectCommunityTopics);
     const [open, setOpen] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState<{ id: string; persisted: boolean } | null>(null);
@@ -17,7 +19,7 @@ export default function CommunityComposer({ onPublished }: { onPublished: () => 
         event.preventDefault();
         if (submitted.current) return;
         const data = new FormData(event.currentTarget);
-        const result = publish({ title: String(data.get('title') || ''), content: String(data.get('content') || ''), author: String(data.get('author') || ''), topicId: String(data.get('topic') || '') });
+        const result = dispatch(publishCommunityPost({ title: String(data.get('title') || ''), content: String(data.get('content') || ''), author: String(data.get('author') || ''), topicId: String(data.get('topic') || '') }));
         if (result.error || !result.id) { setError(result.error); return; }
         submitted.current = true;
         setSuccess({ id: result.id, persisted: result.persisted });

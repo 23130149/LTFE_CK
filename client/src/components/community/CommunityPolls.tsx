@@ -1,26 +1,24 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { communityPolls } from '../../data/communityData.ts';
-import { useCommunity } from '../../hooks/useCommunity.ts';
-import { pollPercentages } from '../../services/communityRanking.ts';
+import { useAppDispatch, useAppSelector } from '../../store/hooks.ts';
+import { selectCommunityPollData, selectCommunityPolls } from '../../store/communitySelectors.ts';
+import { voteInCommunityPoll } from '../../store/communityActions.ts';
 import type { CommunityPoll } from '../../types/community.ts';
 
 export default function CommunityPolls() {
+    const communityPolls = useAppSelector(selectCommunityPolls);
     return <section className="community-panel community-polls" aria-labelledby="community-polls-title"><h2 id="community-polls-title">BÌNH CHỌN NHANH</h2><p className="community-muted">Bình chọn demo trên trình duyệt. Số ban đầu là fixture minh họa, không phải thống kê thật của Tuổi Trẻ.</p>{communityPolls.map(poll => <Poll key={poll.id} poll={poll} />)}</section>;
 }
 
 function Poll({ poll }: { poll: CommunityPoll }) {
-    const { state, vote } = useCommunity();
-    const voted = state.votes[poll.id];
+    const dispatch = useAppDispatch();
+    const { voted, counts, total, percentages } = useAppSelector(state => selectCommunityPollData(state, poll.id));
     const [choice, setChoice] = useState('');
     const [error, setError] = useState('');
-    const counts = poll.options.map(option => option.demoVotes + Number(voted === option.id));
-    const total = counts.reduce((sum, count) => sum + count, 0);
-    const percentages = pollPercentages(counts);
     function submit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
         if (!choice) { setError('Vui lòng chọn một đáp án trước khi bình chọn.'); return; }
-        if (vote(poll.id, choice)) setError('');
+        if (dispatch(voteInCommunityPoll(poll.id, choice))) setError('');
     }
     return <form className="community-poll" onSubmit={submit} noValidate aria-label={poll.question}>
         <fieldset disabled={Boolean(voted)} aria-describedby={error ? `${poll.id}-error` : undefined}><legend>{poll.question}</legend>

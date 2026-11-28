@@ -1,3 +1,4 @@
+import { selectNewsArticles } from '../store/slice/NewsSlice.ts'
 import { useParams } from 'react-router-dom'
 import { useAppSelector } from '../store/hooks.ts'
 import { menu } from '../data/menu.ts'
@@ -8,7 +9,7 @@ const ALL_SLUGS = ['tin-moi-nhat', 'tin-xem-nhieu']
 
 export default function Category() {
     const { zone = '' } = useParams()
-    const news = useAppSelector((state) => state.news)
+    const news = useAppSelector(selectNewsArticles)
 
     const item = menu.find((m) => m.href === `/${zone}`)
     if (!item) return <NotFoundPage embedded />

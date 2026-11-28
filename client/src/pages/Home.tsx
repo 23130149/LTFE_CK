@@ -1,10 +1,11 @@
+import { selectNewsArticles } from '../store/slice/NewsSlice.ts'
 import { useAppSelector } from '../store/hooks.ts'
 import HomeFocus from '../components/HomeFocus.tsx'
 import HotTags from '../components/HotTags.tsx'
 import NewsList from '../components/NewsList.tsx'
 
 export default function Home() {
-    const news = useAppSelector((state) => state.news)
+    const news = useAppSelector(selectNewsArticles)
 
     return (
         <>

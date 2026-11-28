@@ -5,6 +5,11 @@ export interface Article {
     zone: string;
     time: string;
     image: string;
+    publishedAt?: string;
+    content?: string[];
+    demoViews?: number;
+    guide?: boolean;
+    topics?: string[];
 }
 
 export type { NavigationItem as MenuItem } from './navigation.ts';

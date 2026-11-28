@@ -1,22 +1,43 @@
-import { Link, useParams } from 'react-router-dom'
-import { useAppSelector } from '../store/hooks.ts'
+import { useEffect, useRef } from 'react'
+import { Link, useLocation, useParams } from 'react-router-dom'
+import { routes } from '../routing/routes.ts'
+import { useAppDispatch, useAppSelector } from '../store/hooks.ts'
+import { countArticleView, selectNewsArticles } from '../store/slice/NewsSlice.ts'
 
 export default function ArticleDetail() {
     const { id } = useParams()
-    const article = useAppSelector((state) => state.news.find((a) => a.id === Number(id)))
+    const { key } = useLocation()
+    const dispatch = useAppDispatch()
+    const articles = useAppSelector(selectNewsArticles)
+    const article = articles.find(item => String(item.id) === id)
+    const articleId = article?.id
+    const countedEntry = useRef<string | null>(null)
 
-    if (!article) return <h2 className="container">Bài viết không tồn tại!</h2>
+    useEffect(() => {
+        if (articleId === undefined || countedEntry.current === key) return
+        countedEntry.current = key
+        dispatch(countArticleView(articleId))
+    }, [articleId, dispatch, key])
+
+    if (!article) return <div className="container news-collection">
+        <h1>Bài viết không tồn tại</h1>
+        <Link to={routes.home}>Về trang chủ</Link>
+    </div>
 
     return (
-        <article className="container" style={{ maxWidth: 820 }}>
-            <span style={{ color: '#ed1c24', fontSize: 12 }}>{article.zone}</span>
-            <h1 style={{ fontSize: 32, lineHeight: '40px', margin: '8px 0' }}>{article.title}</h1>
-            <p style={{ color: '#8f8f8f', fontSize: 12 }}>{article.time}</p>
-            {article.sapo && <p style={{ fontWeight: 700, margin: '12px 0' }}>{article.sapo}</p>}
+        <article className="container home-article">
+            <header>
+                <span className="box-category-category">{article.zone}</span>
+                <time className="box-category-time" dateTime={article.publishedAt}>{article.time}</time>
+                <h1>{article.title}</h1>
+                <p className="home-article__note">Nội dung minh họa</p>
+            </header>
+            {article.sapo && <p className="home-article__summary">{article.sapo}</p>}
             {article.image && <img src={article.image} alt={article.title} />}
-            <p style={{ marginTop: 16 }}>Nội dung chi tiết bài viết (sẽ lấy từ API sau).</p>
-            <hr />
-            <Link to="/">← Về trang chủ</Link>
+            <div className="home-article__body">
+                {article.content?.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+            </div>
+            <Link to={routes.home} className="home-article__back">← Về trang chủ</Link>
         </article>
     )
 }

@@ -1,9 +1,13 @@
 export const routes = Object.freeze({
     home: '/', education: '/giao-duc', educationLegacy: '/giao-duc.htm',
+    latest: '/tin-moi-nhat', popular: '/tin-xem-nhieu', video: '/video',
+    guides: '/can-biet', topic: '/chu-de',
     vehicles: '/xe', travel: '/du-lich', culture: '/van-hoa', entertainment: '/giai-tri', sports: '/the-thao',
     realEstate: '/nha-dat', health: '/suc-khoe', factCheck: '/gia-that', community: '/cong-dong',
     thoiSu: '/thoi-su', theGioi: '/the-gioi', phapLuat: '/phap-luat',kinhDoanh: '/kinh-doanh', congNghe: '/cong-nghe'
 });
+
+
 
 export const realEstateArticlePath = (id: string): string => `${routes.realEstate}/bai/${encodeURIComponent(id)}`;
 export const healthArticlePath = (id: string): string => `${routes.health}/bai/${encodeURIComponent(id)}`;

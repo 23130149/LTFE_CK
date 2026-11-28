@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { routes } from '../routing/routes.ts'
+import { newsTopicPath, routes } from '../routing/routes.ts'
 import { useAppDispatch, useAppSelector } from '../store/hooks.ts'
 import { countArticleView, selectNewsArticles } from '../store/slice/NewsSlice.ts'
 
@@ -37,6 +37,9 @@ export default function ArticleDetail() {
             <div className="home-article__body">
                 {article.content?.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
             </div>
+            {article.topics && article.topics.length > 0 && <ul className="list-tag">
+                {article.topics.map(topic => <li key={topic}><Link to={newsTopicPath(topic)} className="item">{topic}</Link></li>)}
+            </ul>}
             <Link to={routes.home} className="home-article__back">← Về trang chủ</Link>
         </article>
     )

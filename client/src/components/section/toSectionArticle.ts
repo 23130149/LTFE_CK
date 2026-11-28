@@ -3,7 +3,7 @@ import type { CategoryArticle } from '../../types/category.ts'
 
 const timeFormatter = new Intl.DateTimeFormat('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric', hour12: false })
 
-export function toSectionArticle(article: CategoryArticle): SectionArticle {
+export function toSectionArticle(article: CategoryArticle, basePath: string): SectionArticle {
     const date = article.publishedAt ? new Date(article.publishedAt) : null
     return {
         id: article.id,
@@ -12,5 +12,6 @@ export function toSectionArticle(article: CategoryArticle): SectionArticle {
         zone: article.section,
         time: date ? timeFormatter.format(date) : '',
         image: article.image.src,
+        href: `${basePath}/bai/${encodeURIComponent(article.id)}`,
     }
 }

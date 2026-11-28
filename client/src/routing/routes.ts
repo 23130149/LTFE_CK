@@ -10,6 +10,7 @@ export const routes = Object.freeze({
 export const newsArticlePath = (id: number): string => `/bai/${id}`;
 export const newsTopicPath = (topic: string): string => `${routes.topic}?${new URLSearchParams({ q: topic })}`;
 
+export const editorialArticlePath = (sectionPath: string, id: string): string => `${sectionPath}/bai/${encodeURIComponent(id)}`;
 
 export const realEstateArticlePath = (id: string): string => `${routes.realEstate}/bai/${encodeURIComponent(id)}`;
 export const healthArticlePath = (id: string): string => `${routes.health}/bai/${encodeURIComponent(id)}`;

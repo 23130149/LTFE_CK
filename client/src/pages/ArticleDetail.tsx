@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { newsTopicPath, routes } from '../routing/routes.ts'
+import { newsArticlePath, newsTopicPath, routes } from '../routing/routes.ts'
 import { useAppDispatch, useAppSelector } from '../store/hooks.ts'
 import { countArticleView, selectNewsArticles } from '../store/slice/NewsSlice.ts'
 
@@ -24,6 +24,8 @@ export default function ArticleDetail() {
         <Link to={routes.home}>Về trang chủ</Link>
     </div>
 
+    const related = articles.filter(item => item.id !== article.id && item.topics?.some(topic => article.topics?.includes(topic))).slice(0, 3)
+
     return (
         <article className="container home-article">
             <header>
@@ -41,6 +43,10 @@ export default function ArticleDetail() {
                 {article.topics.map(topic => <li key={topic}><Link to={newsTopicPath(topic)} className="item">{topic}</Link></li>)}
             </ul>}
             <Link to={routes.home} className="home-article__back">← Về trang chủ</Link>
+            {related.length > 0 && <section className="home-article__related" aria-labelledby="home-related-title">
+                <h2 id="home-related-title">Bài liên quan</h2>
+                <ul>{related.map(item => <li key={item.id}><Link to={newsArticlePath(item.id)}>{item.title}</Link></li>)}</ul>
+            </section>}
         </article>
     )
 }

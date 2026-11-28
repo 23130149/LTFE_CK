@@ -11,6 +11,7 @@ export const newsArticlePath = (id: number): string => `/bai/${id}`;
 export const newsTopicPath = (topic: string): string => `${routes.topic}?${new URLSearchParams({ q: topic })}`;
 
 export const editorialArticlePath = (sectionPath: string, id: string): string => `${sectionPath}/bai/${encodeURIComponent(id)}`;
+export const categoryTopicPath = (path: string, topic: string): string => topic ? `${path}?${new URLSearchParams({ muc: topic })}` : path;
 
 export const realEstateArticlePath = (id: string): string => `${routes.realEstate}/bai/${encodeURIComponent(id)}`;
 export const healthArticlePath = (id: string): string => `${routes.health}/bai/${encodeURIComponent(id)}`;

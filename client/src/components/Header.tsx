@@ -1,29 +1,56 @@
+import { useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { menu } from '../data/menu.ts'
+import { headerLinks, menu, sectionLinks } from '../data/menu.ts'
+import { routes } from '../routing/routes.ts'
 
 export default function Header() {
+    const directory = useRef<HTMLDivElement>(null)
+
     return (
-        <header className="header">
-            <div className="header__top">
-                <div className="container header__top-flex">
-                    <Link to="/" className="header__logo">TUỔI TRẺ</Link>
-                    <div className="header__cate">
-                        <a className="header__clink" href="#">Podcast</a>
-                        <a className="header__clink" href="#">YouTube</a>
-                        <a className="header__clink" href="#">Cần biết</a>
-                    </div>
+        <>
+            <header className="site-masthead" id="site-top" tabIndex={-1}>
+                <div className="container site-masthead__inner">
+                    <Link to={routes.home} className="site-wordmark" aria-label="Tuổi Trẻ · Trang chủ">TUỔI TRẺ</Link>
+                    <nav aria-label="Tiện ích" className="site-masthead__utilities">
+                        {headerLinks.map(({ title, href, external }) => external
+                            ? <a key={href} href={href}>{title}</a>
+                            : <NavLink key={href} to={href}>{title}</NavLink>
+                        )}
+                    </nav>
                 </div>
-            </div>
-            <nav className="header__middle" aria-label="Chuyên mục chính">
-                <div className="container">
-                    <ul className="menu-nav">
-                        <li><NavLink className="nav-link" to="/" end aria-label="Trang chủ">🏠</NavLink></li>
-                        {menu.map((m) => (
-                            <li key={m.href}><NavLink className="nav-link" to={m.href}>{m.title}</NavLink></li>
+            </header>
+
+            <nav className="site-nav" aria-label="Chuyên mục chính">
+                <div className="container site-nav__inner">
+                    <NavLink className="site-nav__home" to={routes.home} end aria-label="Trang chủ">
+                        <span aria-hidden="true" className="site-nav__home-icon" />
+                    </NavLink>
+                    <ul className="site-nav__list">
+                        {menu.map(({ title, href }) => (
+                            <li key={href}><NavLink to={href}>{title}</NavLink></li>
                         ))}
                     </ul>
+                    <button
+                        type="button"
+                        className="site-nav__toggle"
+                        popoverTarget="site-section-directory"
+                        aria-label="Tất cả chuyên mục"
+                        title="Tất cả chuyên mục"
+                    >
+                        <span aria-hidden="true" className="site-nav__menu-icon" />
+                    </button>
+                    <div ref={directory} id="site-section-directory" popover="auto" className="site-nav__directory">
+                        <h2>Tất cả chuyên mục</h2>
+                        <ul>
+                            {sectionLinks.map(({ title, href }) => (
+                                <li key={href}>
+                                    <NavLink to={href} onClick={() => directory.current?.hidePopover()}>{title}</NavLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </nav>
-        </header>
+        </>
     )
 }

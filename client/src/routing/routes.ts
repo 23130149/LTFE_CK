@@ -10,3 +10,9 @@ export const healthArticlePath = (id: string): string => `${routes.health}/bai/$
 export const factCheckArticlePath = (id: string): string => `${routes.factCheck}/bai/${encodeURIComponent(id)}`;
 
 export const communityArticlePath = (id: string): string => `${routes.community}/bai/${encodeURIComponent(id)}`;
+
+export const thoiSuArticlePath = (id: string): string => `${routes.thoiSu}/bai/${encodeURIComponent(id)}`;
+export const theGioiArticlePath = (id: string): string => `${routes.theGioi}/bai/${encodeURIComponent(id)}`;
+export const phapLuatArticlePath = (id: string): string => `${routes.phapLuat}/bai/${encodeURIComponent(id)}`;
+export const kinhDoanhArticlePath = (id: string): string => `${routes.kinhDoanh}/bai/${encodeURIComponent(id)}`;
+export const congNgheArticlePath = (id: string): string => `${routes.congNghe}/bai/${encodeURIComponent(id)}`;

@@ -66,7 +66,7 @@ function SectionCategory({ config, articles }: ViewProps) {
     const selectedSection = tabs[tab];
     const selectedArticles = tab === 0 ? articles : isThoiSu && selectedSection === 'Nổi bật'
         ? articles.slice(0, 4) : articles.filter((article) => article.section === selectedSection);
-    const items = selectedArticles.map(toSectionArticle);
+    const items = selectedArticles.map((article) => toSectionArticle(article, config.path));
     return <main id="main-content" className="container sec-page">
         {isThoiSu && (
             <nav className="sec-crumb" aria-label="Đường dẫn trang">

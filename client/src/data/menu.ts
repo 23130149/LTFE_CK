@@ -3,7 +3,6 @@ import type { NavigationItem } from '../types/navigation.ts';
 export const menu: NavigationItem[] = [
     { title: 'Mới nhất', href: '/tin-moi-nhat' },
     { title: 'Xem nhiều', href: '/tin-xem-nhieu' },
-    { title: 'Video', href: '/video' },
     { title: 'Thời sự', href: '/thoi-su' },
     { title: 'Thế giới', href: '/the-gioi' },
     { title: 'Pháp luật', href: '/phap-luat' },

@@ -1,38 +1,48 @@
 import { Link, NavLink } from 'react-router-dom'
-import { menu } from '../data/menu.ts'
+import { headerLinks, quickNewsLinks, sectionLinks } from '../data/menu.ts'
+import { routes } from '../routing/routes.ts'
 
 export default function Footer() {
     return (
-        <footer className="footer">
+        <footer className="site-footer">
             <div className="container">
-                <div className="footer__nav">
-                    <ul className="menu-nav">
-                        <li><Link className="nav-link" to="/">Trang chủ</Link></li>
-                        {menu.map((m) => (
-                            <li key={m.href}><NavLink className="nav-link" to={m.href}>{m.title}</NavLink></li>
-                        ))}
-                    </ul>
+                <div className="site-footer__bar">
+                    <nav aria-label="Đọc nhanh">
+                        <ul className="site-footer__quick">
+                            <li><NavLink to={routes.home} end>Trang chủ</NavLink></li>
+                            {quickNewsLinks.map(({ title, href }) => (
+                                <li key={href}><NavLink to={href}>{title}</NavLink></li>
+                            ))}
+                        </ul>
+                    </nav>
+                    <a className="site-footer__top-link" href="#site-top" aria-label="Lên đầu trang" title="Lên đầu trang">
+                        <span aria-hidden="true">↑</span>
+                    </a>
                 </div>
 
-                <div className="footer__middle-flex">
-                    <div className="footer__logo">
-                        <Link to="/" className="logo-text">TUỔI TRẺ</Link>
+                <div className="site-footer__content">
+                    <div className="site-footer__brand">
+                        <Link to={routes.home} className="site-wordmark" aria-label="Tuổi Trẻ · Trang chủ">TUỔI TRẺ</Link>
                     </div>
-                    <div className="footer__m-content">
-                        <div className="box">
-                            <p>Tổng biên tập: ...</p>
-                            <p>Báo điện tử (bản demo học tập)</p>
-                            <p>Giấy phép hoạt động báo điện tử: ...</p>
-                        </div>
-                        <div className="box">
-                            <p>Địa chỉ: ...</p>
-                            <p>Hotline: ... - Email: ...</p>
-                            <p>Quảng cáo: ...</p>
-                        </div>
-                    </div>
+                    <nav aria-labelledby="footer-topics">
+                        <h2 id="footer-topics">Chuyên mục</h2>
+                        <ul className="site-footer__sections">
+                            {sectionLinks.map(({ title, href }) => (
+                                <li key={href}><NavLink to={href}>{title}</NavLink></li>
+                            ))}
+                        </ul>
+                    </nav>
+                    <nav aria-labelledby="footer-utilities" className="site-footer__utilities">
+                        <h2 id="footer-utilities">Tiện ích</h2>
+                        <ul>
+                            {headerLinks.map(({ title, href, external }) => (
+                                <li key={href}>
+                                    {external ? <a href={href}>{title}</a> : <NavLink to={href}>{title}</NavLink>}
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
                 </div>
-
-                <p className="footer__coppy">© Demo học tập, không phải trang chính thức của Báo Tuổi Trẻ.</p>
             </div>
         </footer>
     )

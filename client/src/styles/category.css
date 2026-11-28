@@ -1,15 +1,6 @@
 .site-shell--category { --category-red: #c31620; --category-ink: #202124; --category-muted: #5b6168; --category-line: #e4e6e8; color: var(--category-ink); }
 .site-shell--category .container { width: 100%; max-width: 1310px; }
-.site-shell--category .menu-nav { flex-wrap: wrap; justify-content: flex-start; gap: 4px 18px; }
-.site-shell--category .nav-link { display: inline-block; padding: 12px 0; }
-.nav-link[aria-current="page"] { color: #b20e18; text-decoration: underline; text-underline-offset: 7px; text-decoration-thickness: 2px; }
-.site-shell--category .footer__nav .menu-nav { overflow: visible; }
-.site-shell--category .footer__middle-flex { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
-.site-shell--category .footer__logo { width: auto; }
-.site-shell--category .footer__m-content { gap: 24px; }
-.site-shell--category .footer__m-content .box { width: auto; flex: 1; margin: 0; }
-.site-shell--category .footer__coppy { color: #5b6168; }
-.skip-link { position: absolute; left: 16px; top: -100px; z-index: 10; background: #fff; color: #a40913; padding: 12px 18px; border: 2px solid currentColor; }
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 30; background: #fff; color: #a40913; padding: 12px 18px; border: 2px solid currentColor; }
 .skip-link:focus { top: 8px; }
 .site-shell a:focus-visible, .site-shell button:focus-visible { outline: 3px solid #12639c; outline-offset: 4px; }
 .category-page { width: 100%; max-width: 1310px; padding: 24px 15px 48px; margin: 0 auto; }
@@ -87,7 +78,6 @@
     .category-sidebar { margin-top: 12px; }
     .category-sidebar ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
     .category-sidebar__intro { padding: 18px 20px; }
-    .site-shell--category .footer__middle-flex { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 600px) {
     .category-page { padding: 18px 16px 32px; }
@@ -108,12 +98,6 @@
     .category-card--row p { display: none; }
     .category-card__meta { font-size: 11px; }
     .category-sidebar ol { display: block; }
-    .site-shell--category .header__logo { font-size: 25px; }
-    .site-shell--category .header__clink { font-size: 11px; padding: 0 5px; }
-    .site-shell--category .header__top-flex { height: 56px; }
-    .site-shell--category .menu-nav { gap: 0 16px; }
-    .site-shell--category .nav-link { padding: 9px 0; font-size: 11px; }
-    .site-shell--category .footer__m-content { flex-direction: column; gap: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .category-state__loader { animation: none; } }
 

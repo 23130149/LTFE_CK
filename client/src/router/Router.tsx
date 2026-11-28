@@ -5,6 +5,7 @@ import ErrorPage from './Error.tsx'
 import Home from '../pages/Home.tsx'
 import Category from '../pages/Category.tsx'
 import ArticleDetail from '../pages/ArticleDetail.tsx'
+import VideoPage from '../pages/VideoPage.tsx'
 import { store } from '../store/Store.ts'
 import { load } from '../store/slice/NewsSlice.ts'
 import { loadCategory } from '../store/slice/CategoryNewsSlice.ts'
@@ -51,6 +52,7 @@ export const appRoutes: RouteObject[] = [
         children: [
             { index: true, element: <Home /> },
             { path: 'bai/:id', element: <ArticleDetail /> },
+            { path: routes.video.slice(1), element: <VideoPage /> },
             { path: routes.education.slice(1), element: <CategoryPage config={educationConfig} /> },
             { path: routes.educationLegacy.slice(1), element: <Navigate to={routes.education} replace /> },
             ...editorialSections.flatMap(section => [

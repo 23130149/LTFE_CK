@@ -1,4 +1,4 @@
-import { matchPath, Outlet, useLocation } from 'react-router-dom'
+import { matchPath, Outlet, ScrollRestoration, useLocation } from 'react-router-dom'
 import Header from '../components/Header.tsx'
 import Footer from '../components/Footer.tsx'
 import { routes } from '../routing/routes.ts'
@@ -18,6 +18,7 @@ export default function Layout() {
                 <Outlet />
             </main>}
             <Footer />
+            <ScrollRestoration />
         </div>
     )
 }

@@ -6,6 +6,7 @@ import { store } from './store/Store.ts'
 import './styles/home.css'
 import './styles/category.css'
 import './styles/editorial.css'
+import './styles/site-chrome.css'
 
 const rootElement = document.getElementById('root')
 if (!rootElement) throw new Error('Missing root element')
